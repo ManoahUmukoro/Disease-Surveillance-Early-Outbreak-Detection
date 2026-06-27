@@ -1,0 +1,10 @@
+# Serving layer only — kept light so it fits Render's free tier.
+# The web tier reads precomputed forecasts/alerts from MongoDB and does NOT
+# load TensorFlow at runtime (training deps live in ../requirements-ml.txt).
+fastapi>=0.115,<0.116
+uvicorn[standard]>=0.32,<0.33
+motor>=3.6,<3.7
+pymongo>=4.9,<5
+pydantic>=2.9,<3
+pydantic-settings>=2.6,<3
+python-dotenv>=1.0,<2
