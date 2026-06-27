@@ -1,0 +1,29 @@
+# ── Python ───────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+
+# ── Environment ──────────────────────────────────────────
+.env
+.env.local
+
+# ── Data & trained models (regenerated from scripts/notebooks) ──
+# Final submission artifacts can be force-added before tagging the release.
+backend/data/*.csv
+backend/models/*.h5
+backend/models/*.pkl
+backend/models/*.keras
+
+# ── Node / frontend ──────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ── OS ───────────────────────────────────────────────────
+.DS_Store
+
+# ── Editor / tooling ─────────────────────────────────────
+.claude/
