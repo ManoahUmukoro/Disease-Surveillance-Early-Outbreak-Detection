@@ -26,7 +26,9 @@ app = FastAPI(
 
 origins = [o.strip() for o in os.environ.get("CORS_ORIGINS", "http://localhost:5173").split(",")]
 app.add_middleware(
-    CORSMiddleware, allow_origins=origins, allow_credentials=True,
+    # Public read-only API (no cookies/auth), so any origin may read it and a
+    # wildcard is safe. allow_credentials must be False for a "*" origin to work.
+    CORSMiddleware, allow_origins=origins, allow_credentials=False,
     allow_methods=["*"], allow_headers=["*"],
 )
 

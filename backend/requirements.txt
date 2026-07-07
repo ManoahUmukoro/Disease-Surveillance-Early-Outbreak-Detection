@@ -5,6 +5,7 @@ fastapi>=0.115,<0.116
 uvicorn[standard]>=0.32,<0.33
 motor>=3.6,<3.7
 pymongo>=4.9,<5
+dnspython>=2.6,<3        # resolve mongodb+srv:// Atlas connection strings
 pydantic>=2.9,<3
 pydantic-settings>=2.6,<3
 python-dotenv>=1.0,<2

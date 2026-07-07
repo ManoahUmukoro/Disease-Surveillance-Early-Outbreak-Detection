@@ -1,0 +1,21 @@
+# Render Blueprint — deploys the FastAPI backend.
+# In Render: New + → Blueprint → connect this repo → Render reads this file.
+# You'll be prompted for MONGODB_URI (the Atlas connection string) — everything else is preset.
+services:
+  - type: web
+    name: disease-surveillance-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: MONGODB_DB
+        value: disease_surveillance
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: MONGODB_URI
+        sync: false   # paste the Atlas connection string when prompted (kept secret)
