@@ -27,3 +27,7 @@ frontend/.vite/
 
 # ── Editor / tooling ─────────────────────────────────────
 .claude/
+
+# ── Adaptive SVM runtime artifacts (not source) ──────────
+adaptive-svm/data/surveillance.db
+~$*

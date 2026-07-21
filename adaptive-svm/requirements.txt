@@ -1,0 +1,11 @@
+# Full Adaptive SVM stack (Chapter 4), pinned to the versions the models were
+# trained with. NOTE: Streamlit Community Cloud deploys from app/requirements.txt
+# (the dashboard subset); redis below is for the streaming-ingestion pipeline.
+streamlit==1.59.2
+scikit-learn==1.9.0
+pandas==2.3.3
+numpy==1.26.4
+scipy==1.17.1
+pyreadstat==1.3.5
+joblib==1.5.3
+redis>=5,<6
