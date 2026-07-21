@@ -26,3 +26,7 @@ frontend/.vite/
 .DS_Store
 
 # ── Editor / tooling ─────────────────────────────────────
+
+# ── Adaptive SVM runtime artifacts (not source) ──────────
+adaptive-svm/data/surveillance.db
+~$*
