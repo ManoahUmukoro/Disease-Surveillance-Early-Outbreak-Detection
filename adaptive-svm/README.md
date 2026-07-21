@@ -10,7 +10,7 @@ This folder is the reference prototype for the thesis
 **“An Adaptive SVM Model for Intelligent Disease Surveillance System.”** It lives alongside
 the earlier LSTM/React forecasting system in the same repository ("keep both").
 
-> **Live demo:** _add your Streamlit URL here after deploying_ (e.g. `https://<your-app>.streamlit.app`)
+> **Live demo:** https://disease-surveillance-early-outbreak-detection-9eggg9qvphqsz7z6.streamlit.app/
 
 ---
 
