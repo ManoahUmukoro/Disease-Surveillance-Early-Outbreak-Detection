@@ -51,6 +51,16 @@ CREATE TABLE IF NOT EXISTS notifications(
 def conn():
     DB.parent.mkdir(parents=True, exist_ok=True)
     c = sqlite3.connect(str(DB))
+    # Migrate a legacy notifications table that an earlier deployment may have left behind
+    # (its schema predates recipient/method/status/acknowledged). CREATE TABLE IF NOT EXISTS
+    # would otherwise keep the old columns and every new query would fail with "no such column".
+    try:
+        cols = {r[1] for r in c.execute("PRAGMA table_info(notifications)").fetchall()}
+        if cols and not {"recipient", "method", "status", "acknowledged"}.issubset(cols):
+            c.execute("DROP TABLE notifications")
+            c.commit()
+    except Exception:
+        pass
     c.executescript(SCHEMA)
     return c
 
