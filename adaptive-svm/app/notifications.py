@@ -1,20 +1,17 @@
 """
 notifications.py — the alerting layer.
 
-When the Adaptive SVM flags a rising outbreak signal (or a high-risk case), this
-module notifies the people in charge. It logs every alert to SQLite (the structured
-store) and, if SMTP is configured via environment variables, emails the recipients;
-otherwise it degrades gracefully to an in-app log so the prototype runs with zero setup.
+When the Adaptive SVM flags a rising outbreak signal (or a high-risk case), this module notifies
+the people in charge. Every alert is logged to the structured store (SQLite, via store.py) with a
+recipient, a delivery method, and a status; if SMTP is configured via environment variables it also
+e-mails the recipients, otherwise it degrades gracefully to the in-app dashboard log.
 """
 import os
-import json
 import smtplib
-import sqlite3
 from datetime import datetime
 from email.mime.text import MIMEText
-from pathlib import Path
 
-DB = Path(__file__).resolve().parents[1] / "data" / "surveillance.db"
+import store
 
 # The "people in charge" — in production this would come from a roster table.
 RECIPIENTS = [
@@ -23,24 +20,15 @@ RECIPIENTS = [
 ]
 
 
-def _conn():
-    DB.parent.mkdir(parents=True, exist_ok=True)
-    c = sqlite3.connect(DB)
-    c.execute("""CREATE TABLE IF NOT EXISTS notifications(
-        id INTEGER PRIMARY KEY AUTOINCREMENT, ts TEXT, disease TEXT, location TEXT,
-        severity TEXT, message TEXT, recipients TEXT, delivered INTEGER)""")
-    return c
-
-
-def _send_email(recipients, subject, body) -> bool:
+def _send_email(recipient, subject, body) -> bool:
     host = os.environ.get("SMTP_HOST")
-    if not host:                       # no SMTP configured → in-app log only
+    if not host:                       # no SMTP configured → dashboard log only
         return False
     try:
         msg = MIMEText(body)
         msg["Subject"] = subject
         msg["From"] = os.environ.get("SMTP_FROM", "alerts@surveillance.local")
-        msg["To"] = ", ".join(r["email"] for r in recipients)
+        msg["To"] = recipient["email"]
         with smtplib.SMTP(host, int(os.environ.get("SMTP_PORT", "587"))) as s:
             s.starttls()
             if os.environ.get("SMTP_USER"):
@@ -52,19 +40,21 @@ def _send_email(recipients, subject, body) -> bool:
 
 
 def send_alert(disease, location, severity, message, recipients=None):
-    """Log an alert and notify recipients. Returns a delivery record."""
+    """Log + deliver one alert per recipient. Returns a delivery record."""
     recipients = recipients or RECIPIENTS
     ts = datetime.now().isoformat(timespec="seconds")
     subject = f"[{severity}] {disease} outbreak signal — {location}"
-    delivered = _send_email(recipients, subject, message)
-    c = _conn()
-    c.execute("INSERT INTO notifications(ts,disease,location,severity,message,recipients,delivered)"
-              " VALUES(?,?,?,?,?,?,?)",
-              (ts, disease, location, severity, message,
-               json.dumps([r["email"] for r in recipients]), int(delivered)))
-    c.commit(); c.close()
-    return {"ts": ts, "delivered": delivered, "channel": "email" if delivered else "in-app log",
-            "recipients": [r["name"] for r in recipients]}
+    smtp_on = bool(os.environ.get("SMTP_HOST"))
+    rows = []
+    for r in recipients:
+        delivered = _send_email(r, subject, message)
+        method = "Email" if delivered else "Dashboard"
+        status = "Delivered" if delivered else ("Failed" if smtp_on else "Delivered")
+        nid = store.log_notification(ts, disease, location, severity, message,
+                                     r["name"], method, status)
+        rows.append({"id": nid, "recipient": r["name"], "method": method, "status": status})
+    return {"ts": ts, "recipients": [r["name"] for r in recipients], "rows": rows,
+            "delivered": any(x["status"] == "Delivered" for x in rows)}
 
 
 def check_and_notify(signals):
@@ -75,11 +65,3 @@ def check_and_notify(signals):
         if s.get("severity") in ("HIGH", "MEDIUM"):
             fired.append({**s, **send_alert(s["disease"], s["location"], s["severity"], s["message"])})
     return fired
-
-
-def recent(limit=25):
-    c = _conn()
-    rows = c.execute("SELECT ts,disease,location,severity,message,delivered "
-                     "FROM notifications ORDER BY id DESC LIMIT ?", (limit,)).fetchall()
-    c.close()
-    return rows
