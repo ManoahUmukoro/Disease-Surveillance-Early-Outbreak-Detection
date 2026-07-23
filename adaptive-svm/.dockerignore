@@ -1,0 +1,7 @@
+data/surveillance.db
+**/__pycache__
+*.pyc
+docs/*.pdf
+docs/*.docx
+docs/~$*
+.git
