@@ -22,7 +22,7 @@ import numpy as np
 import pandas as pd
 import pyreadstat
 import joblib
-from sklearn.linear_model import SGDClassifier
+from sklearn.linear_model import SGDClassifier, LogisticRegression
 from sklearn.svm import LinearSVC
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import precision_recall_fscore_support, accuracy_score, roc_auc_score
@@ -114,8 +114,17 @@ def online_svm(X, y, warm=0.15, batch=100):
         auc = roc_auc_score(acts, scores)
     except Exception:
         auc = float("nan")
+    # Platt scaling: fit a logistic map from the raw hinge-loss margin to a calibrated
+    # probability, so the UI can show a 0-100% likelihood instead of an unbounded margin.
+    calib = None
+    try:
+        if len(np.unique(acts)) == 2:
+            lr = LogisticRegression(max_iter=1000).fit(scores.reshape(-1, 1), acts)
+            calib = (float(lr.coef_[0][0]), float(lr.intercept_[0]))
+    except Exception:
+        calib = None
     return (dict(acc=accuracy_score(acts, preds), prec=p, rec=r, f1=f, auc=auc,
-                 n_eval=len(acts), pos_rate=float(acts.mean())), clf, scaler)
+                 n_eval=len(acts), pos_rate=float(acts.mean())), clf, scaler, calib)
 
 
 def batch_svm(X, y):
@@ -163,18 +172,18 @@ def build_bundles(df):
     bundles, metrics = {}, {}
 
     mask = df["case_classification_recode"].notna()
-    m1, c1, s1 = online_svm(Xc[mask], df["positive"][mask])
-    bundles["diagnosis"] = {"model": c1, "scaler": s1, "features": list(Xc.columns)}
+    m1, c1, s1, cal1 = online_svm(Xc[mask], df["positive"][mask])
+    bundles["diagnosis"] = {"model": c1, "scaler": s1, "features": list(Xc.columns), "calib": cal1}
     metrics["diagnosis"] = m1
 
     oc = df["outcome_case"].astype(str); om = oc.isin(["Recovered", "Deceased"])
-    m2, c2, s2 = online_svm(Xc[om], (oc[om] == "Deceased").astype(int))
-    bundles["outcome"] = {"model": c2, "scaler": s2, "features": list(Xc.columns)}
+    m2, c2, s2, cal2 = online_svm(Xc[om], (oc[om] == "Deceased").astype(int))
+    bundles["outcome"] = {"model": c2, "scaler": s2, "features": list(Xc.columns), "calib": cal2}
     metrics["outcome"] = m2
 
     agg = _outbreak_frame(df)
-    m3, c3, s3 = online_svm(agg[OUTBREAK_FEATURES], agg["outbreak"])
-    bundles["outbreak"] = {"model": c3, "scaler": s3, "features": OUTBREAK_FEATURES}
+    m3, c3, s3, cal3 = online_svm(agg[OUTBREAK_FEATURES], agg["outbreak"])
+    bundles["outbreak"] = {"model": c3, "scaler": s3, "features": OUTBREAK_FEATURES, "calib": cal3}
     metrics["outbreak"] = m3
     return bundles, metrics
 

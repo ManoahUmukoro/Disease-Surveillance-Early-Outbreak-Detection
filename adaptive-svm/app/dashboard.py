@@ -71,12 +71,18 @@ mongo, bus = get_stores()
 
 
 # ── helpers ───────────────────────────────────────────────
-def confidence(margin):
-    return round(1 / (1 + math.exp(-abs(float(margin)))), 2)
+def to_prob(bundle, margin):
+    """Calibrated probability (0-1) from an SVM margin, via the bundle's Platt-scaling params.
+    Turns the unbounded hinge-loss margin into an interpretable 0-100% likelihood."""
+    cal = bundle.get("calib")
+    if cal:
+        A, B = cal
+        return float(1 / (1 + math.exp(-(A * float(margin) + B))))
+    return float(1 / (1 + math.exp(-float(margin) / 50)))   # fallback if uncalibrated
 
 
-def risk_band(score, hi, mid):
-    return "HIGH" if score >= hi else ("MEDIUM" if score >= mid else "LOW")
+def prob_band(p):
+    return "HIGH" if p >= 0.5 else ("MEDIUM" if p >= 0.25 else "LOW")
 
 
 def recommend(level):
@@ -132,10 +138,11 @@ def predict_case(chosen, age, sex, state):
     obg = models["outcome"]
     orow = row.reindex(obg["features"]).fillna(0.0)
     os_ = float(obg["model"].decision_function(obg["scaler"].transform(orow.values.reshape(1, -1)))[0])
-    level = "HIGH" if ds > 0.8 else ("MEDIUM" if ds > 0 else "LOW")
-    return {"label": "LIKELY" if ds > 0 else "unlikely", "risk": round(ds, 2),
-            "confidence": confidence(ds), "level": level, "recommendation": recommend(level),
-            "severity": "elevated" if os_ > 0 else "lower", "severity_score": round(os_, 2)}
+    p = to_prob(dbg, ds)                        # calibrated Lassa probability (0-1)
+    pdeath = to_prob(obg, os_)                  # calibrated death-risk probability
+    level = prob_band(p)
+    return {"prob": p, "level": level, "recommendation": recommend(level),
+            "label": "LIKELY" if p >= 0.5 else "unlikely", "death_prob": pdeath}
 
 
 # ── header + live store status ────────────────────────────
@@ -201,18 +208,21 @@ with tabs[1]:
         b = models["outbreak"]
         score = b["model"].decision_function(b["scaler"].transform(latest[b["features"]]))
         latest = latest.assign(risk=score)
-        # Rank-based bands: robust to the SVM margin's wide, skewed scale and to ties (states with
-        # no recent cases share one score). The percentile doubles as a believable confidence.
+        latest["prob"] = [to_prob(b, s) for s in score]
+        # Risk level ranks states by the model signal (robust to the margin's skewed scale and to
+        # ties among states with no recent cases); Outbreak probability is the calibrated 0-100%.
         pct = latest.risk.rank(pct=True)
         latest["level"] = np.where(pct >= 0.75, "HIGH", np.where(pct >= 0.40, "MEDIUM", "LOW"))
         latest["Status"] = latest["level"].map(BADGE)
-        latest["Confidence"] = [f"{0.5 + 0.49 * p:.0%}" for p in pct]
+        latest["Outbreak probability"] = [f"{p:.0%}" for p in latest["prob"]]
         latest["Trend"] = [arrow(t) for t in latest.trend]
         latest["Recommended action"] = [recommend(l) for l in latest["level"]]
-        view = (latest[["state", "confirmed", "Status", "Confidence", "Trend", "Recommended action"]]
+        view = (latest[["state", "confirmed", "Status", "Outbreak probability", "Trend", "Recommended action"]]
                 .sort_values("confirmed", ascending=False).reset_index(drop=True))
-        view.columns = ["State", "Recent cases", "Risk level", "Confidence", "Trend", "Recommended action"]
+        view.columns = ["State", "Recent cases", "Risk level", "Outbreak probability", "Trend", "Recommended action"]
         st.dataframe(view, width="stretch", hide_index=True)
+        st.caption("Risk level ranks states by the model's outbreak signal; outbreak probability is "
+                   "the calibrated likelihood (0–100%). Recommended action follows the risk level.")
 
         high = latest[latest["level"] == "HIGH"]
         if st.button(f"🔔 Notify NCDC — {len(high)} HIGH-risk state(s)"):
@@ -277,7 +287,9 @@ with tabs[2]:
                                  accept_multiple_files=True)
 
     if st.button("Predict", type="primary"):
-        pred = predict_case(chosen, age, sex, state)
+        # The trained model is Lassa-specific (real SORMAS data); other diseases are registered
+        # and stored but not scored, rather than shown a misleading Lassa verdict.
+        pred = predict_case(chosen, age, sex, state) if disease_in == "Lassa fever" else None
         st.session_state["reg"] = {
             "inputs": dict(report_date=str(report_date), state=state, lga=lga, disease=disease_in,
                            age_group=age, sex=sex, symptoms=chosen, n_symptoms=len(chosen),
@@ -290,29 +302,34 @@ with tabs[2]:
             "files": [(f.name, f.getvalue(), f.type) for f in (files or [])],
             "pred": pred,
         }
-        if disease_in != "Lassa fever":
-            st.info(f"Note: the prediction model is Lassa-specific; for **{disease_in}** the score "
-                    "is indicative only.")
 
     reg = st.session_state.get("reg")
     if reg:
         p = reg["pred"]
-        st.markdown("**Prediction** · structured → SQLite")
-        m1, m2, m3 = st.columns(3)
-        m1.metric("Lassa likelihood", p["label"], f"risk score {p['risk']:+.2f}")
-        m2.metric("Risk level", p["level"], f"confidence {p['confidence']:.0%}")
-        m3.metric("Recommended action", p["recommendation"])
-        if p["level"] == "HIGH":
-            st.warning(f"⚠️ High-risk case in **{reg['inputs']['state']}** — officers would be notified.")
-        st.caption(f"Severity (death-risk) signal: **{p['severity']}** (score {p['severity_score']:+.2f}). "
-                   "Scores are hinge-loss margins, not calibrated probabilities.")
+        if p is None:
+            st.info(f"🔬 Predictive scoring currently covers **Lassa fever** (the only disease with "
+                    f"real training data). This **{reg['inputs']['disease']}** case can still be "
+                    f"registered and stored — click **Save case** below.")
+        else:
+            st.markdown("**Prediction** · structured → SQLite")
+            m1, m2, m3 = st.columns(3)
+            m1.metric("Lassa probability", f"{p['prob']:.0%}", p["label"])
+            m2.metric("Risk level", p["level"])
+            m3.metric("Recommended action", p["recommendation"])
+            if p["level"] == "HIGH":
+                st.warning(f"⚠️ High-risk case in **{reg['inputs']['state']}** — officers would be notified.")
+            st.caption(f"Lassa probability is the model's **calibrated** likelihood (0–100%) that this is "
+                       f"confirmed Lassa — the SVM margin mapped through Platt scaling, not a raw score. "
+                       f"Death-risk signal: **{p['death_prob']:.0%}**.")
 
         if st.button("💾 Save case", type="primary"):
             inp, mg = reg["inputs"], reg["mongo"]
-            case_id = store.insert_case({**inp, **{
-                "pred_label": p["label"], "pred_risk": p["risk"], "pred_confidence": p["confidence"],
-                "recommendation": p["recommendation"], "alert_status": p["level"],
-                "has_documents": 1 if reg["files"] else 0}})
+            pf = ({"pred_label": p["label"], "pred_risk": round(p["prob"], 3),
+                   "pred_confidence": round(p["prob"], 3), "recommendation": p["recommendation"],
+                   "alert_status": p["level"]} if p else
+                  {"pred_label": "not scored", "pred_risk": None, "pred_confidence": None,
+                   "recommendation": "Register only", "alert_status": "n/a"})
+            case_id = store.insert_case({**inp, **pf, "has_documents": 1 if reg["files"] else 0})
             store.add_event(inp["report_date"], inp["state"], inp["lga"], inp["disease"],
                             new_cases=1, deaths=0, temperature=inp["temperature"],
                             rainfall=inp["rainfall"], source="registration")
@@ -320,7 +337,8 @@ with tabs[2]:
             if mres.get("stored"):
                 store.mark_case_documents(case_id)
             pub = bus.publish_case(case_id, {"state": inp["state"], "lga": inp["lga"],
-                                             "disease": inp["disease"], "risk_level": p["level"],
+                                             "disease": inp["disease"],
+                                             "risk_level": p["level"] if p else "n/a",
                                              "symptoms": inp["symptoms"]})
 
             st.success(f"✅ Case saved · `case_id = {case_id}`")
