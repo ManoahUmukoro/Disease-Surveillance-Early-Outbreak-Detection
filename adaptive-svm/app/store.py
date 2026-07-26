@@ -105,6 +105,14 @@ def bootstrap(df):
         temp, rain = climate(mo, str(r.State_new))
         rows.append((f"{int(r.yr):04d}-{mo:02d}-01", str(r.State_new), None, "Lassa fever",
                      int(r.new_cases), int(r.deaths), temp, rain, "historical", _now()))
+    # Additional REAL diseases (cholera per-state, mpox national) — no fabricated data.
+    try:
+        import real_data
+        for r in real_data.extra_events().itertuples(index=False):
+            rows.append((r.report_date, r.state, r.lga, r.disease, int(r.new_cases),
+                         int(r.deaths), r.temperature, r.rainfall, r.source, _now()))
+    except Exception:
+        pass
     c = conn()
     c.executemany("INSERT INTO surveillance_events(report_date,state,lga,disease,new_cases,"
                   "deaths,temperature,rainfall,source,created_at) VALUES(?,?,?,?,?,?,?,?,?,?)", rows)

@@ -1,0 +1,1356 @@
+Entry ID,Date,Year,State,Local Government Area,Cases,Deaths,Confirmed,Hospitalised/Treated ,CFR (%),M/F,Age,OCV Delivered,Population,"Cases/100,000","Deaths/100,000",IDP/Displacement,Socio-cultural,Food/Water,Environmental,Rural/Urban,Sanitation & Hygiene,Education,Occupation,Household/Setting,Conflict (Y),Interventions ,Aid,Reference
+NGA71-3-1-1,1 Mar,1971,Kaduna,,131,3,30,,2.290,21M:9F,,,"57,296,983",0.2286,0.0052,,,,,,,,Travelling,,,,,"Hunponu-Wusu, O.O., 1973. Epidemiological aspects of an El Tor cholera outbreak in Kaduna, Nigeria. Tropical and geographical medicine, 25(3), pp.277-81."
+NGA82-4-1-1,1 Apr,1982,Katsina,,662,51,12,,7.704,372F:190M,"65 cases 0-10yrs, 108 cases 11-20yrs, 110 cases 21-30yrs, 63 cases 31-40yrs, 17 cases >50yrs",Was vaccination of contacts but insufficient to vaccinate large proportions of the population. ,"77,427,546",0.8550,0.0659,,,Informal water selling ,Dry season,Urban 64% cases,,,,,,,,"Umoh, J.U., Adesiyun, A.A., Adekeye, J.O. and Nadarajah, M., 1983. Epidemiological features of an outbreak of gastroenteritis/cholera in Katsina, Northern Nigeria. Epidemiology & Infection, 91(1), pp.101-111."
+NGA87-9-1-1,1 Sep,1987,,,,38,,,,,,,"88,048,032",,0.0432,,,,,,,,,,,,,https://public.emdat.be
+NGA91-1-21-1,2 Jan,1991,,,588,,101,,,,,,"97,667,632",0.6020,,,,,,,,,,,,,,"Ndon, J.A., Udo, S.M. and Wehrenberg, W.B., 1992. Vibrio-associated gastroenteritis in the lower Cross-River Basin of Nigeria. Journal of clinical microbiology, 30(10), pp.2730-2732."
+,,,Akwa ,Uyo,,,,,,,,,,,,,,,,,,,,,,,,"Ndon, J.A., Udo, S.M. and Wehrenberg, W.B., 1992. Vibrio-associated gastroenteritis in the lower Cross-River Basin of Nigeria. Journal of clinical microbiology, 30(10), pp.2730-2732."
+,,,Cross River,Calabar,,,,,,,,,,,,,,,,,,,,,,,,"Ndon, J.A., Udo, S.M. and Wehrenberg, W.B., 1992. Vibrio-associated gastroenteritis in the lower Cross-River Basin of Nigeria. Journal of clinical microbiology, 30(10), pp.2730-2732."
+NGA91-5-6-1,6 May,1991,,,"10,000","7,289",,,72.890,,,,"97,667,632",10.2388,7.4631,,,,,,,,,,,,,https://public.emdat.be
+,,,Kaduna,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Bauchi,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+NGA91-12-31-1,31 Dec,1991,,,"59,478","7,654",,,12.869,,,,"97,667,632",60.8984,7.8368,,,,,,,,,,,,,"Dalhat, M.M., Isa, A.N., Nguku, P., Nasir, S.G., Urban, K., Abdulaziz, M., Dankoli, R.S., Nsubuga, P. and Poggensee, G., 2014. Descriptive characterization of the 2010 cholera outbreak in Nigeria. BMC public health, 14(1), p.1167."
+NGA92-2-1-1,1 Feb,1992,Cross River,,,100,,,,,,,"100,161,710",,0.0998,,,,,,,,,,,,,https://public.emdat.be
+NGA96-1-1-1,1 Jan,1996,Oyo,Ibadan,"1,384",92,,,6.647,720M:640F,"<4yrs 26 cases, 5-9yrs 91 cases, 10-14yrs 185 cases, Adults 857 cases",,"110,668,794",1.2506,0.0831,,,,Dry season,,,,,,,,,"Lawoyin, T.O., Ogunbodede, N.A., Olumide, E.A.A. and Onadeko, M.O., 1999. Outbreak of cholera in Ibadan, Nigeria. European journal of epidemiology, 15(4), pp.365-368."
+NGA96-2-19-1,19 Feb,1996,,,"12,374","1,193",,,9.641,,,,"110,668,794",11.1811,1.0780,,,,,,,,,,,,,https://public.emdat.be
+,,,Borno,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Kano,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Kebbi,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Oyo,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Niger,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Taraba,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Yobe,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+NGA96-3-1-1,1 Mar,1996,,,"1,487",99,,,6.658,,,,"110,668,794",1.3436,0.0895,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+NGA96-3-1-2,1 Mar,1996,,,"1,000",15,,,1.500,,,,"110,668,794",0.9036,0.0136,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Kano,,,,,,,,,,,,,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Kwara,,,,,,,,,,,,,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Ondo,,,,,,,,,,,,,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Oyo ,,,,,,,,,,,,,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+NGA96-3-6-1,6 Mar,1996,,,"2,662",288,,,10.819,,,,"110,668,794",2.4054,0.2602,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Kano,,"1,871",107,,,5.719,,,,"110,668,794",1.6906,0.0967,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Kwara,,272,77,,,28.309,,,,"110,668,794",0.2458,0.0696,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Niger,,304,97,,,31.908,,,,"110,668,794",0.2747,0.0876,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Ondo,,,,,,,,,,,,,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Oyo ,,215,7,,,3.256,,,,"110,668,794",0.1943,0.0063,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+NGA96-3-7-1,7 Mar,1996,,,"2,836",299,,,10.543,,,,"110,668,794",2.5626,0.2702,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+NGA96-3-15-1,15 Mar,1996,,,"6,117",487,,,7.961,,,,"110,668,794",5.5273,0.4401,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Kano,,"4,388",150,,,3.418,,,,"110,668,794",3.9650,0.1355,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Kaduna,,11,3,,,27.273,,,,"110,668,794",0.0099,0.0027,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Kebbi,,525,122,,,23.238,,,,"110,668,794",0.4744,0.1102,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Kwara,,272,72,,,26.471,,,,"110,668,794",0.2458,0.0651,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Niger,,304,97,,,31.908,,,,"110,668,794",0.2747,0.0876,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+NGA96-3-16-1,16 Mar,1996,Kano,,"5,600",340,,,6.071,,"0-4 yrs 459 cases, 5-14 yrs 348 cases, 15-29 yrs 430 cases, >30 yrs 399 cases",,"110,668,794",5.0601,0.3072,,,Informal water selling ,,,Handwashing,,,,,,,"Hutin, Y., Luby, S. and Paquet, C., 2003. A large cholera outbreak in Kano City, Nigeria: the importance of hand washing with soap and the danger of street-vended water. Journal of water and health, 1(1), pp.45-52."
+NGA99-3-24-1,24 Mar,1999,,,"1,122",89,,,7.932,,,,"199,260,063",0.5631,0.0447,,,,,,,,,,,,,https://public.emdat.be
+,,,Kano,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Adamawa,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Edo,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+NGA99-5-12-1,12 May,1999,Kano,,815,28,,,3.436,,,,"199,260,063",0.4090,0.0141,,,Domestic water supply,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+NGA99-5-12-2,12 May,1999,Tofa LGA,,182,19,,,10.440,,,,"199,260,063",0.0913,0.0095,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+NGA99-5-12-3,12 May,1999,Adamawa ,,76,18,,,23.684,,,,"199,260,063",0.0381,0.0090,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+NGA99-5-12-4,12 May,1999,Edo,,49,24,,,48.980,,,,"199,260,063",0.0246,0.0120,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+NGA99-6-1-1,1 Jul,1999,Enugu,,119,25,,,21.008,,,,"199,260,063",0.0597,0.0125,,,,,,,,,,,,,https://public.emdat.be
+NGA00-5-1-1,1 May,2000,Kano,,"1,215",27,,,2.222,,,,"122,283,850",0.9936,0.0221,,,,,,,,,,,,,https://public.emdat.be
+NGA01-11-27-1,27 Nov,2001,,,724,52,,,7.182,,,,"125,394,046",0.5774,0.0415,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Akwa,,25,8,,,32.000,,,,"125,394,046",0.0199,0.0064,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Kwara,,124,16,,,12.903,,,,"125,394,046",0.0989,0.0128,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Kano,,575,28,,,4.870,,,,"125,394,046",0.4586,0.0223,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+NGA01-11-14-1,14 Nov,2001,,,"2,170",80,,,3.687,,,,"125,394,046",1.7305,0.0638,,,,,,,,,,,,,https://public.emdat.be
+,,,Kano,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Akwa,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Kwara,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Jigawa,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+NGA01-12-3-1,3 Dec,2001,Kano,,"2,050",80,,,3.902,,,,"125,394,046",1.6348,0.0638,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+NGA01-12-3-2,3 Dec,2001,Jigawa,,120,,,,0.000,,,,"125,394,046",0.0957,,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+NGA02-11-21-1,21 Nov,2002,Kano,,164,12,,,7.317,,,,"128,596,076",0.1275,0.0093,,,,,,,,,,,,,https://public.emdat.be
+NGA04-11-15-1,15 Nov,2004,,,"1,316",76, ,,5.775,,,,"135,320,422",0.9725,0.0562,,,,,,,,,,,,,https://public.emdat.be
+,,,Kano,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Jigawa,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+NGA04-11-16-1,16 Nov,2004,Edo,,300,50,,,16.667,,,,"135,320,422",0.2217,0.0369,,,,,,,,,,,,,https://public.emdat.be
+NGA04-12-3-1,3 Dec,2004,,,"1,616",126,,,7.797,,,,"135,320,422",1.1942,0.0931,,,Water shortage/access,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Kano,,"1,316",76,,,5.775,,,,"135,320,422",0.9725,0.0562,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+,,,Edo,,300,50,,,16.667,,,,"135,320,422",0.2217,0.0369,,,,,,,,,,,,,https://www.who.int/csr/don/archive/disease/cholera/en/
+NGA05-5-16-1,16 May,2005,Borno,Ngala,98,12,,,12.245,,,,"138,865,016",0.0706,0.0086,,,,,,,,,,,,,https://public.emdat.be
+NGA08-3-1-1,1 Mar,2008,Benue,Madurdi,,35,,,,,,,"150,269,623",,0.0233,,,Poor water quality ,,,Hygiene ,,,,,,,https://public.emdat.be
+,,,,Oturkpo,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+NGA08-7-16-1,16 Jul,2008,Kaduna,Zaria,30,6,,30,20.000,,,,"150,269,623",0.0200,0.0040,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA08-9-1-1,1 Sep,2008,,,,97,,,,,,,"150,269,623",,0.0646,,,Poor water quality ,,,,,,,,,,https://public.emdat.be
+,,,Katsina,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Zamfara,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Bauchi,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Kano,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+NGA08-9-26-1,26 Sep,2008,Zamfara,Asako,100,18,,100,18.000,,,,"150,269,623",0.0665,0.0120,,,Contaminated wells,,,,,,,,Education campaign,,https://promedmail.org/promed-posts/
+,,,,Bungudu,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA09-6-1-1,1 Jun,2009,Adamawa,,,20,,,,,,,"154,324,933",,0.0130,,,,,,,,,,,,,https://public.emdat.be
+NGA09-9-30-1,30 Sep,2009,Jigawa,,400,88,,,22.000,,,,"154,324,933",0.2592,0.0570,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA09-10-1-1,1 Oct,2009,Borno,Gwoza,24,4,,,16.667,,,,"154,324,933",0.0156,0.0026,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA09-10-16-1,16 Oct,2009,Borno,,1335,149,,1335,11.161,,,,"154,324,933",0.8651,0.0965,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Adamawa,,1000,77,,1000,7.700,,,,"154,324,933",0.6480,0.0499,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Jigawa,,400,11,,,2.750,,,,"154,324,933",0.2592,0.0071,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Taraba,,120,9,,,7.500,,,,"154,324,933",0.0778,0.0058,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA09-10-23-1,23 Oct,2009,Borno,,,70,,,,,,,"154,324,933",,0.0454,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA09-10-24-1,24 Oct,2009,Adamawa,Michika,,20,,,,,,,"154,324,933",,0.0130,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA09-11-4-1,4 Nov,2009,Adamawa,,200,20,,,10.000,,,,"154,324,933",0.1296,0.0130,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA09-11-20-1,20 Nov,2009,Borno,Taraba,,9,,,,,,,"154,324,933",,0.0058,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-1-1-1,1 Jan,2010,,,"44,456","1,734",,,3.900,"7,997F:6,924M","<5 3,940, 5-17 4,680, 18-44 5,015, 45-65 1,282, >65 297",,"158,503,197",28.0474,1.0940,Displacement ,,,Heavy rainfall,,,,,,,,,"Dalhat, M.M., Isa, A.N., Nguku, P., Nasir, S.G., Urban, K., Abdulaziz, M., Dankoli, R.S., Nsubuga, P. and Poggensee, G., 2014. Descriptive characterization of the 2010 cholera outbreak in Nigeria. BMC public health, 14(1), p.1167."
+,,,Adamawa,,"2,004",123,,,6.138,,,,"158,503,197",1.2643,0.0776,,,,,,,,,,,,,"Dalhat, M.M., Isa, A.N., Nguku, P., Nasir, S.G., Urban, K., Abdulaziz, M., Dankoli, R.S., Nsubuga, P. and Poggensee, G., 2014. Descriptive characterization of the 2010 cholera outbreak in Nigeria. BMC public health, 14(1), p.1167."
+,,,Bauchi,,"4,660",151,,,3.240,,,,"158,503,197",2.9400,0.0953,,,,,,,,,,,,,"Dalhat, M.M., Isa, A.N., Nguku, P., Nasir, S.G., Urban, K., Abdulaziz, M., Dankoli, R.S., Nsubuga, P. and Poggensee, G., 2014. Descriptive characterization of the 2010 cholera outbreak in Nigeria. BMC public health, 14(1), p.1167."
+,,,Borno,,"2,616",30,,,1.147,,,,"158,503,197",1.6504,0.0189,,,,,,,,,,,,,"Dalhat, M.M., Isa, A.N., Nguku, P., Nasir, S.G., Urban, K., Abdulaziz, M., Dankoli, R.S., Nsubuga, P. and Poggensee, G., 2014. Descriptive characterization of the 2010 cholera outbreak in Nigeria. BMC public health, 14(1), p.1167."
+,,,Gombe,,"1,089",151,,,13.866,,,,"158,503,197",0.6871,0.0953,,,,,,,,,,,,,"Dalhat, M.M., Isa, A.N., Nguku, P., Nasir, S.G., Urban, K., Abdulaziz, M., Dankoli, R.S., Nsubuga, P. and Poggensee, G., 2014. Descriptive characterization of the 2010 cholera outbreak in Nigeria. BMC public health, 14(1), p.1167."
+,,,Jigawa,,741,35,,,4.723,,,,"158,503,197",0.4675,0.0221,,,,,,,,,,,,,"Dalhat, M.M., Isa, A.N., Nguku, P., Nasir, S.G., Urban, K., Abdulaziz, M., Dankoli, R.S., Nsubuga, P. and Poggensee, G., 2014. Descriptive characterization of the 2010 cholera outbreak in Nigeria. BMC public health, 14(1), p.1167."
+,,,Kaduna,,778,40,,,5.141,,,,"158,503,197",0.4908,0.0252,,,,,,,,,,,,,"Dalhat, M.M., Isa, A.N., Nguku, P., Nasir, S.G., Urban, K., Abdulaziz, M., Dankoli, R.S., Nsubuga, P. and Poggensee, G., 2014. Descriptive characterization of the 2010 cholera outbreak in Nigeria. BMC public health, 14(1), p.1167."
+,,,Katsina,,"5,704",200,,,3.506,,,,"158,503,197",3.5987,0.1262,,,,,,,,,,,,,"Dalhat, M.M., Isa, A.N., Nguku, P., Nasir, S.G., Urban, K., Abdulaziz, M., Dankoli, R.S., Nsubuga, P. and Poggensee, G., 2014. Descriptive characterization of the 2010 cholera outbreak in Nigeria. BMC public health, 14(1), p.1167."
+,,,Sokoto,,248,22,,,8.871,,,,"158,503,197",0.1565,0.0139,,,,,,,,,,,,,"Dalhat, M.M., Isa, A.N., Nguku, P., Nasir, S.G., Urban, K., Abdulaziz, M., Dankoli, R.S., Nsubuga, P. and Poggensee, G., 2014. Descriptive characterization of the 2010 cholera outbreak in Nigeria. BMC public health, 14(1), p.1167."
+,,,Taraba,,536,37,,,6.903,,,,"158,503,197",0.3382,0.0233,,,,,,,,,,,,,"Dalhat, M.M., Isa, A.N., Nguku, P., Nasir, S.G., Urban, K., Abdulaziz, M., Dankoli, R.S., Nsubuga, P. and Poggensee, G., 2014. Descriptive characterization of the 2010 cholera outbreak in Nigeria. BMC public health, 14(1), p.1167."
+,,,Yobe,,"2,735",136,,,4.973,,,,"158,503,197",1.7255,0.0858,,,,,,,,,,,,,"Dalhat, M.M., Isa, A.N., Nguku, P., Nasir, S.G., Urban, K., Abdulaziz, M., Dankoli, R.S., Nsubuga, P. and Poggensee, G., 2014. Descriptive characterization of the 2010 cholera outbreak in Nigeria. BMC public health, 14(1), p.1167."
+NGA10-1-4-1,4 Jan,2010,,,"29,115","1,191",,,4.091,,,,"158,503,197",18.3687,0.7514,Displacement ,,,Heavy rainfall,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-5-1-1,1 May,2010,,,,,,,,53F:39M,"<5 yrs 23.9%, 13-25 yrs 23.9%, >25 yrs 34.8%",,,,,,,,,,,Women were less likely to be educated in good public health ,,,,,,"Adeneye, A.K., Musa, A.Z., Oyedeji, K.S., Oladele, D., Ochoga, M., Akinsinde, K.A., Niemogha, M.T., Nwaokorie, F.O., Bamidele, T.A., Brai, B.I. and Omonigbehin, E.A., 2016. Risk factors associated with cholera outbreak in Bauchi and Gombe states in north East Nigeria. Journal of Public Health and Epidemiology, 8(11), pp.286-296."
+,,,Bauchi,,73,,,,,,,,"158,503,197",0.0461,,,,,,,,,,,,,,"Adeneye, A.K., Musa, A.Z., Oyedeji, K.S., Oladele, D., Ochoga, M., Akinsinde, K.A., Niemogha, M.T., Nwaokorie, F.O., Bamidele, T.A., Brai, B.I. and Omonigbehin, E.A., 2016. Risk factors associated with cholera outbreak in Bauchi and Gombe states in north East Nigeria. Journal of Public Health and Epidemiology, 8(11), pp.286-296."
+,,,Gombe,,"1,998",113,,,5.656,,,,"158,503,197",1.2605,0.0713,,,,,,,,,,,,,"Adeneye, A.K., Musa, A.Z., Oyedeji, K.S., Oladele, D., Ochoga, M., Akinsinde, K.A., Niemogha, M.T., Nwaokorie, F.O., Bamidele, T.A., Brai, B.I. and Omonigbehin, E.A., 2016. Risk factors associated with cholera outbreak in Bauchi and Gombe states in north East Nigeria. Journal of Public Health and Epidemiology, 8(11), pp.286-296."
+,,,,Akko,266,14,,,5.263,,,,"158,503,197",0.1678,0.0088,,,,,,,,,,,,,"Adeneye, A.K., Musa, A.Z., Oyedeji, K.S., Oladele, D., Ochoga, M., Akinsinde, K.A., Niemogha, M.T., Nwaokorie, F.O., Bamidele, T.A., Brai, B.I. and Omonigbehin, E.A., 2016. Risk factors associated with cholera outbreak in Bauchi and Gombe states in north East Nigeria. Journal of Public Health and Epidemiology, 8(11), pp.286-296."
+,,,,Balanga,608,23,,,3.783,,,,"158,503,197",0.3836,0.0145,,,,,,,,,,,,,"Adeneye, A.K., Musa, A.Z., Oyedeji, K.S., Oladele, D., Ochoga, M., Akinsinde, K.A., Niemogha, M.T., Nwaokorie, F.O., Bamidele, T.A., Brai, B.I. and Omonigbehin, E.A., 2016. Risk factors associated with cholera outbreak in Bauchi and Gombe states in north East Nigeria. Journal of Public Health and Epidemiology, 8(11), pp.286-296."
+,,,,Billiri,11,2,,,18.182,,,,"158,503,197",0.0069,0.0013,,,,,,,,,,,,,"Adeneye, A.K., Musa, A.Z., Oyedeji, K.S., Oladele, D., Ochoga, M., Akinsinde, K.A., Niemogha, M.T., Nwaokorie, F.O., Bamidele, T.A., Brai, B.I. and Omonigbehin, E.A., 2016. Risk factors associated with cholera outbreak in Bauchi and Gombe states in north East Nigeria. Journal of Public Health and Epidemiology, 8(11), pp.286-296."
+,,,,Gombe,152,44,,,28.947,,,,"158,503,197",0.0959,0.0278,,,,,,,,,,,,,"Adeneye, A.K., Musa, A.Z., Oyedeji, K.S., Oladele, D., Ochoga, M., Akinsinde, K.A., Niemogha, M.T., Nwaokorie, F.O., Bamidele, T.A., Brai, B.I. and Omonigbehin, E.A., 2016. Risk factors associated with cholera outbreak in Bauchi and Gombe states in north East Nigeria. Journal of Public Health and Epidemiology, 8(11), pp.286-296."
+,,,,Kaltungo,84,7,,,8.333,,,,"158,503,197",0.0530,0.0044,,,,,,,,,,,,,"Adeneye, A.K., Musa, A.Z., Oyedeji, K.S., Oladele, D., Ochoga, M., Akinsinde, K.A., Niemogha, M.T., Nwaokorie, F.O., Bamidele, T.A., Brai, B.I. and Omonigbehin, E.A., 2016. Risk factors associated with cholera outbreak in Bauchi and Gombe states in north East Nigeria. Journal of Public Health and Epidemiology, 8(11), pp.286-296."
+,,,,Kwami,5,1,,,20.000,,,,"158,503,197",0.0032,0.0006,,,,,,,,,,,,,"Adeneye, A.K., Musa, A.Z., Oyedeji, K.S., Oladele, D., Ochoga, M., Akinsinde, K.A., Niemogha, M.T., Nwaokorie, F.O., Bamidele, T.A., Brai, B.I. and Omonigbehin, E.A., 2016. Risk factors associated with cholera outbreak in Bauchi and Gombe states in north East Nigeria. Journal of Public Health and Epidemiology, 8(11), pp.286-296."
+,,,,Nafada,8,1,,,12.500,,,,"158,503,197",0.0050,0.0006,,,,,,,,,,,,,"Adeneye, A.K., Musa, A.Z., Oyedeji, K.S., Oladele, D., Ochoga, M., Akinsinde, K.A., Niemogha, M.T., Nwaokorie, F.O., Bamidele, T.A., Brai, B.I. and Omonigbehin, E.A., 2016. Risk factors associated with cholera outbreak in Bauchi and Gombe states in north East Nigeria. Journal of Public Health and Epidemiology, 8(11), pp.286-296."
+,,,,Shongom,10,2,,,20.000,,,,"158,503,197",0.0063,0.0013,,,,,,,,,,,,,"Adeneye, A.K., Musa, A.Z., Oyedeji, K.S., Oladele, D., Ochoga, M., Akinsinde, K.A., Niemogha, M.T., Nwaokorie, F.O., Bamidele, T.A., Brai, B.I. and Omonigbehin, E.A., 2016. Risk factors associated with cholera outbreak in Bauchi and Gombe states in north East Nigeria. Journal of Public Health and Epidemiology, 8(11), pp.286-296."
+,,,,Yamaltu/Deba,254,19,,,7.480,,,,"158,503,197",0.1602,0.0120,,,,,,,,,,,,,"Adeneye, A.K., Musa, A.Z., Oyedeji, K.S., Oladele, D., Ochoga, M., Akinsinde, K.A., Niemogha, M.T., Nwaokorie, F.O., Bamidele, T.A., Brai, B.I. and Omonigbehin, E.A., 2016. Risk factors associated with cholera outbreak in Bauchi and Gombe states in north East Nigeria. Journal of Public Health and Epidemiology, 8(11), pp.286-296."
+NGA10-5-24-1,24 May,2010,Federal Capital Territory ,Gwagwalada,118,6,,,5.085,,,,"158,503,197",0.0744,0.0038,,,,,,,,,,,Encourage reporting instead of self-medication ,,https://promedmail.org/promed-posts/
+NGA10-6-18-1,18 Jun,2010,Rivers,,78,6,,78,7.692,,,,"158,503,197",0.0492,0.0038,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-6-21-1,21 Jun,2010,Adamawa,,86,21,,,24.419,,,,"158,503,197",0.0543,0.0132,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-7-1-1,1 Jul,2010,Bauchi,,"3,300",,,,,,,,"158,503,197",2.0820,,,,,,,,,,,,,MSF,https://promedmail.org/promed-posts/
+,,,Borno,Maiduguri,300,7,,,2.333,,,,"158,503,197",0.1893,0.0044,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Zamfara,,"1,000",100,,,10.000,,,,"158,503,197",0.6309,0.0631,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-7-23-1,23 Jul,2010,,,"41,787","1,716",,,4.107,,,,"158,503,197",26.3635,1.0826,,,Contaminated wells,Heavy rainfall,,Sanitation,,,,,,,https://public.emdat.be
+,,,Borno,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Bauchi,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Jigawa,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Rivers,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Cross River,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Taraba,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Kaduna,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Adamawa,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Gombe,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Katsina,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Yobe,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+NGA10-7-28-1,28 Jul,2010,Bauchi,,160,6,,,3.750,,,,"158,503,197",0.1009,0.0038,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-8-12-1,12 Aug,2010,Borno,,115,40,,,34.783,,,,"158,503,197",0.0726,0.0252,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-8-12-2,12 Aug,2010,Borno,,25,50,,,,,,,"158,503,197",0.0158,0.0315,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-8-15-1,15 Aug,2010,Bauchi,,777,31,,,3.990,,,,"158,503,197",0.4902,0.0196,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-8-16-1,16 Aug,2010,,,"1,315",87,,,6.616,,,,"158,503,197",0.8296,0.0549,,,Contaminated wells,,,Hygiene ,,,,,Education campaign,,https://promedmail.org/promed-posts/
+,,,Borno,,115,40,,,34.783,,,,"158,503,197",0.0726,0.0252,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Bauchi,,"1,200",47,,,3.917,,,,"158,503,197",0.7571,0.0297,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-8-17-1,17 Aug,2010,,,"1,742",67,,,,,,,"158,503,197",1.0990,0.0423,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Maiduguri,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Bauchi,,1368,31,,,2.266,,,,"158,503,197",0.8631,0.0196,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Ganjuwa,,284,20,,,7.042,,,,"158,503,197",0.1792,0.0126,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-8-18-1,18 Aug,2010,Bauchi,,"1,700",67,,,3.941,,,,"158,503,197",1.0725,0.0423,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-8-19-1,19 Aug,2010,,,"4,665",231,,,4.952,,,,"158,503,197",2.9432,0.1457,,,,,,,,,,,Distribution of food and medicine ,"USAID, MSF, UNICEF ",https://promedmail.org/promed-posts/
+,,,Borno,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Bauchi,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-8-20-1,20 Aug,2010,,,837,30,,,3.584,,,,"158,503,197",0.5281,0.0189,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-8-21-1,21 Aug,2010,Adamawa,,139,15,,,10.791,,,,"158,503,197",0.0877,0.0095,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-8-23-1,23 Aug,2010,,,"5,329",129,,,2.421,,,,"158,503,197",3.3621,0.0814,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Bauchi,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Borno,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-8-24-1,24 Aug,2010,,,"5,000",283,,,5.660,,,,"158,503,197",3.1545,0.1785,,,,Heavy rainfall,Rural,,,,,,,,https://promedmail.org/promed-posts/
+,,,Yobe,,443,42,,,9.481,,,,"158,503,197",0.2795,0.0265,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Katsina,,50,6,,,12.000,,,,"158,503,197",0.0315,0.0038,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-8-25-1,25 Aug,2010,,,"6,347",352,,,5.546,,,,"158,503,197",4.0043,0.2221,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Bauchi,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Borno,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-8-27-1,27 Aug,2010,Adamawa,,"1,200",100,,,8.333,,,,"158,503,197",0.7571,0.0631,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Sukur,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Pallam,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Suhu,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Belbel,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Girjiya,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Gulak,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Shuwa,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Hyambula,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-8-30-1,30 Aug,2010,,,"10,134",,,,,,,,"158,503,197",6.3936,,,,,,,,,,,,,RedCross,https://promedmail.org/promed-posts/
+,,,Bauchi,,"2,417",72,,,2.979,,,,"158,503,197",1.5249,0.0454,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Borno,,"2,617",162,,,6.190,,,,"158,503,197",1.6511,0.1022,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-9-1-1,1 Sep,2010,,,"16,487",800,,,4.852,,,,"158,503,197",10.4017,0.5047,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-9-2-1,2 Sep,2010,Zamfara,,54,7,,,12.963,,,,"158,503,197",0.0341,0.0044,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Bungudu,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Gus,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Maradun,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Shinkafi,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Zurmi,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-9-3-1,3 Sep,2010,Jigawa,Bashuri,181,11,6,,6.077,52.5%M,"0-4yrs highest attack rate, 30yrs most cases",,"158,503,197",0.1142,0.0069,,,,,,Hygiene ,,,Contact with case ,,,,"Gidado, S., Awosanya, E., Haladu, S., Ayanleke, H.B., Idris, S., Mamuda, I., Mohammed, A., Michael, C.A., Waziri, N.E. and Nguku, P., 2018. Cholera outbreak in a naïve rural community in Northern Nigeria: the importance of hand washing with soap, September 2010. The Pan African Medical Journal, 30."
+NGA10-9-5-1,5 Sep,2010,Gombe,,735,233,,,31.701,,,,"158,503,197",0.4637,0.1470,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-9-6-1,6 Sep,2010,Jigawa,,100,5,,,5.000,,,,"158,503,197",0.0631,0.0032,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Buji,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Gwaram,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-9-7-1,7 Sep,2010,Federal Capital Territory ,Abuja,137,2,,,1.460,,,,"158,503,197",0.0864,0.0013,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-9-8-1,8 Sep,2010,,,"13,000",781,,,6.008,,,,"158,503,197",8.2017,0.4927,,,,,,,,,,,Vaccination ordered,,https://promedmail.org/promed-posts/
+,,,Bauchi,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Borno,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Adamawa,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Gombe,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Yobe,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Taraba,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Jigawa,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Kaduna,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Katsina,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Zamfara,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Sokoto,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-9-12-1,12 Sep,2010,,,,800,,,,,,,"158,503,197",,0.5047,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-9-16-1,16 Sep,2010,Katsina,Safana,,15,,,,,,,"158,503,197",,0.0095,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-9-17-1,17 Sep,2010,Jigawa,,86,52,,,60.465,,,,"158,503,197",0.0543,0.0328,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Bauchi,,"1,725",53,,,3.072,,,,"158,503,197",1.0883,0.0334,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Borno,,"1,090",80,,,7.339,,,,"158,503,197",0.6877,0.0505,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Adamawa,,986,56,,,5.680,,,,"158,503,197",0.6221,0.0353,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Yobe,,458,46,,,10.044,,,,"158,503,197",0.2890,0.0290,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Rivers,,81,3,,,3.704,,,,"158,503,197",0.0511,0.0019,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-9-18-1,18 Sep,2010,Yobe,,793,80,,,10.088,,,,"158,503,197",0.5003,0.0505,,,,Dry season,,,,,,,ORS and antimicrobial have been supplied ,,https://promedmail.org/promed-posts/
+,,,,Baden,647,15,,,2.318,,,,"158,503,197",0.4082,0.0095,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Potiskum,408,26,,,6.373,,,,"158,503,197",0.2574,0.0164,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-9-23-1,23 Sep,2010,Zamfara,,,103,,,,,,,"158,503,197",,0.0650,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-10-21-1,21 Oct,2010,Sokoto,Wurno,"1,185",,,,,,,,"158,503,197",0.7476,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-10-26-1,26 Oct,2010,,,"40,000","1,500",,,3.750,,,,"158,503,197",25.2361,0.9464,,,,Heavy rainfall,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-10-28-1,28 Oct,2010,,,"37,289","1,434",,,3.846,,,,"158,503,197",23.5257,0.9047,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Adamawa,,"1,764",118,,,6.689,,,,"158,503,197",1.1129,0.0744,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Anambra,,6,0,,,0.000,,,,"158,503,197",0.0038,0.0000,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Bauchi,,"10,819",182,,,1.682,,,,"158,503,197",6.8257,0.1148,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Borno,,"9,379",377,,,4.020,,,,"158,503,197",5.9172,0.2379,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Gombe,,"3,190",129,,,4.044,,,,"158,503,197",2.0126,0.0814,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Jugawa,,718,36,,,5.014,,,,"158,503,197",0.4530,0.0227,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Kaduna,,969,61,,,6.295,,,,"158,503,197",0.6113,0.0385,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Taraba,,553,41,,,7.414,,,,"158,503,197",0.3489,0.0259,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Yobe,,"1,479",110,,,7.437,,,,"158,503,197",0.9331,0.0694,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Kano,,165,15,,,9.091,,,,"158,503,197",0.1041,0.0095,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Sokoto,,"1,210",0,,,0.000,,,,"158,503,197",0.7634,0.0000,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Zamfara,,899,50,,,5.562,,,,"158,503,197",0.5672,0.0315,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Federal Capital Territory ,,137,2,,,1.460,,,,"158,503,197",0.0864,0.0013,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Osun,,42,2,,,4.762,,,,"158,503,197",0.0265,0.0013,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Rivers,,81,3,,,3.704,,,,"158,503,197",0.0511,0.0019,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA10-11-1-1,1 Nov,2010,Bauchi,,"11,220",100,,,0.891,,,,"158,503,197",7.0787,0.0631,,,,,,,,,,,Chlorinate wells and houses ,,https://promedmail.org/promed-posts/
+NGA11-1-14-1,14 Jan,2011,Niger,Lavun,22,13,,,59.091,,,,"162,805,071",0.0135,0.0080,,,Poor water quality ,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Edati,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA11-2-2-1,2 Feb,2011,Kano,,30,0,,,0.000,,,,"162,805,071",0.0184,0.0000,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA11-2-11-1,11 Feb,2011,,Kogi,,17,,,,,,,"162,805,071",,0.0104,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA11-4-8-1,8 Apr,2011,Taraba,Donga,60,24,,,40.000,,,,"162,805,071",0.0369,0.0147,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA11-6-2-1,2 Jun,2011,Abia,Bende ,,30,,,,,,,"162,805,071",,0.0184,,,Contaminated wells,,,Sanitation,,,,,,,https://promedmail.org/promed-posts/
+NGA11-6-9-1,9 Jun,2011,Adamawa,,200,30,,,15.000,,,,"162,805,071",0.1228,0.0184,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Maiha,,17,,,,,,,"162,805,071",,0.0104,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Mubi South ,,19,,,,,,,"162,805,071",,0.0117,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA11-6-25-1,25 Jun,2011,Niger,Minna,457,13,,,2.845,,,,"162,805,071",0.2807,0.0080,,,Contaminated wells,,,,,,,,Medication supplied ,,https://promedmail.org/promed-posts/
+NGA11-6-27-1,27 Jun,2011,,,"21,382",694,,,3.246,,,,"162,805,071",13.1335,0.4263,,,,,,,,,,,,,https://public.emdat.be
+,,,Plateau,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Bauchi,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Taraba,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Adamawa,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Kaduna,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Yobe,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Nasarawa,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Oyo,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Kogi,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+NGA11-6-29-1,29 Jun,2011,Plateau,,300,10,,,3.333,,,,"162,805,071",0.1843,0.0061,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA11-7-8-1,8 Jul,2011,,,"1,668",43,,,2.578,,,,"162,805,071",1.0245,0.0264,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Plateau,,410,24,,,5.854,,,,"162,805,071",0.2518,0.0147,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Bauchi,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Taraba,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Adamawa,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Kaduna,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA11-8-10-1,10 Aug,2011,Osun,,148,8,5,,5.405,76F:72M,"33 cases <5 yrs, 25 cases 5-14 yrs, 90 cases >15 years",,"162,805,071",0.0909,0.0049,,,,Heavy rainfall,,,,,,,,,"Fatiregun, A., Olowookere, S., Isere, E. and Ayede, A., 2012. Epidemiology of an outbreak of cholera in a south-west state of Nigeria. Southern African Journal of Epidemiology and Infection, 27(4), pp.201-204."
+,,,,Ede North,42,,,,,,,,"162,805,071",0.0258,,,,,,,,,,,,,,"Fatiregun, A., Olowookere, S., Isere, E. and Ayede, A., 2012. Epidemiology of an outbreak of cholera in a south-west state of Nigeria. Southern African Journal of Epidemiology and Infection, 27(4), pp.201-204."
+,,,,Ede South,31,,,,,,,,"162,805,071",0.0190,,,,,,,,,,,,,,"Fatiregun, A., Olowookere, S., Isere, E. and Ayede, A., 2012. Epidemiology of an outbreak of cholera in a south-west state of Nigeria. Southern African Journal of Epidemiology and Infection, 27(4), pp.201-204."
+,,,,Osogbo,21,,,,,,,,"162,805,071",0.0129,,,,,,,,,,,,,,"Fatiregun, A., Olowookere, S., Isere, E. and Ayede, A., 2012. Epidemiology of an outbreak of cholera in a south-west state of Nigeria. Southern African Journal of Epidemiology and Infection, 27(4), pp.201-204."
+,,,,Isokan,15,,,,,,,,"162,805,071",0.0092,,,,,,,,,,,,,,"Fatiregun, A., Olowookere, S., Isere, E. and Ayede, A., 2012. Epidemiology of an outbreak of cholera in a south-west state of Nigeria. Southern African Journal of Epidemiology and Infection, 27(4), pp.201-204."
+,,,,Ife East,10,,,,,,,,"162,805,071",0.0061,,,,,,,,,,,,,,"Fatiregun, A., Olowookere, S., Isere, E. and Ayede, A., 2012. Epidemiology of an outbreak of cholera in a south-west state of Nigeria. Southern African Journal of Epidemiology and Infection, 27(4), pp.201-204."
+,,,,Ayedire,9,,,,,,,,"162,805,071",0.0055,,,,,,,,,,,,,,"Fatiregun, A., Olowookere, S., Isere, E. and Ayede, A., 2012. Epidemiology of an outbreak of cholera in a south-west state of Nigeria. Southern African Journal of Epidemiology and Infection, 27(4), pp.201-204."
+,,,,Olorunda,7,,,,,,,,"162,805,071",0.0043,,,,,,,,,,,,,,"Fatiregun, A., Olowookere, S., Isere, E. and Ayede, A., 2012. Epidemiology of an outbreak of cholera in a south-west state of Nigeria. Southern African Journal of Epidemiology and Infection, 27(4), pp.201-204."
+,,,,Egbedore,5,,,,,,,,"162,805,071",0.0031,,,,,,,,,,,,,,"Fatiregun, A., Olowookere, S., Isere, E. and Ayede, A., 2012. Epidemiology of an outbreak of cholera in a south-west state of Nigeria. Southern African Journal of Epidemiology and Infection, 27(4), pp.201-204."
+,,,,Ife South,3,,,,,,,,"162,805,071",0.0018,,,,,,,,,,,,,,"Fatiregun, A., Olowookere, S., Isere, E. and Ayede, A., 2012. Epidemiology of an outbreak of cholera in a south-west state of Nigeria. Southern African Journal of Epidemiology and Infection, 27(4), pp.201-204."
+,,,,Ife Central,2,,,,,,,,"162,805,071",0.0012,,,,,,,,,,,,,,"Fatiregun, A., Olowookere, S., Isere, E. and Ayede, A., 2012. Epidemiology of an outbreak of cholera in a south-west state of Nigeria. Southern African Journal of Epidemiology and Infection, 27(4), pp.201-204."
+,,,,Atakumosa West,2,,,,,,,,"162,805,071",0.0012,,,,,,,,,,,,,,"Fatiregun, A., Olowookere, S., Isere, E. and Ayede, A., 2012. Epidemiology of an outbreak of cholera in a south-west state of Nigeria. Southern African Journal of Epidemiology and Infection, 27(4), pp.201-204."
+,,,,Ayedaade,1,,,,,,,,"162,805,071",0.0006,,,,,,,,,,,,,,"Fatiregun, A., Olowookere, S., Isere, E. and Ayede, A., 2012. Epidemiology of an outbreak of cholera in a south-west state of Nigeria. Southern African Journal of Epidemiology and Infection, 27(4), pp.201-204."
+NGA11-8-24-1,24 Aug,2011,Osun,,,8,,,,,,,"162,805,071",,0.0049,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA11-8-27-1,27 Aug,2011,Sokoto,Rabah,70,2,,,2.857,,,,"162,805,071",0.0430,0.0012,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA11-8-27-2,27 Aug,2011,Yobe,Potiskum,81,6,,,7.407,,,,"162,805,071",0.0498,0.0037,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA11-8-28-1,28 Aug,2011,Oyo ,Ibadan North-West,16,4,,,25.000,,,,"162,805,071",0.0098,0.0025,,,,Heavy rainfall,,Sanitation & hygiene ,,,,,,,https://promedmail.org/promed-posts/
+NGA11-8-30-1,30 Aug,2011,Sokoto,,70,2,,,2.857,,,,"162,805,071",0.0430,0.0012,,,,Heavy rainfall,,,,,,,,,https://promedmail.org/promed-posts/
+NGA11-8-30–2,30 Aug,2011,Yobe,,690,35,,,5.072,,,,"162,805,071",0.4238,0.0215,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA11-9-6-1,6 Sep,2011,Bauchi,,30,10,,,33.333,,,,"162,805,071",0.0184,0.0061,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA11-9-14-1,14 Sep,2011,Osun,Ede,80,0,,,0.000,,,,"162,805,071",0.0491,0.0000,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA11-9-16-1,16 Sep,2011,Oyo ,,947,30,,,3.168,,,,"162,805,071",0.5817,0.0184,,,,Heavy rainfall,,,,,,,,,https://promedmail.org/promed-posts/
+NGA11-10-12-1,12 Oct,2011,Adamawa,,55,5,,,9.091,,,,"162,805,071",0.0338,0.0031,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA12-7-20-1,20 Jul,2012,Ekiti,,,2,,,,,,,"167,228,767",,0.0012,,,,,,,,,,,Medication supplied ,,https://promedmail.org/promed-posts/
+NGA12-11-26-1,26 Nov,2012,Osun,,42,3,,,7.143,,,,"167,228,767",0.0251,0.0018,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA13-7-1-1,1 Jul,2013,Lagos,,39,,,,,,,,"171,765,769",0.0227,,,,,,,,,Caring for sick ,,,,,"Fatiregun, A.A., Ajayi, I.O. and Isere, E.E., 2013. Cholera outbreak in a southwest community of Nigeria: investigation of risk factors and evaluation of a district surveillance system. West African journal of medicine, 32(3), p.173."
+NGA13-7-27-1,27 Jul,2013,Ogun,,103,3,,,2.913,,,,"171,765,769",0.0600,0.0017,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Abeokuta South ,76,,,,,,,,"171,765,769",0.0442,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Abeokuta North,25,,,,,,,,"171,765,769",0.0146,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Odeda,2,,,,,,,,"171,765,769",0.0012,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Obafemi Owode,1,,,,,,,,"171,765,769",0.0006,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA13-9-5-1,5 Sep,2013,Oyo ,,10,8,,,80.000,,,,"171,765,769",0.0058,0.0047,,,,Heavy rainfall,,,,,,,,,https://promedmail.org/promed-posts/
+NGA13-9-12-1,12 Sep,2013,Nasarawa,Akwanga,118,2,,,1.695,68F:50M,Young adult females at risk,,"171,765,769",0.0687,0.0012,,,Informal water selling ,,,,,"Domestic work, food venders and car wash",,,,,"Akyala Ishaku, A., Shadrack, B.E., Ajumobi, O., Olayinka, A. and Nguku, P., 2014. Investigation of cholera outbreak in an urban north central Nigerian community: the Akwanga experience. Public Health Res, 4, pp.7-12."
+NGA13-10-20-1,20 Oct,2013,Plateau,Qua’pan,61,8,,,13.115,,,,"171,765,769",0.0355,0.0047,,,,,,,,,,Y,,,https://promedmail.org/promed-posts/
+NGA13-10-21-1,21 Oct,2013,Zamfara,,,50,,,,,,,"171,765,769",,0.0291,,,Water shortage/access,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA13-10-22-1,22 Oct,2013,Sokoto,Tambuwal,11,5,,,45.455,2M:3F,,,"171,765,769",0.0064,0.0029,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA13-10-23-1,23 Oct,2013,Lagos,,13,3,,,23.077,,,,"171,765,769",0.0076,0.0017,,,Salad,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA13-10-23-2,23 Oct,2013,Plateau,,96,9,,96,9.375,,,,"171,765,769",0.0559,0.0052,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA13-10-29-1,29 Oct,2013,,,373,74,,,,,,,"171,765,769",0.2172,0.0431,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Plateau,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Sokoto,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Zamfara,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Lagos,,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA13-11-6-1,6 Nov,2013,Lagos,Yaba,,4,,,,,,,"171,765,769",,0.0023,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA13-11-15-1,15 Nov,2013,Benue,Otukpo,80,12,,,15.000,,,,"171,765,769",0.0466,0.0070,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA14-1-1-1,1 Jan,2014,Kaduna,,"1,468",54,2,,3.678,809F:659M,"865 cases 1-20yrs, 360 cases 21-40yrs",,"176,404,902",0.8322,0.0306,,,,,,,,Caring for sick ,,,,,"Sule, I.B., Yahaya, M., Aisha, A.A., Zainab, A.D., Ummulkhulthum, B. and Nguku, P., 2017. Descriptive epidemiology of a cholera outbreak in Kaduna State, Northwest Nigeria, 2014. The Pan African medical journal, 27."
+,,,,Chikum,20,6,,,30.000,,,,"176,404,902",0.0113,0.0034,,,,,,,,,,,,,"Sule, I.B., Yahaya, M., Aisha, A.A., Zainab, A.D., Ummulkhulthum, B. and Nguku, P., 2017. Descriptive epidemiology of a cholera outbreak in Kaduna State, Northwest Nigeria, 2014. The Pan African medical journal, 27."
+,,,,Igabi ,301,3,,,0.997,,,,"176,404,902",0.1706,0.0017,,,,,,,,,,,,,"Sule, I.B., Yahaya, M., Aisha, A.A., Zainab, A.D., Ummulkhulthum, B. and Nguku, P., 2017. Descriptive epidemiology of a cholera outbreak in Kaduna State, Northwest Nigeria, 2014. The Pan African medical journal, 27."
+,,,,Kaduna North,87,0,,,0.000,,,,"176,404,902",0.0493,,,,,,,,,,,,,,"Sule, I.B., Yahaya, M., Aisha, A.A., Zainab, A.D., Ummulkhulthum, B. and Nguku, P., 2017. Descriptive epidemiology of a cholera outbreak in Kaduna State, Northwest Nigeria, 2014. The Pan African medical journal, 27."
+,,,,Soba,99,3,,,3.030,,,,"176,404,902",0.0561,0.0017,,,,,,,,,,,,,"Sule, I.B., Yahaya, M., Aisha, A.A., Zainab, A.D., Ummulkhulthum, B. and Nguku, P., 2017. Descriptive epidemiology of a cholera outbreak in Kaduna State, Northwest Nigeria, 2014. The Pan African medical journal, 27."
+,,,,Zaira,22,4,,,18.182,,,,"176,404,902",0.0125,0.0023,,,,,,,,,,,,,"Sule, I.B., Yahaya, M., Aisha, A.A., Zainab, A.D., Ummulkhulthum, B. and Nguku, P., 2017. Descriptive epidemiology of a cholera outbreak in Kaduna State, Northwest Nigeria, 2014. The Pan African medical journal, 27."
+NGA14-1-11-1,11 Jan,2014,Kano,,"2,165",,,,0.000,,,,"176,404,902",1.2273,,,,,,,,,,,,Medication supplied ,,https://promedmail.org/promed-posts/
+NGA14-1-13-1,13 Jan,2014,Kano,,2156,71,,,3.293,,,,"176,404,902",1.2222,0.0402,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA14-1-16-1,16 Jan,2014,Jigawa,,153,11,,,7.190,,,,"176,404,902",0.0867,0.0062,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA14-1-26-1,26 Jan,2014,Kebbi,Koko,,3,,,,,,,"176,404,902",,0.0017,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Besse,,,,,,,,,,,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA14-2-15-1,15 Feb,2014,Benue,Makurdi,240,30,,10,12.500,,,,"176,404,902",0.1361,0.0170,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA14-3-3-1,3 Mar,2014,Bauchi,,61,10,,,16.393,,,,"176,404,902",0.0346,0.0057,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA14-4-1-1,1 Apr,2014,Bauchi,,"35,996",755,,,2.097,,,,"176,404,902",20.4053,0.4280,,,,,,,,,,,,,https://public.emdat.be
+,,,,Bauchi Metropolis,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,,Tafawa Alewa,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+NGA14-7-17-1,17 Jul,2014,Bauchi,,"15,500",83,,"14,000",0.535,,,,"176,404,902",8.7866,0.0471,,,,,,,,,,,Chlorinate wells,MSF,https://promedmail.org/promed-posts/
+NGA14-7-21-1,21 Jul,2014,Kano,,701,16,,,2.282,,,,"176,404,902",0.3974,0.0091,,,Contaminated wells,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA14-8-5-1,5 Aug,2014,Borno,,2924,27,,,0.923,,,,"176,404,902",1.6576,0.0153,Bui IDP camp,,,,,Hygiene ,,,,,,,https://promedmail.org/promed-posts/
+NGA14-9-5-1,5 Sep,2014,Sokoto,,40,16,,,40.000,,,,"176,404,902",0.0227,0.0091,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA14-10-26-1,26 Oct,2014,Federal Capital Territory ,Kwali,48,6,4,,12.500,25F:18M,"16 cases 5-9 yrs, 3 cases 10-19 yrs, 15 cases 20-29 yrs, 9 cases >30 yrs",,"176,404,902",0.0272,0.0034,,,,Contaminated river ,,,,,>people/household,,,,"Dan-Nwafor, C.C., Ogbonna, U., Onyiah, P., Gidado, S., Adebobola, B., Nguku, P. and Nsubuga, P., 2019. A cholera outbreak in a rural north central Nigerian community: An unmatched case-control study. BMC public health, 19(1), p.112."
+NGA15-1-1-1,1 Jan,2015,,,"2,108",97,,,4.602,,,,"181,137,448",1.1638,0.0536,,,,,,,,,,,,,https://public.emdat.be
+,,,Anambra,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Kano,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Rivers,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,Ebonyi,,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+NGA15-1-14-1,14 Jan,2015,Rivers,Angoni,170,20,,,11.765,,,,"181,137,448",0.0939,0.0110,,,,,,,,,,,Treatment centres ,,https://promedmail.org/promed-posts/
+NGA15-1-25-1,25 Jan,2015,Kano,Gaya,216,2,,,0.926,,,,"181,137,448",0.1192,0.0011,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+,,,Oyo,,67,,,,,,,,"181,137,448",0.0370,,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+NGA15-3-8-1,8 Mar,2015,Rivers,Andoni,"10,903",3,,,0.028,,,,"181,137,448",6.0192,0.0017,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+NGA15-8-1-1,1 Aug,2015,Kaduna,Zaria,40,10,,,25.000,,,,"181,137,448",0.0221,0.0055,,,,,,,,,,,,,"Sule, I.B., Yahaya, M., Aisha, A.A., Zainab, A.D., Ummulkhulthum, B. and Nguku, P., 2017. Descriptive epidemiology of a cholera outbreak in Kaduna State, Northwest Nigeria, 2014. The Pan African medical journal, 27."
+NGA15-9-7-1,7 Sep,2015,Borno,Maiduguri,187,,,,,,,,"181,137,448",0.1032,,IDP camp,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+,,,Kaduna,Zaria,192,,,,,,,,"181,137,448",0.1060,,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+NGA15-9-11-1,11 Sep,2015,Jigawa,Birnin Kudu,50,1,,,2.000,27M:23F,,,"181,137,448",0.0276,0.0006,,,,,,Handwashing,Poor cholera understanding ,,,,,,"Nnaji, R.N., Ajumobi, O., Oladimeji, A., Sarki, M., Buba, M., Sale, F. and Nguku, P., 2016. Cholera outbreak investigation, Gajala community, Birnin kudu local government area (LGA), Jigawa state, Nigeria, September 2015. International Journal of Infectious Diseases, 45, pp.144-145."
+NGA15-9-11-2,11 Sep,2015,Borno,Maiduguri,385,13,,,3.377,,Median 31yrs,,"181,137,448",0.2125,0.0072,IDP camp,,,,,Hygiene ,,,Contact with case ,,,,"Abubakar, A.T., Dalhat, M. and Nguku, P., 2016. Cholera outbreak-IDP camps in Maiduguri, northern Nigeria, September 2015. International Journal of Infectious Diseases, 45, p.132."
+NGA15-9-28-1,28 Sep,2015,Borno,Maiduguri,187,16,,,8.556,,,,"181,137,448",0.1032,0.0088,IDP camp,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA15-11-24-1,24 Nov,2015,Borno,,961,,,,,,,,"181,137,448",0.5305,,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+,,,Kano,,771,,,,,,,,"181,137,448",0.4256,,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+,,,Bauchi,,114,,,,,,,,"181,137,448",0.0629,,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+NGA16-3-14-1,14 Mar,2016,Jigawa,,10,0,,,0.000,,,,"185,960,289",0.0054,,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+,,,Kano,,60,0,,,0.000,,,,"185,960,289",0.0323,,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+NGA16-3-28-1,28 Mar,2016,Jigawa,,19,0,,,0.000,,,,"185,960,289",0.0102,,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+,,,Kano,,69,0,,,0.000,,,,"185,960,289",0.0371,,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+NGA16-6-13-1,13 Jun,2016,Kano,Bichi,53,2,,,3.774,,,,"185,960,289",0.0285,0.0011,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+NGA16-8-9-1,9 Aug,2016,Borno,Rann,19,8,,,42.105,,,,"185,960,289",0.0102,0.0043,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+NGA16-9-16-1,16 Sep,2016,Lagos,,14,1,,,7.143,,,,"185,960,289",0.0075,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Oshodi,,,,,,,,,,,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Isolo,,,,,,,,,,,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA16-9-22-1,22 Sep,2016,Lagos,Isolo,45,6,,,13.333,,,,"185,960,289",0.0242,0.0032,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA16-9-30-1,30 Sep,2016,,,36,1,4,,2.778,,,,"185,960,289",0.0194,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA16-10-1-1,1 Oct,2016,,,3,,,,,,,,"185,960,289",0.0016,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA16-10-14-1,14 Oct,2016,,,13,4,1,,30.769,,,,"185,960,289",0.0070,0.0022,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA16-10-21-1,21 Oct,2016,Oyo,Akinyele,6,,,,,,,,"185,960,289",0.0032,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA16-11-11-1,11 Nov,2016,Lagos,Kosofe,2,,,,,,,,"185,960,289",0.0011,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA16-11-25-1,25 Nov,2016,Gombe,Gombe,1,,,,,,,,"185,960,289",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-2-10-1,10 Feb,2017,Federal Capital Territory ,Kuje,5,,,,,,,,"190,873,311",0.0026,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-2-24-1,24 Feb,2017,Gombe,Gombe,1,,,,,,,,"190,873,311",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-3-10-1,10 Mar,2017,,,7,,,,,,,,"190,873,311",0.0037,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-3-17-1,17 Mar,2017,Gombe,Gombe,1,,,,,,,,"190,873,311",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-4-21-1,21 Apr,2017,Zamfara,,7,0,,,0.000,,,,"190,873,311",0.0037,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-5-5-1,5 May,2017,Cross River,Obudu,1,0,,,0.000,,,,"190,873,311",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-5-26-1,26 May,2017,,,5,0,,,0.000,,,,"190,873,311",0.0026,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,Kaduna South,3,0,,,0.000,,,,"190,873,311",0.0016,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-6-7-1,7 Jun,2017,Kwara,,"1,558",11,,,0.706,,,,"190,873,311",0.8162,0.0058,,,,,,,,,,,,,https://public.emdat.be
+,,,,Asa,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,,Ilorin East,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,,Ilorin South,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,,Ilorin West,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+,,,,Moro,,,,,,,,,,,,,,,,,,,,,,,,https://public.emdat.be
+NGA17-6-7-1,9 Jun,2017,,,77,1,,,1.299,,,,"190,873,311",0.0403,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-6-16-1,16 Jun,2017,Kwara ,,126,1,,,0.794,,,,"190,873,311",0.0660,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-6-25-1,25 Jun,2017,Kwara,,83,1,1,,1.205,,,,"190,873,311",0.0435,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-7-2-1,2 Jul,2017,,,186,10,0,,5.376,,,,"190,873,311",0.0974,0.0052,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kwara,,61,,,,,,,,"190,873,311",0.0320,,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+,,,Zamfara,,110,10,,,9.091,,,,"190,873,311",0.0576,0.0052,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+,,,Jigawa,,10,,,,,,,,"190,873,311",0.0052,,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+,,,Kaduna,,5,,,,,,,,"190,873,311",0.0026,,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+NGA17-7-9-1,9 Jul,2017,,,109,1,3,,0.917,,,,"190,873,311",0.0571,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-7-9-2,9 Jul,2017,Kwara,,"1,617",17,13,,1.051,,,,"190,873,311",0.8472,0.0089,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+NGA17-7-12-1,12 Jul,2017,Kwara,,1558,11,,,0.706,50% M:49% F,,,"190,873,311",0.8162,0.0058,,,,,,Sanitation,,,,,,,https://promedmail.org/promed-posts/
+,,,,Asa,18,,,,,,,,"190,873,311",0.0094,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Ilorin East,450,,,,,,,,"190,873,311",0.2358,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Ilorin South,215,,,,,,,,"190,873,311",0.1126,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Ilorin West,780,,,,,,,,"190,873,311",0.4086,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Moro,50,,,,,,,,"190,873,311",0.0262,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA17-7-16-1,16 Jul,2017,,,36,2,2,,5.556,,,,"190,873,311",0.0189,0.0010,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-7-21-1,21 Jul,2017,Kwara,,1617,17,,,1.051,M children 51.6% of cases,460 cases 1-5 years,,"190,873,311",0.8472,0.0089,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA17-7-23-1,23 Jul,2017,,,81,3,3,,3.704,,,,"190,873,311",0.0424,0.0016,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-7-30-1,30 Jul,2017,Kwara,Ilorin East,2,0,0,,0.000,,,,"190,873,311",0.0010,0.0000,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-7-30-2,30 Jul,2017,Kwara,,"1,627",22,18,,1.352,,,,"190,873,311",0.8524,0.0115,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=9
+,,,Zamfara,,313,11,,,3.514,,,,"190,873,311",0.1640,0.0058,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=9
+,,,Lagos,,38,2,1,,5.263,,,,"190,873,311",0.0199,0.0010,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=9
+NGA17-8-6-1,6 Aug,2017,Kwara,Ilorin East,23,0,3,,0.000,,,,"190,873,311",0.0120,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-8-13-1,13 Aug,2017,,,92,10,,,10.870,,,,"190,873,311",0.0482,0.0052,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-8-14-1,14 Aug,2017,Borno,,"5,889",43,,,0.730,"3,088F:2,801M","1,477 0-4 yrs, 1,104 5-9 yrs, 727 10-19 yrs, >20 yrs 1,628",,"190,873,311",3.0853,0.0225,,,,,,,,Caring for sick ,,,,,"Denue, B.A., Akawu, C.B., Kwayabura, S.A. and Kida, I., 2018. Low case fatality during 2017 cholera outbreak in Borno State, North Eastern Nigeria. Annals of African medicine, 17(4), p.203."
+NGA17-8-20-1,20 Aug,2017,,,24,1,4,,4.167,,,,"190,873,311",0.0126,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-8-20-2,20 Aug,2017,Borno,Jere,5,,2,,,,,,"190,873,311",0.0026,,Muna Garage IDP camp,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=9
+NGA17-8-21-1,21 Aug,2017,Borno,,"5,000",,,,,,,,"190,873,311",2.6195,,,,,,,,,,,,,,"Ngwa, M.C., Wondimagegnehu, A., Okudo, I., Owili, C., Ugochukwu, U., Clement, P., Devaux, I., Pezzoli, L., Ihekweazu, C., Jimme, M.A. and Winch, P., 2020. The multi-sectorial emergency response to a cholera outbreak in Internally Displaced Persons camps in Borno State, Nigeria, 2017. BMJ global health, 5(1)."
+,,,,Jere,,61,,,1.140,,,"891,137","190,873,311",,0.0320,Muna Garage IDP camp,Religious festivals,Sharing food,,,Sanitation,,,,,,MSF,"Ngwa, M.C., Wondimagegnehu, A., Okudo, I., Owili, C., Ugochukwu, U., Clement, P., Devaux, I., Pezzoli, L., Ihekweazu, C., Jimme, M.A. and Winch, P., 2020. The multi-sectorial emergency response to a cholera outbreak in Internally Displaced Persons camps in Borno State, Nigeria, 2017. BMJ global health, 5(1)."
+NGA17-8-27-1,27 Aug,2017,,,106,2,0,,1.887,,,,"190,873,311",0.0555,0.0010,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-9-3-1,3 Sep,2017,,,424,1,0,,0.236,,,,"190,873,311",0.2221,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,409,,,,,,,,"190,873,311",0.2143,0.0000,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,3,,,,,,,,"190,873,311",0.0016,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,12,,,,,,,,"190,873,311",0.0063,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-9-3-1,3 Sep,2017,Borno,,,14,,,,,,,"190,873,311",,0.0073,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA17-9-4-1,4 Sep,2017,Borno,,70,,,,0.000,,,,"190,873,311",0.0367,,IDP camp,,,,,,,,,,,MSF,https://promedmail.org/promed-posts/
+NGA17-9-4-2,4 Sep,2017,Borno,,"1,626",40,,,2.460,,53.6% cases <10 yrs ,,"190,873,311",0.8519,0.0210,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+,,,,Jere,,,,,,,,,,,,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+,,,,Maiduguri,,,,,,,,,,,,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+,,,,Dikwa,,,,,,,,,,,,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+,,,,Mongonu,,,,,,,,,,,,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+NGA17-9-5-1,5 Sep,2017,Borno,,319,20,,,6.270,,,,"190,873,311",0.1671,0.0105,IDP camp,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA17-9-5-1,5 Sep,2017,Borno,,375,21,,,5.600,,,,"190,873,311",0.1965,0.0110,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,8 Sep,2017,,,"1,165",30,50,,2.575,,,,"190,873,311",0.6104,0.0157,"IDP camp (Muna Garage, Agric, Sangya & Bulabulin)",,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=9
+,,,Muna,,689,,,,,,,,"190,873,311",0.3610,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=9
+,,,Dikwa,,406,,,,,,,,"190,873,311",0.2127,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=9
+,,,Monguno,,70,,,,,,,,"190,873,311",0.0367,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=9
+NGA17-9-10-1,10 Sep,2017,,,708,18,4,,2.542,,,,"190,873,311",0.3709,0.0094,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,3,,,,,,,,"190,873,311",0.0016,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,593,,,,,,,,"190,873,311",0.3107,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,28,,,,,,,,"190,873,311",0.0147,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,4,,,,,,,,"190,873,311",0.0021,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Oyo,,8,,,,,,,,"190,873,311",0.0042,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,775,21,,,2.710,,,,"190,873,311",0.4060,0.0110,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA17-9-15-1,15 Sep,2017,Kebbi,Dandi,216,18,,,8.333,,,,"190,873,311",0.1132,0.0094,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA17-9-16-1,16 Sep,2017,Borno,,1926,44,,,2.285,,,,"190,873,311",1.0090,0.0231,Muna Garage IDP camp,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA17-9-17-1,17 Sep,2017,,,907,26,1,,2.867,,,,"190,873,311",0.4752,0.0136,,,,,,,,,,,,NCDC,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,2,,,,,,,,"190,873,311",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,842,,,,,,,,"190,873,311",0.4411,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,40,,,,,,,,"190,873,311",0.0210,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,5,,,,,,,,"190,873,311",0.0026,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Oyo,,1,,,,,,,,"190,873,311",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,17,,,,,,,,"190,873,311",0.0089,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-9-17-2,17 Sep,2017,,,651,,,,,,,,"190,873,311",0.3411,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Borno,,,,,,,,,,,,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Kano,,,,,,,,,,,,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Kebbi,,,,,,,,,,,,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Oyo,,,,,,,,,,,,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Zamfara,,,,,,,,,,,,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+NGA17-9-18-1,18 Sep,2017,Borno,,"2,300",44,,,1.913,,,,"190,873,311",1.2050,0.0231,IDP camp,,,,,,,,,Y,,,https://promedmail.org/promed-posts/
+NGA17-9-18-1,18 Sep,2017,Borno,,,,,,,,,"811,959",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Maiduguri,,,,,,,,,,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Jere,,,,,,,,,,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Konduga,,,,,,,,,,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Dikwa,,,,,,,,,,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Monguno,,,,,,,,,,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Mafa,,,,,,,,,,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+NGA17-9-22-1,22 Sep,2017,Borno,,"3,498",53,107,,1.515,,,"915,005","190,873,311",1.8326,0.0278,Muna Garage IDP camp,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Dikwa,640,,,,,,,,"190,873,311",0.3353,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Jere,"1,759",,,,,,,,"190,873,311",0.9216,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Konduga,,,,,,,,,,,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Maiduguri,,,,,,,,,,,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Monguno,"1,099",,,,0.000,,,,"190,873,311",0.5758,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+NGA17-9-24-1,24 Sep,2017,,,107,2,,,1.869,,,,"190,873,311",0.0561,0.0010,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,4,,,,,,,,"190,873,311",0.0021,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,8,,,,,,,,"190,873,311",0.0042,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,69,,,,,,,,"190,873,311",0.0361,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,8,,,,,,,,"190,873,311",0.0042,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,18,,,,,,,,"190,873,311",0.0094,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-10-1-1,1 Oct,2017,,,20,,,,,,,,"190,873,311",0.0105,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,6,,,,,,,,"190,873,311",0.0031,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,1,,,,,,,,"190,873,311",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Delta,,3,,,,,,,,"190,873,311",0.0016,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,5,,,,,,,,"190,873,311",0.0026,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,5,,,,,,,,"190,873,311",0.0026,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-10-8-1,8 Oct,2017,,,50,1,,,2.000,,,,"190,873,311",0.0262,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,3,,,,,,,,"190,873,311",0.0016,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,35,,,,,,,,"190,873,311",0.0183,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Delta,,3,,,,,,,,"190,873,311",0.0016,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,4,,,,,,,,"190,873,311",0.0021,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,8,,,,,,,,"190,873,311",0.0042,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-10-8-2,8 Oct,2017,Borno,,"4,704",60,119,,1.276,,,"844,305","190,873,311",2.4645,0.0314,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Jere,"2,331",42,,,1.802,,,,"190,873,311",1.2212,0.0220,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Monguno,"1,600",3,,,0.188,,,,"190,873,311",0.8383,0.0016,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Dikwa,729,13,,,1.783,,,,"190,873,311",0.3819,0.0068,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Maiduguri,38,2,,,5.263,,,,"190,873,311",0.0199,0.0010,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Mafa,6,0,,,0.000,,,"24,625","190,873,311",0.0031,0.0000,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+NGA17-10-15-1,15 Oct,2017,,,19,1,,,5.263,,,,"190,873,311",0.0100,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-10-22-1,22 Oct,2017,Borno,Monguno,72,,,,,,,,"190,873,311",0.0377,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-10-29-1,29 Oct,2017,,,108,3,,,2.778,,,,"190,873,311",0.0566,0.0016,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,92,,,,,,,,"190,873,311",0.0482,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,11,,,,,,,,"190,873,311",0.0058,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kwara,,1,,,,,,,,"190,873,311",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Oyo,,4,,,,,,,,"190,873,311",0.0021,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-11-2-1,2 Nov,2017,Borno,,"5,281",61,220,,1.155,,,,"190,873,311",2.7668,0.0320,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Jere,"2,651",43,,,1.622,,,,"190,873,311",1.3889,0.0225,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Dikwa,736,13,,,1.766,,,,"190,873,311",0.3856,0.0068,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Monguno,"1,753",3,,,0.171,,,,"190,873,311",0.9184,0.0016,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Maiduguri,58,2,,,,,,,"190,873,311",0.0304,0.0010,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Mafa,20,,,,0.000,,,,"190,873,311",0.0105,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Guzmala,66,0,,,0.000,,,,"190,873,311",0.0346,,,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+NGA17-11-5-1,5 Nov,2017,,,14,,,,,,,,"190,873,311",0.0073,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,9,,,,,,,,"190,873,311",0.0047,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Cross River ,,1,,,,,,,,"190,873,311",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,4,,,,,,,,"190,873,311",0.0021,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-11-12-1,12 Nov,2017,,,22,0,0,,0.000,,,,"190,873,311",0.0115,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,2,,,,,,,,"190,873,311",0.0010,0.0000,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,13,,,,,,,,"190,873,311",0.0068,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Gombe,,1,,,,,,,,"190,873,311",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,6,,,,,,,,"190,873,311",0.0031,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-11-12-2,12 Nov,2017,Borno,,"5,336",61,354,,1.143,,,"896,919","190,873,311",2.7956,0.0320,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Jere,,"2,682",43,,,1.603,,,,"190,873,311",1.4051,0.0225,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Monguno,,"1,758",3,,,0.171,,,,"190,873,311",0.9210,0.0016,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Dikwa,,736,13,,,1.766,,,,"190,873,311",0.3856,0.0068,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Guzamala,,82,0,,,0.000,,,,"190,873,311",0.0430,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Maiduguri,,58,2,,,3.448,,,,"190,873,311",0.0304,0.0010,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Mafa,,20,0,,,0.000,,,,"190,873,311",0.0105,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+NGA17-11-19-1,19 Nov,2017,,,10,0,0,,0.000,,,,"190,873,311",0.0052,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,1,,,,,,,,"190,873,311",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,1,,,,,,,,"190,873,311",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,8,,,,,,,,"190,873,311",0.0042,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-11-26-1,26 Nov,2017,,,7,0,0,,0.000,,,,"190,873,311",0.0037,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Anambra,,2,,,,,,,,"190,873,311",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,1,,,,,,,,"190,873,311",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,4,,,,,,,,"190,873,311",0.0021,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-12-3-1,3 Dec,2017,,,8,0,1,,0.000,,,,"190,873,311",0.0042,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Anambra,,1,,,,,,,,"190,873,311",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,2,,,,,,,,"190,873,311",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,2,,,,,,,,"190,873,311",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,1,,,,,,,,"190,873,311",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,2,,,,,,,,"190,873,311",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,,,,,,,,"560,267","190,873,311",,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+NGA17-12-10–1,10 Dec,2017,,,11,,,,,,,,"190,873,311",0.0058,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,10,,,,,,,,"190,873,311",0.0052,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,1,,,,,,,,"190,873,311",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-12-17-1,17 Dec,2017,,,156,5,6,,3.205,,,,"190,873,311",0.0817,0.0026,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,106,,,,,,,,"190,873,311",0.0555,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,59,,,,,,,,"190,873,311",0.0309,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA17-12-20-1,20 Dec,2017,Nasarawa,Toto,,4,,,,2 F,,,"190,873,311",,0.0021,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA17-12-24-1,24 Dec,2017,,,172,5,4,,2.907,,,,"190,873,311",0.0901,0.0026,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,2,,,,,,,,"190,873,311",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,170,,,,,,,,"190,873,311",0.0891,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,,,,,,,,"1,800,000","190,873,311",,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA17-12-31-1,31 Dec,2017,Kano,,121,9,5,,7.438,,,,"190,873,311",0.0634,0.0047,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-1-1-1,1 Jan,2018,,,"43,996",836,980,20224,1.900,"22,322F:21,674M","<2 2,602, 2-4 7,651, 5-10 8,068, 10-14 3,300, >15 21,014",,"195,874,740",22.4613,0.4268,Displacement ,Religious festivals,,Dry season,,,,,,Y,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Anambra,,23,1,,,4.348,,,,"195,874,740",0.0117,0.0005,,,,Heavy rainfall,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Ebonyi,,182,7,,,3.846,,,,"195,874,740",0.0929,0.0036,,,,,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Adamawa,,"2,748",41,,,1.492,,,,"195,874,740",1.4029,0.0209,,,,,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Borno,,"7,626",74,,,0.970,,,,"195,874,740",3.8933,0.0378,,,,,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Bauchi,,"9,405",35,,,0.372,,,,"195,874,740",4.8015,0.0179,,,,,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Gombe,,552,18,,,3.261,,,,"195,874,740",0.2818,0.0092,,,,,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Yobe,,"2,275",83,,,3.648,,,,"195,874,740",1.1615,0.0424,,,,,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Federal Capital Territory ,,221,14,,,6.335,,,,"195,874,740",0.1128,0.0071,,,,,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Kogi,,102,8,,,7.843,,,,"195,874,740",0.0521,0.0041,,,,Heavy rainfall,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Kwara,,10,0,,,0.000,,,,"195,874,740",0.0051,0.0000,,,,,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Nasarawa,,71,5,,,7.042,,,,"195,874,740",0.0362,0.0026,,,,,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Niger,,584,29,,,4.966,,,,"195,874,740",0.2981,0.0148,,,,Heavy rainfall,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Plateau,,347,6,,,1.729,,,,"195,874,740",0.1772,0.0031,,,,,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Jigawa,,15,1,,,6.667,,,,"195,874,740",0.0077,0.0005,,,,,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Kaduna,,401,25,,,6.234,,,,"195,874,740",0.2047,0.0128,,,,,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Kano,,"1,905",73,,,3.832,,,,"195,874,740",0.9726,0.0373,,,,,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Katsina,,"7,400",190,,,2.568,,,,"195,874,740",3.7779,0.0970,,,,,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Kebbi,,198,7,,,3.535,,,,"195,874,740",0.1011,0.0036,,,,,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Sokoto,,"1,602",84,,,5.243,,,,"195,874,740",0.8179,0.0429,,,,,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+,,,Zamfara,,8329,135,,,1.621,,,,"195,874,740",4.2522,0.0689,,,,,,,,,,,,,"Elimian, K.O., Musah, A., Mezue, S., Oyebanji, O., Yennan, S., Jinadu, A., Williams, N., Ogunleye, A., Fall, I.S., Yao, M. and Eteng, W.E., 2019. Descriptive epidemiology of cholera outbreak in Nigeria, January–November, 2018: implications for the global roadmap strategy. BMC public health, 19(1), p.1264."
+NGA18-1-5-1,5 Jan,2018,,,84,5,1,,5.952,,,,"195,874,740",0.0429,0.0026,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,9,,,,,,,,"195,874,740",0.0046,0.0000,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,3,,,,,,,,"195,874,740",0.0015,0.0000,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,2,,,,,,,,"195,874,740",0.0010,0.0000,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,70,,,,,,,,"195,874,740",0.0357,0.0000,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-1-12-1,12 Jan,2018,,,40,4,1,,10.000,,,,"195,874,740",0.0204,0.0020,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,3,,,,,,,,"195,874,740",0.0015,0.0000,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,6,,,,,,,,"195,874,740",0.0031,0.0000,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,31,,,,,,,,"195,874,740",0.0158,0.0000,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,25,2,0,,8.000,,,,"195,874,740",0.0128,0.0010,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-1-28-1,28 Jan,2018,,,8,0,0,,0.000,,,,"195,874,740",0.0041,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,5,,,,,,,,"195,874,740",0.0026,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-1-28-2,28 Jan,2018,,,15,2,0,,13.333,,,,"195,874,740",0.0077,0.0010,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ebonyi,,12,,,,,,,,"195,874,740",0.0061,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Enugu,,3,,,,,,,,"195,874,740",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-2-11-1,11 Feb,2018,,,12,0,0,,,,,,"195,874,740",0.0061,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,5,,,,,,,,"195,874,740",0.0026,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,5,,,,,,,,"195,874,740",0.0026,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,Kaduna South,3,0,0,,0.000,,,,"195,874,740",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-2-13-1,13 Feb,2018,Borno,Kukawa,502,1,69,,0.199,,,,"195,874,740",0.2563,0.0005,IDP camp,,,,,,,,,,,,http://plateformecholera.info/index.php/cholera-in-wca/regional-updates
+NGA18-2-25-1,25 Feb,2018,,,11,1,0,,9.091,,,,"195,874,740",0.0056,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,4,,,,,,,,"195,874,740",0.0020,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,4,,,,,,,,"195,874,740",0.0020,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Oyo,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-3-4-1,4 Mar,2018,,,12,2,2,,16.667,,,,"195,874,740",0.0061,0.0010,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,6,,,,,,,,"195,874,740",0.0031,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,4,,,,,,,,"195,874,740",0.0020,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-3-4-2,4 Mar,2018,,,189,4,6,,2.116,,,,"195,874,740",0.0965,0.0020,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,35,,,,,,,,"195,874,740",0.0179,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,131,,,,,,,,"195,874,740",0.0669,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,3,,,,,,,,"195,874,740",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,20,,,,,,,,"195,874,740",0.0102,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,Kukawa,600,3,,,0.500,,,,"195,874,740",0.3063,0.0015,,,,,,,,,,Y,,,https://promedmail.org/promed-posts/
+NGA18-3-8-1,8 Mar,2018,Borno,,608,3,69,,0.493,,,,"195,874,740",0.3104,0.0015,,,,,,,,,,,,"ALIMA, MSF",https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Kukawa (Doro),323,,,,,,,,"195,874,740",0.1649,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Kukawa (Baga),229,3,,,1.310,,,,"195,874,740",0.1169,0.0015,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Kukawa (Kukawa),56,,,,,,,,"195,874,740",0.0286,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+NGA18-3-18-1,18 Mar,2018,,,175,5,15,,2.857,,,,"195,874,740",0.0893,0.0026,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,112,,,,,,,,"195,874,740",0.0572,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,40,,,,,,,,"195,874,740",0.0204,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ebonyi,,21,,,,,,,,"195,874,740",0.0107,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-3-25-1,25 Mar,2018,,,351,5,6,,1.425,,,,"195,874,740",0.1792,0.0026,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Abia,,13,,,,,,,,"195,874,740",0.0066,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,289,,,,,,,,"195,874,740",0.1475,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,21,,,,,,,,"195,874,740",0.0107,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ebonyi,,9,,,,,,,,"195,874,740",0.0046,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,3,,,,,,,,"195,874,740",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,15,,,,,,,,"195,874,740",0.0077,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kwara,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-4-1-1,1 Apr,2018,,,337,8,19,,2.374,,,,"195,874,740",0.1720,0.0041,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Abia,,19,,,,,,,,"195,874,740",0.0097,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,181,,,,,,,,"195,874,740",0.0924,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,11,,,,,,,,"195,874,740",0.0056,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Gombe,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,3,,,,,,,,"195,874,740",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,15,,,,,,,,"195,874,740",0.0077,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,,106,,,,,,,,"195,874,740",0.0541,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-4-8-1,8 Apr,2018,,,602,9,13,,1.495,,,,"195,874,740",0.3073,0.0046,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Abia,,8,,,,,,,,"195,874,740",0.0041,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Anambra,,20,,,,,,,,"195,874,740",0.0102,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,420,,,,,,,,"195,874,740",0.2144,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Federal Capital Territory ,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Nasarawa,,8,,,,,,,,"195,874,740",0.0041,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,,136,,,,,,,,"195,874,740",0.0694,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,6,,,,,,,,"195,874,740",0.0031,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-4-15-1,15 Apr,2018,,,615,3,16,,0.488,,,,"195,874,740",0.3140,0.0015,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Abia,,,,,,,,,,,,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,,,,,,,,,,,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,,,,,,,,,,,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ekiti,,,,,,,,,,,,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,,,,,,,,,,,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,,,,,,,,,,,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,,,,,,,,,,,,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,,,,,,,,,,,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-4-22-1,22 Apr,2018,,,599,3,12,,0.501,,,,"195,874,740",0.3058,0.0015,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,523,,,,,,,,"195,874,740",0.2670,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,8,,,,,,,,"195,874,740",0.0041,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,6,,,,,,,,"195,874,740",0.0031,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,38,,,,,,,,"195,874,740",0.0194,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,,20,,,,,,,,"195,874,740",0.0102,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,3,,,,,,,,"195,874,740",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-4-29-1,29 Apr,2018,,,527,4,2,,0.759,,,,"195,874,740",0.2690,0.0020,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,371,,,,,,,,"195,874,740",0.1894,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,9,,,,,,,,"195,874,740",0.0046,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ebonyi,,128,,,,,,,,"195,874,740",0.0653,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,,15,,,,,,,,"195,874,740",0.0077,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,3,,,,,,,,"195,874,740",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-4-29-2,29 Apr,2018,,,297,2,32,,0.673,,,,"195,874,740",0.1516,0.0010,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,218,,,,,,,,"195,874,740",0.1113,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,36,,,,,,,,"195,874,740",0.0184,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ebonyi,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Federal Capital Territory ,,34,,,,,,,,"195,874,740",0.0174,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,6,,,,,,,,"195,874,740",0.0031,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-5-6-1,6 May,2018,,,733,0,8,,0.000,,,,"195,874,740",0.3742,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Abia,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,695,,,,,,,,"195,874,740",0.3548,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,29,,,,,,,,"195,874,740",0.0148,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Federal Capital Territory ,,16,,,,,,,,"195,874,740",0.0082,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,Bade,,,,,,,,"252,872",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+NGA18-5-9-1,9 May,2018,Bauchi,,,,,,,,,,,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Birshi,,,,,,,,"70,044",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Dan Amar A,,,,,,,,"93,495",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Dan Amar B,,,,,,,,"109,718",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Dan Dango,,,,,,,,"41,780",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Kan Kade,,,,,,,,"26,997",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Dan Iya,,,,,,,,"147,798",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Dawaki,,,,,,,,"72,338",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Hardo,,,,,,,,"53,711",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Kangere,,,,,,,,"52,200",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Kundun Durum,,,,,,,,"58,055",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Makama A,,,,,,,,"80,296",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Makama B,,,,,,,,"42,546",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Miri,,,,,,,,"101,468",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Liman Katagum,,,,,,,,"65,498",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Tirwun,,,,,,,,"134,350",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+NGA18-5-12-1,12 May,2018,Adamawa,,"1,500",25,,,1.667,,,"378,800","195,874,740",0.7658,0.0128,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA18-5-20-1,20 May,2018,,,190,17,17,,8.947,,,,"195,874,740",0.0970,0.0087,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,100,,,,,,,,"195,874,740",0.0511,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,22,,,,,,,,"195,874,740",0.0112,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,20,,,,,,,,"195,874,740",0.0102,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Kukawa,19,,,,,,,,"195,874,740",0.0097,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Federal Capital Territory ,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,44,,,,,,,,"195,874,740",0.0225,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,Mubi North,143,12,,,8.392,,,,"195,874,740",0.0730,0.0061,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Yobe,,"3,000",50,,,1.667,,,,"195,874,740",1.5316,0.0255,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA18-5-21-1,21 May,2018,Yobe,,404,15,16,,3.713,,,,"195,874,740",0.2063,0.0077,IDP camp,,,,,,,,,Y,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Bade,379,15, ,,3.958,,,,"195,874,740",0.1935,0.0077,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Karasuwa,16,,,,,,,,"195,874,740",0.0082,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Kalusko,4,,,,,,,,"195,874,740",0.0020,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Yusufari,3,,,,,,,,"195,874,740",0.0015,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Bursari,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+NGA18-5-27-1,27 May,2018,,,832,8,8,,0.962,,,,"195,874,740",0.4248,0.0041,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,382,,,,,,,,"195,874,740",0.1950,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,324,,,,,,,,"195,874,740",0.1654,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno ,,20,,,,,,,,"195,874,740",0.0102,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,22,,,,,,,,"195,874,740",0.0112,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Plateau,,72,,,,,,,,"195,874,740",0.0368,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,12,,,,,,,,"195,874,740",0.0061,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-5-27-2,27 May,2018,Adamawa,,482,13,,,2.697,,,,"195,874,740",0.2461,0.0066,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Mubi South ,247,6,,,2.429,,,,"195,874,740",0.1261,0.0031,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Mubi North,235,7,,,2.979,,,,"195,874,740",0.1200,0.0036,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+NGA18-6-3-1,3 Jun,2018,,,910,6,12,,0.659,,,,"195,874,740",0.4646,0.0031,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,423,,,,,,,,"195,874,740",0.2160,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,344,,,,,,,,"195,874,740",0.1756,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,20,,,,,,,,"195,874,740",0.0102,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,11,,,,,,,,"195,874,740",0.0056,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Plateau,,37,,,,,,,,"195,874,740",0.0189,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,75,,,,,,,,"195,874,740",0.0383,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-6-3-2,3 Jun,2018,Borno,,808,3,87,,0.371,,,,"195,874,740",0.4125,0.0015,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Kukawa,769,,,,,,,,"195,874,740",0.3926,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Banki,31,,,,,,,,"195,874,740",0.0158,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,El-minskin,6,,,,,,,,"195,874,740",0.0031,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Damboa,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+NGA18-6-7-1,7 Jun,2018,Plateau,,93,3,,,3.226,,,,"195,874,740",0.0475,0.0015,,,,,,Sanitation,,,,,,,https://promedmail.org/promed-posts/
+NGA18-6-10-1,10 Jun,2018,,,800,7,22,,0.875,,,,"195,874,740",0.4084,0.0036,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,101,,,,,,,,"195,874,740",0.0516,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,268,,,,,,,,"195,874,740",0.1368,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,7,,,,,,,,"195,874,740",0.0036,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,42,,,,,,,,"195,874,740",0.0214,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Plateau,,131,,,,,,,,"195,874,740",0.0669,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,251,,,,,,,,"195,874,740",0.1281,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-6-10-1,10 Jun,2018,Adamawa,,"1,227",20,44,,1.630,,,,"195,874,740",0.6264,0.0102,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Mubi South ,693,9,,,1.299,,,,"195,874,740",0.3538,0.0046,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Mubi North,526,11,,,2.091,,,,"195,874,740",0.2685,0.0056,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Hong,5,,,,,,,,"195,874,740",0.0026,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Maiha,3,,,,,,,,"195,874,740",0.0015,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+NGA18-6-17-1,17 Jun,2018,,,725,9,9,,1.241,,,,"195,874,740",0.3701,0.0046,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,80,,,,,,,,"195,874,740",0.0408,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,323,,,,,,,,"195,874,740",0.1649,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,42,,,,,,,,"195,874,740",0.0214,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kogi,,20,,,,,,,,"195,874,740",0.0102,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Plateau,,19,,,,,,,,"195,874,740",0.0097,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,238,,,,,,,,"195,874,740",0.1215,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-6-24-1,24 Jun,2018,,,828,9,9,,1.087,,,,"195,874,740",0.4227,0.0046,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,29,,,,,,,,"195,874,740",0.0148,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,183,,,,,,,,"195,874,740",0.0934,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,27,,,,,,,,"195,874,740",0.0138,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Federal Capital Territory ,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Gombe,,41,,,,,,,,"195,874,740",0.0209,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Jigawa,,13,,,,,,,,"195,874,740",0.0066,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,11,,,,,,,,"195,874,740",0.0056,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,110,,,,,,,,"195,874,740",0.0562,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,45,,,,,,,,"195,874,740",0.0230,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kogi,,4,,,,,,,,"195,874,740",0.0020,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Plateau,,24,,,,,,,,"195,874,740",0.0123,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,339,,,,,,,,"195,874,740",0.1731,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-6-24-2,24 Jun,2018,Adamawa,,"1,412",25,47,,1.771,,"710 cases <15yrs, 437 cases 15-34yrs",,"195,874,740",0.7209,0.0128,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Mubi South ,819,12,,,,,,,"195,874,740",0.4181,0.0061,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Mubi North,565,13,,,,,,,"195,874,740",0.2884,0.0066,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Maiha,21,,,,,,,,"195,874,740",0.0107,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Hong,7,,,,,,,,"195,874,740",0.0036,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+NGA18-6-25-1,25 Jun,2018,Bauchi,,,,,,,,,,,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Birshi,,,,,,,,"35,291",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Dan Amar A,,,,,,,,"46,945",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Dan Amar B,,,,,,,,"51,458",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Dan Dango,,,,,,,,"22,930",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Kan Kade,,,,,,,,"10,897",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Dan Iya,,,,,,,,"73,182",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Dawaki,,,,,,,,"33,600",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Hardo,,,,,,,,"24,404",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Kangere,,,,,,,,"26,466",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Kundun Durum,,,,,,,,"31,469",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Makama A,,,,,,,,"38,096",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Makama B,,,,,,,,"21,046",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Miri,,,,,,,,"55,623",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Liman Katagum,,,,,,,,"34,113",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Tirwun,,,,,,,,"59,822",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+NGA18-7-1-1,1 Jul,2018,,,744,14,22,,1.882,,,,"195,874,740",0.3798,0.0071,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,42,,,,,,,,"195,874,740",0.0214,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,178,,,,,,,,"195,874,740",0.0909,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,47,,,,,,,,"195,874,740",0.0240,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Federal Capital Territory ,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Gombe,,23,,,,,,,,"195,874,740",0.0117,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,70,,,,,,,,"195,874,740",0.0357,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,81,,,,,,,,"195,874,740",0.0414,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,54,,,,,,,,"195,874,740",0.0276,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kogi,,3,,,,,,,,"195,874,740",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Plateau,,10,,,,,,,,"195,874,740",0.0051,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,235,,,,,,,,"195,874,740",0.1200,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-7-8-1,8 Jul,2018,,,469,8,16,,1.706,,,,"195,874,740",0.2394,0.0041,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,45,,,,,,,,"195,874,740",0.0230,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,115,,,,,,,,"195,874,740",0.0587,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,5,,,,,,,,"195,874,740",0.0026,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Gombe,,7,,,,,,,,"195,874,740",0.0036,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,122,,,,,,,,"195,874,740",0.0623,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,30,,,,,,,,"195,874,740",0.0153,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kogi,,16,,,,,,,,"195,874,740",0.0082,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,129,,,,,,,,"195,874,740",0.0659,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-7-15-1,15 Jul,2018,,,671,8,3,,1.192,,,,"195,874,740",0.3426,0.0041,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,51,,,,,,,,"195,874,740",0.0260,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,95,,,,,,,,"195,874,740",0.0485,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,28,,,,,,,,"195,874,740",0.0143,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Cross River,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Gombe,,3,,,,,,,,"195,874,740",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,13,,,,,,,,"195,874,740",0.0066,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,101,,,,,,,,"195,874,740",0.0516,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Plateau,,28,,,,,,,,"195,874,740",0.0143,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,350,,,,,,,,"195,874,740",0.1787,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-7-15-2,15 Jul,2018,,,367,4,12,,1.090,,,,"195,874,740",0.1874,0.0020,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Adamawa,,42,,,,,,,"378,815","195,874,740",0.0214,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Bauchi,,56,,,,,,,,"195,874,740",0.0286,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Katsina,,68,,,,,,,,"195,874,740",0.0347,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Niger,,14,,,,,,,,"195,874,740",0.0071,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Plateau,,11,,,,,,,,"195,874,740",0.0056,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Zamfara,,176,,,,,,,,"195,874,740",0.0899,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+NGA18-7-22-1,22 Jul,2018,,,191,8,3,,4.188,,,,"195,874,740",0.0975,0.0041,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,24,,,,,,,,"195,874,740",0.0123,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,6,,,,,,,,"195,874,740",0.0031,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,4,,,,,,,,"195,874,740",0.0020,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Gombe,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Jigawa,,10,,,,,,,,"195,874,740",0.0051,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,60,,,,,,,,"195,874,740",0.0306,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,86,,,,,,,,"195,874,740",0.0439,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-7-29-1,29 Jul,2018,,,534,12,23,,2.247,,,,"195,874,740",0.2726,0.0061,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,11,,,,,,,,"195,874,740",0.0056,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,27,,,,,,,,"195,874,740",0.0138,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ebonyi,,5,,,,,,,,"195,874,740",0.0026,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Federal Capital Territory ,,20,,,,,,,,"195,874,740",0.0102,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,10,,,,,,,,"195,874,740",0.0051,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,130,,,,,,,,"195,874,740",0.0664,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,104,,,,,,,,"195,874,740",0.0531,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,,19,,,,,,,,"195,874,740",0.0097,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,204,,,,,,,,"195,874,740",0.1041,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-8-5-1,5 Aug,2018,,,595,12,13,,2.017,,,,"195,874,740",0.3038,0.0061,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Abia,,4,,,,,,,,"195,874,740",0.0020,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,4,,,,,,,,"195,874,740",0.0020,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,9,,,,,,,,"195,874,740",0.0046,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ebonyi,,9,,,,,,,,"195,874,740",0.0046,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ekiti,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Federal Capital Territory ,,20,,,,,,,,"195,874,740",0.0102,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,24,,,,,,,,"195,874,740",0.0123,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,119,,,,,,,,"195,874,740",0.0608,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,122,,,,,,,,"195,874,740",0.0623,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,,3,,,,,,,,"195,874,740",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,280,,,,,,,,"195,874,740",0.1429,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-8-12-1,12 Aug,2018,,,962,18,21,,1.871,,,,"195,874,740",0.4911,0.0092,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,10,,,,,,,,"195,874,740",0.0051,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Federal Capital Territory ,,6,,,,,,,,"195,874,740",0.0031,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Jigawa,,32,,,,,,,,"195,874,740",0.0163,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,21,,,,,,,,"195,874,740",0.0107,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,135,,,,,,,,"195,874,740",0.0689,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,136,,,,,,,,"195,874,740",0.0694,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,,18,,,,,,,,"195,874,740",0.0092,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,600,,,,,,,,"195,874,740",0.3063,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-8-12-2,12 Aug,2018,,,898,22,,,2.450,,,,"195,874,740",0.4585,0.0112,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Zamfara,,575,2,,,0.348,,,,"195,874,740",0.2936,0.0010,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Katsina,,171,4,,,2.339,,,,"195,874,740",0.0873,0.0020,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,Sokoto,,152,16,,,10.526,,,,"195,874,740",0.0776,0.0082,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+NGA18-8-18-1,18 Aug,2018,,,57,0,19,,0.000,,,,"195,874,740",0.0291,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,55,,,,,,,,"195,874,740",0.0281,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-8-26-1,26 Aug,2018,,,452,22,0,,4.867,,,,"195,874,740",0.2308,0.0112,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,3,,,,,,,,"195,874,740",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,38,,,,,,,,"195,874,740",0.0194,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,20,,,,,,,,"195,874,740",0.0102,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,169,,,,,,,,"195,874,740",0.0863,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,222,,,,,,,,"195,874,740",0.1133,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-9-2-1,2 Sep,2018,,,"1,446",20,6,,1.383,,,,"195,874,740",0.7382,0.0102,,,,,,,,,,,Rapid response team deployed,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,63,,,,,,,,"195,874,740",0.0322,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,84,,,,,,,,"195,874,740",0.0429,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Gombe,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,8,,,,,,,,"195,874,740",0.0041,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,153,,,,,,,,"195,874,740",0.0781,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,380,,,,,,,,"195,874,740",0.1940,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kebbi,,187,,,,,,,,"195,874,740",0.0955,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Oyo,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,568,,,,,,,,"195,874,740",0.2900,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-9-9-1,9 Sep,2018,,,"1,715",38,27,,2.216,,,,"195,874,740",0.8756,0.0194,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,151,,,,,,,,"195,874,740",0.0771,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,4,,,,,,,,"195,874,740",0.0020,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,165,,,,,,,,"195,874,740",0.0842,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ebonyi,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Gombe,,88,,,,,,,,"195,874,740",0.0449,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,11,,,,,,,,"195,874,740",0.0056,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,216,,,,,,,,"195,874,740",0.1103,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,439,,,,,,,,"195,874,740",0.2241,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kebbi,,11,,,,,,,,"195,874,740",0.0056,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,629,,,,,,,,"195,874,740",0.3211,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-9-13-1,13 Sep,2018,Borno,,"1,102",21,64,,1.906,,,,"195,874,740",0.5626,0.0107,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Jere,414,,,,,,,,"195,874,740",0.2114,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Maiduguri,243,,,,,,,,"195,874,740",0.1241,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Magumeri,243,,,,,,,,"195,874,740",0.1241,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Kaga,29,,,,,,,,"195,874,740",0.0148,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Konduga,63,,,,,,,,"195,874,740",0.0322,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Chibok,96,,,,,,,,"195,874,740",0.0490,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Shani,11,,,,,,,,"195,874,740",0.0056,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Damboa,8,,,,,,,,"195,874,740",0.0041,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+NGA18-9-16-1,16 Sep,2018,,,"2,126",38,27,,1.787,,,,"195,874,740",1.0854,0.0194,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,69,,,,,,,,"195,874,740",0.0352,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,3,,,,,,,,"195,874,740",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,281,,,,,,,,"195,874,740",0.1435,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ebonyi,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Gombe,,94,,,,,,,,"195,874,740",0.0480,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,3,,,,,,,,"195,874,740",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,110,,,,,,,,"195,874,740",0.0562,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,263,,,,,,,,"195,874,740",0.1343,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kwara,,6,,,,,,,,"195,874,740",0.0031,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Lagos,,3,,,,,,,,"195,874,740",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Osum,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,,252,,,,,,,,"195,874,740",0.1287,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,"1,040",,,,,,,,"195,874,740",0.5310,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-9-16-2,16 Sep,2018,Adamawa,,"2,105",34,25,,1.615,,,,"195,874,740",1.0747,0.0174,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Fufore,369,7,,,1.897,,,,"195,874,740",0.1884,0.0036,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Hong,9,0,,,0.000,,,,"195,874,740",0.0046,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Maiha,170,1,,,0.588,,,,"195,874,740",0.0868,0.0005,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Mubi North,639,14,,,2.191,,,,"195,874,740",0.3262,0.0071,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Mubi South ,918,12,,,1.307,,,,"195,874,740",0.4687,0.0061,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+NGA18-9-17-1,17 Sep,2018,Yobe ,,932,61,37,,6.545,,,,"195,874,740",0.4758,0.0311,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Gulani,286,,,,,,,,"195,874,740",0.1460,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Damaturu,225,,,,,,,,"195,874,740",0.1149,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Fune,102,,,,,,,,"195,874,740",0.0521,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Potiskum,54,,,,,,,,"195,874,740",0.0276,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Gujba,265,,,,,,,,"195,874,740",0.1353,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+NGA18-9-23-1,23 Sep,2018,,,"2,492",44,8,,1.766,,,,"195,874,740",1.2722,0.0225,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,94,,,,,,,,"195,874,740",0.0480,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,824,,,,,,,,"195,874,740",0.4207,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Gombe,,77,,,,,,,,"195,874,740",0.0393,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,7,,,,,,,,"195,874,740",0.0036,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,151,,,,,,,,"195,874,740",0.0771,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,529,,,,,,,,"195,874,740",0.2701,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kwara,,4,,,,,,,,"195,874,740",0.0020,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Osun,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,,233,,,,,,,,"195,874,740",0.1190,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,572,,,,,,,,"195,874,740",0.2920,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-9-30-1,30 Sep,2018,,,"2,052",18,26,,0.877,,,,"195,874,740",1.0476,0.0092,,,,,,,,,,,National emergency operations centre actived,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,107,,,,,,,,"195,874,740",0.0546,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,701,,,,,,,,"195,874,740",0.3579,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Gombe,,90,,,,,,,,"195,874,740",0.0459,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,585,,,,,,,,"195,874,740",0.2987,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe ,,162,,,,,,,,"195,874,740",0.0827,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,404,,,,,,,,"195,874,740",0.2063,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-10-4-1,4 Oct,2018,Yobe,,1319,61,,,4.625,,~72% <5 yrs,,"195,874,740",0.6734,0.0311,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Gulani,420,,,,,,,,"195,874,740",0.2144,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Gujba,367,,,,,,,,"195,874,740",0.1874,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Damaturu,317,,,,,,,,"195,874,740",0.1618,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA18-10-14-1,14 Oct,2018,,,"1,226",5,7,,0.408,,,,"195,874,740",0.6259,0.0026,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,92,,,,,,,,"195,874,740",0.0470,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,291,,,,,,,,"195,874,740",0.1486,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Gombe,,56,,,,,,,,"195,874,740",0.0286,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,12,,,,,,,,"195,874,740",0.0061,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,457,,,,,,,,"195,874,740",0.2333,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kebbi,,3,,,,,,,,"195,874,740",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kogi,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Oyo,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Taraba,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe ,,76,,,,,,,,"195,874,740",0.0388,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,230,,,,,,,,"195,874,740",0.1174,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-10-21-1,21 Oct,2018,,,954,8,25,,0.839,,,,"195,874,740",0.4870,0.0041,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,101,,,,,,,,"195,874,740",0.0516,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,11,,,,,,,,"195,874,740",0.0056,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,328,,,,,,,,"195,874,740",0.1675,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Enugu,,8,,,,,,,,"195,874,740",0.0041,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,4,,,,,,,,"195,874,740",0.0020,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,299,,,,,,,,"195,874,740",0.1526,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,,95,,,,,,,,"195,874,740",0.0485,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,108,,,,,,,,"195,874,740",0.0551,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-10-28-1,28 Oct,2018,,,454,8,25,,1.762,,,,"195,874,740",0.2318,0.0041,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,106,,,,,,,,"195,874,740",0.0541,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,5,,,,,,,,"195,874,740",0.0026,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,197,,,,,,,,"195,874,740",0.1006,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Gombe,,7,,,,,,,,"195,874,740",0.0036,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,4,,,,,,,,"195,874,740",0.0020,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,22,,,,,,,,"195,874,740",0.0112,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,,76,,,,,,,,"195,874,740",0.0388,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,37,,,,,,,,"195,874,740",0.0189,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-11-4-1,4 Nov,2018,,,342,40,9,,11.696,,,,"195,874,740",0.1746,0.0204,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,28,,,,,,,,"195,874,740",0.0143,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,9,,,,,,,,"195,874,740",0.0046,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,197,,,,,,,,"195,874,740",0.1006,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Edo,,9,,,,,,,,"195,874,740",0.0046,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Gombe,,15,,,,,,,,"195,874,740",0.0077,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,23,,,,,,,,"195,874,740",0.0117,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kwara,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Osun,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Oyo,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,,44,,,,,,,,"195,874,740",0.0225,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,,8,,,,,,,,"195,874,740",0.0041,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-11-11-1,11 Nov,2018,,,175,2,11,,1.143,,,,"195,874,740",0.0893,0.0010,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,12,,,,,,,,"195,874,740",0.0061,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,86,,,,,,,,"195,874,740",0.0439,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Gombe,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,4,,,,,,,,"195,874,740",0.0020,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,32,,,,,,,,"195,874,740",0.0163,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Oyo,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,,36,,,,,,,,"195,874,740",0.0184,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-11-12-1,12 Nov,2018,,,"10,000",175,,,1.750,,,,"195,874,740",5.1053,0.0893,IDP camp,,,,,,,,,Y,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,,,,,,,,,"195,874,740",0.0000,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Adamawa,,,,,,,,,,"195,874,740",0.0000,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,Yobe,,,,,,,,,,"195,874,740",0.0000,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA18-11-18-1,18 Nov,2018,,,47,2,13,,4.255,,,,"195,874,740",0.0240,0.0010,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,20,,,,,,,,"195,874,740",0.0102,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,7,,,,,,,,"195,874,740",0.0036,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,4,,,,,,,,"195,874,740",0.0020,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kwara,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Osun,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,,13,,,,,,,,"195,874,740",0.0066,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-11-25-1,25 Nov,2018,,,61,0,0,,0.000,,,,"195,874,740",0.0311,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,6,,,,,,,,"195,874,740",0.0031,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,16,,,,,,,,"195,874,740",0.0082,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Cross River,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,17,,,,,,,,"195,874,740",0.0087,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,3,,,,,,,,"195,874,740",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Osun,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,,15,,,,,,,,"195,874,740",0.0077,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-11-26-1,26 Nov,2018,Yobe,Gulani,,,,,,,,"68,620",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+NGA18-11-28-1,28 Nov,2018,Borno,Jere,,,,,,,,"374,782",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Kal-Balge,,,,,,,,"51,680",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Maiduguri,,,,,,,,"369,418",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Ngala,,,,,,,,"138,382",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+NGA18-12-2-1,2 Dec,2018,,,62,5,9,,8.065,,,,"195,874,740",0.0317,0.0026,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,9,,,,,,,,"195,874,740",0.0046,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Cross River,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,34,,,,,,,,"195,874,740",0.0174,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,,15,,,,,,,,"195,874,740",0.0077,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Zamfara,Gummi,,,,,,,,"265,860",,,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+NGA18-12-9-1,9 Dec,2018,,,37,3,0,,8.108,,,,"195,874,740",0.0189,0.0015,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,26,,,,,,,,"195,874,740",0.0133,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,2,,,,,,,,"195,874,740",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,6,,,,,,,,"195,874,740",0.0031,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kwara,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Yobe,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA18-12-23-1,23 Dec,2018,,,6,0,0,,0.000,,,,"195,874,740",0.0031,0.0000,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,1,,,,,,,,"195,874,740",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,5,,,,,,,,"195,874,740",0.0026,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,Gubio,8,1,0,,12.500,,,,"195,874,740",0.0041,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-1-6-1,6 Jan,2019,Bauchi,Dass,1,0,0,,0.000,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-1-13-1,13 Jan,2019,,,18,0,0,,0.000,,,,"200,963,599",0.0090,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ebonyi,,9,,,,,,,,"200,963,599",0.0045,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,9,,,,,,,,"200,963,599",0.0045,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-1-20-1,20 Jan,2019,,,29,1,1,,3.448,,,,"200,963,599",0.0144,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,15,,,,,,,,"200,963,599",0.0075,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Edo,,9,,,,,,,,"200,963,599",0.0045,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,9,,,,,,,,"200,963,599",0.0045,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-1-27-1,27 Jan,2019,,,14,3,1,,21.429,,,,"200,963,599",0.0070,0.0015,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ebonyi,,12,,,,,,,,"200,963,599",0.0060,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,2,,,,,,,,"200,963,599",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-2-3-1,3 Feb,2019,,,7,0,0,,0.000,,,,"200,963,599",0.0035,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Enugu,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,6,,,,,,,,"200,963,599",0.0030,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-2-10-1,10 Feb,2019,Kano,,14,0,0,,0.000,,,,"200,963,599",0.0070,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-2-17-1,17 Feb,2019,,,33,0,0,,0.000,,,,"200,963,599",0.0164,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,30,,,,,,,,"200,963,599",0.0149,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,3,,,,,,,,"200,963,599",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-2-23-1,23 Feb,2019,Bayelsa,,75,6,2,,8.000,,,,"200,963,599",0.0373,0.0030,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-3-3-1,3 Mar,2019,,,34,2,0,,5.882,,,,"200,963,599",0.0169,0.0010,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,28,,,,,,,,"200,963,599",0.0139,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,6,,,,,,,,"200,963,599",0.0030,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-3-10-1,10 Mar,2019,,,5,0,0,,0.000,,,,"200,963,599",0.0025,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Abia,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,3,,,,,,,,"200,963,599",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-3-11-1,11 Mar,2019,Bayelsa,,14,,,,,,,,"200,963,599",0.0070,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/cholera-in-wca/regional-updates/268-2019-bulletins/807-cholera-outbreaks-in-central-and-west-africa-2019-regional-update-week-13
+,,,Kano,,10,,,,,,,,"200,963,599",0.0050,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/cholera-in-wca/regional-updates/268-2019-bulletins/807-cholera-outbreaks-in-central-and-west-africa-2019-regional-update-week-13
+,,,Taraba,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/cholera-in-wca/regional-updates/268-2019-bulletins/807-cholera-outbreaks-in-central-and-west-africa-2019-regional-update-week-13
+NGA19-3-17-1,17 Mar,2019,Bayelsa,,11,1,1, ,9.091,,,,"200,963,599",0.0055,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-3-24-1,24 Mar,2019,,,25,3,1,,12.000,,,,"200,963,599",0.0124,0.0015,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,14,,,,,,,,"200,963,599",0.0070,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,10,,,,,,,,"200,963,599",0.0050,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-3-31-1,31 Mar,2019,,,12,0,2,,0.000,,,,"200,963,599",0.0060,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Abia,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,6,,,,,,,,"200,963,599",0.0030,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ebonyi,,2,,,,,,,,"200,963,599",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,3,,,,,,,,"200,963,599",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-3-24-1,24 Mar,2019,Taraba,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-4-8-1,8 Apr,2019,,,91,4,0,,4.396,,,,"200,963,599",0.0453,0.0020,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Abia,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,53,,,,,,,,"200,963,599",0.0264,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,2,,,,,,,,"200,963,599",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Cross River,,32,,,,,,,,"200,963,599",0.0159,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,2,,,,,,,,"200,963,599",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-4-15-1,15 Apr,2019,Bayelsa,,6,,,,,,,,"200,963,599",0.0030,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,Kano,,4,,,,,,,,"200,963,599",0.0020,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,Ebonyi,,2,,,,,,,,"200,963,599",0.0010,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+NGA19-4-16-1,16 Apr,2019,,,96,0,0,,0.000,,,,"200,963,599",0.0478,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,95,,,,,,,,"200,963,599",0.0473,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ondo,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-4-24-1,24 Apr,2019,,,85,0,0,,0.000,,,,"200,963,599",0.0423,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,82,,,,,,,,"200,963,599",0.0408,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Cross River,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,2,,,,,,,,"200,963,599",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-4-29-1,29 Apr,2019,,,47,0,0,,0.000,,,,"200,963,599",0.0234,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,41,,,,,,,,"200,963,599",0.0204,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,6,,,,,,,,"200,963,599",0.0030,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-5-6-1,6 May,2019,,,12,0,0,,0.000,,,,"200,963,599",0.0060,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,8,,,,,,,,"200,963,599",0.0040,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ebonyi,,2,,,,,,,,"200,963,599",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ondo,,2,,,,,,,,"200,963,599",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-5-13-1,13 May,2019,,,17,0,0,,0.000,,,,"200,963,599",0.0085,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,4,,,,,,,,"200,963,599",0.0020,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,5,,,,,,,,"200,963,599",0.0025,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,8,,,,,,,,"200,963,599",0.0040,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-5-20-1,20 May,2019,,,26,0,0,,0.000,,,,"200,963,599",0.0129,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ebonyi,,16,,,,,,,,"200,963,599",0.0080,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,10,,,,,,,,"200,963,599",0.0050,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,16,0,0,,0.000,,,,"200,963,599",0.0080,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-5-27-1,27 May,2019,,Ogbia,7,,,,,,,,"200,963,599",0.0035,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-5-27-2,27 May,2019,,Yenogoa,9,,,,,,,,"200,963,599",0.0045,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-6-3-1,3 Jun,2019,,,15,0,0,,0.000,,,,"200,963,599",0.0075,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-6-4-1,4 Jun,2019,Adamawa,,12,,,,,,,,"200,963,599",0.0060,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-6-5-1,5 Jun,2019,Bayelsa,,2,,,,,,,,"200,963,599",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-6-6-1,6 Jun,2019,Oyo,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-6-8-1,8 Jun,2019,Bayelsa,,16,,,,,,,,"200,963,599",0.0080,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Yenogoa,9,,,,,,,,"200,963,599",0.0045,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Ogbia,7,,,,,,,,"200,963,599",0.0035,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+NGA19-6-10-1,10 Jun,2019,,,86,1,0,,1.163,,,,"200,963,599",0.0428,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Abia,,4,,,,,,,,"200,963,599",0.0020,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,28,,,,,,,,"200,963,599",0.0139,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,18,,,,,,,,"200,963,599",0.0090,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,36,,,,,,,,"200,963,599",0.0179,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-6-17-1,17 Jun,2019,,,75,0,0,,0.000,,,,"200,963,599",0.0373,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Abia,,5,,,,,,,,"200,963,599",0.0025,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,55,,,,,,,,"200,963,599",0.0274,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,2,,,,,,,,"200,963,599",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,13,,,,,,,,"200,963,599",0.0065,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-6-18-1,18 Jun,2019,Adamawa,,91,1,8,,1.099,60% cases in F,,,"200,963,599",0.0453,0.0005,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Yola North,57,1,,,1.754,,,,"200,963,599",0.0284,0.0005,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Yola South ,1,0,,,0.000,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+,,,,Girei,33,0,,,0.000,,,,"200,963,599",0.0164,,,,,,,,,,,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+NGA19-6-22-1,22 Jun,2019,Adamawa,,28,,,,,,,,"200,963,599",0.0139,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,Abia,,4,,,,,,,,"200,963,599",0.0020,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,Kano,,18,,,,,,,,"200,963,599",0.0090,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,Katsina,,36,,,,,,,,"200,963,599",0.0179,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+NGA19-6-24-1,24 Jun,2019,,,64,1,8,,1.563,,,,"200,963,599",0.0318,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,40,,,,,,,,"200,963,599",0.0199,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,24,,,,,,,,"200,963,599",0.0119,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-7-1-1,1 Jul,2019,,,82,1,36,,1.220,,,,"200,963,599",0.0408,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,60,,,,,,,,"200,963,599",0.0299,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,2,,,,,,,,"200,963,599",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,20,,,,,,,,"200,963,599",0.0100,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-7-8-1,8 Jul,2019,,,114,0,0,,0.000,,,,"200,963,599",0.0567,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,63,,,,,,,,"200,963,599",0.0313,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Girei,15,,,,,,,,"200,963,599",0.0075,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Yola North,7,,,,,,,,"200,963,599",0.0035,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,,Yola South ,18,,,,,,,,"200,963,599",0.0090,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,Borno,,48,,,,,,,,"200,963,599",0.0239,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,3,,,,,,,,"200,963,599",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-7-15-1,15 Jul,2019,,,225,2,13,,0.889,,,,"200,963,599",0.1120,0.0010,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Abia,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,94,,,,,,,,"200,963,599",0.0468,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,124,,,,,,,,"200,963,599",0.0617,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,5,,,,,,,,"200,963,599",0.0025,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-7-22-1,22 Jul,2019,,,192,0,18,,0.000,,,,"200,963,599",0.0955,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,75,,,,,,,,"200,963,599",0.0373,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,104,,,,,,,,"200,963,599",0.0518,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,2,,,,,,,,"200,963,599",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,11,,,,,,,,"200,963,599",0.0055,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-7-29-1,29 Jul,2019,Adamawa,,83,0,14,,0.000,,,,"200,963,599",0.0413,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-8-1-1,1 Aug,2019,Adamawa,,665,4,,,0.602,,,,"200,963,599",0.3309,0.0020,,,,,,,,,,,,,https://public.emdat.be
+NGA19-8-5-1,5 Aug,2019,Adamawa,,72,0,24,,0.000,,,,"200,963,599",0.0358,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-8-12-1,12 Aug,2019,,,57,0,19,,0.000,,,,"200,963,599",0.0284,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,55,,,,,,,,"200,963,599",0.0274,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,2,,,,,,,,"200,963,599",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-8-19-1,19 Aug,2019,Adamawa,,49,0,12,,0.000,,,,"200,963,599",0.0244,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Girie,6,,,,,,,,"200,963,599",0.0030,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Yola North,34,,,,,,,,"200,963,599",0.0169,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Yola South ,9,,,,,,,,"200,963,599",0.0045,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-8-26-1,26 Aug,2019,,,33,0,11,,0.000,,,,"200,963,599",0.0164,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,24,,,,,,,,"200,963,599",0.0119,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,9,,,,,,,,"200,963,599",0.0045,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-9-2-1,2 Sep,2019,,,36,0,13,,0.000,,,,"200,963,599",0.0179,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,25,,,,,,,,"200,963,599",0.0124,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,3,,,,,,,,"200,963,599",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,8,,,,,,,,"200,963,599",0.0040,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-9-9-1,9 Sep,2019,,,21,0,,,0.000,,,,"200,963,599",0.0104,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,20,,,,,,,,"200,963,599",0.0100,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-9-15-1,15 Sep,2019,Adamawa,,757,4,222,,0.528,1.3F:1M,Children <4 most affected ,,"200,963,599",0.3767,0.0020,,,,,,Sanitation & hygiene ,,,Overcrowding,,,,https://www.afro.who.int/health-topics/disease-outbreaks/outbreaks-and-other-emergencies-updates?page=7
+NGA19-9-16-1,16 Sep,2019,,,32,0,11,,0.000,,,,"200,963,599",0.0159,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,21,,,,,,,,"200,963,599",0.0104,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,11,,,,,,,,"200,963,599",0.0055,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-9-23-1,23 Sep,2019,,,31,0,2,,0.000,,,,"200,963,599",0.0154,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,10,,,,,,,,"200,963,599",0.0050,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,21,,,,,,,,"200,963,599",0.0104,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-9-30-1,30 Sep,2019,,,24,0,,,0.000,,,,"200,963,599",0.0119,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,23,,,,,,,,"200,963,599",0.0114,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-10-7-1,7 Oct,2019,,,15,0,7,,0.000,,,,"200,963,599",0.0075,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,7,,,,,,,,"200,963,599",0.0035,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,8,,,,,,,,"200,963,599",0.0040,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-10-14-1,14 Oct,2019,,,23,0,10,,0.000,,,,"200,963,599",0.0114,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Abia,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,11,,,,,,,,"200,963,599",0.0055,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,11,,,,,,,,"200,963,599",0.0055,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-10-21-1,21 Oct,2019,,,25,0,7,,0.000,,,,"200,963,599",0.0124,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Abia,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,7,,,,,,,,"200,963,599",0.0035,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,16,,,,,,,,"200,963,599",0.0080,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Lagos,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-10-26-1,26 Oct,2019,Adamawa,,787,4,,,0.508,,,,"200,963,599",0.3916,0.0020,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Yola North,481,2,,,0.416,,,,"200,963,599",0.2393,0.0010,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Girei,193,1,,,0.518,,,,"200,963,599",0.0960,0.0005,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Yola South ,112,1,,,0.893,,,,"200,963,599",0.0557,0.0005,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Song,1,0,,,0.000,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA19-10-26-2,26 Oct,2019,Borno,,11,,,,,,,,"200,963,599",0.0055,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,Adamawa,,11,,,,,,,,"200,963,599",0.0055,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+,,,Abia,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,http://www.plateformecholera.info/index.php/ressources/tools-and-guidelines/ocv-vaccine/874-monitoring-ocv
+NGA19-10-28-1,28 Oct,2019,Adamawa,,5,0,3,,0.000,,,,"200,963,599",0.0025,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-11-4-1,4 Nov,2019,,,33,0,11,,0.000,,,,"200,963,599",0.0164,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-11-11-1,11 Nov,2019,,,34,0,8,,0.000,,,,"200,963,599",0.0169,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Abia,,1,,,,,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,8,,,,,,,,"200,963,599",0.0040,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,4,,,,,,,,"200,963,599",0.0020,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Lagos,,21,,,,,,,,"200,963,599",0.0104,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-11-18-1,18 Nov,2019,,,4,0,2,,0.000,,,,"200,963,599",0.0020,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Abia,,1,,,,0.000,,,,"200,963,599",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,3,,,,0.000,,,,"200,963,599",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-11-25-1,25 Nov,2019,,,14,1,5,,7.143,,,,"200,963,599",0.0070,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,5,,,,,,,,"200,963,599",0.0025,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,2,,,,,,,,"200,963,599",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ogun,,7,,,,,,,,"200,963,599",0.0035,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-12-2-1,2 Dec,2019,,,60,11,3,,18.333,,,,"200,963,599",0.0299,0.0055,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,2,,,,,,,,"200,963,599",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ogun,,2,,,,,,,,"200,963,599",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Rivers,,56,,,,,,,,"200,963,599",0.0279,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-12-9-1,9 Dec,2019,Ogun,Abeokuta North,5,0,0,,0.000,,,,"200,963,599",0.0025,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-12-23-1,23 Dec,2019,,,9,0,0,,0.000,,,,"200,963,599",0.0045,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,5,,,,,,,,"200,963,599",0.0025,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,4,,,,,,,,"200,963,599",0.0020,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA19-12-30-1,30 Dec,2019,,,33,2,0,,6.061,,,,"200,963,599",0.0164,0.0010,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,25,,,,,,,,"200,963,599",0.0124,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kebbi,,8,,,,,,,,"200,963,599",0.0040,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-1-6-1,6 Jan,2020,,,19,4,0,,21.053,,,,"206,139,589",0.0092,0.0019,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,3,,,,,,,,"206,139,589",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ebonyi,,5,,,,,,,,"206,139,589",0.0024,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kebbi,,11,,,,,,,,"206,139,589",0.0053,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-1-13-1,13 Jan,2020,,,20,0,0,,0.000,,,,"206,139,589",0.0097,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,17,,,,,,,,"206,139,589",0.0082,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kebbi,,2,,,,,,,,"206,139,589",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ogun,,1,,,,,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-1-20-1,20 Jan,2020,,,74,4,0,,5.405,,,,"206,139,589",0.0359,0.0019,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,3,,,,,,,,"206,139,589",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ebonyi,,69,,,,,,,,"206,139,589",0.0335,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kebbi,,2,,,,,,,,"206,139,589",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-1-27-1,27 Jan,2020,Ebonyi,,198,8,0,,4.040,,,,"206,139,589",0.0961,0.0039,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Abakaliki,105,,,,,,,,"206,139,589",0.0509,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Ebonyi,12,,,,,,,,"206,139,589",0.0058,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Ivo,48,,,,,,,,"206,139,589",0.0233,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Ohaukwu,18,,,,,,,,"206,139,589",0.0087,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Onicha,15,,,,,,,,"206,139,589",0.0073,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-2-3-1,3 Feb,2020,Ebonyi,,257,4,0,,1.556,,,,"206,139,589",0.1247,0.0019,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Abakaliki,61,,,,,,,,"206,139,589",0.0296,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Afikpo North,82,,,,,,,,"206,139,589",0.0398,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Ezza South,2,,,,,,,,"206,139,589",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Ivo,66,,,,,,,,"206,139,589",0.0320,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Izzi,44,,,,,,,,"206,139,589",0.0213,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Ohaukwu,2,,,,,,,,"206,139,589",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-2-17-1,17 Feb,2020,Anambra,,1,0,,,0.000,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-3-9-1,9 Mar,2020,Abia,Isiala-Ngwa North,7,0,0,,0.000,,,,"206,139,589",0.0034,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-3-13-1,13 Mar,2020,,,6,0,0,,0.000,,,,"206,139,589",0.0029,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,4,,,,,,,,"206,139,589",0.0019,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Katsina,,1,,,,,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kogi,,1,,,,,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-3-30-1,30 Mar,2020,Katsina,Katsina,7,0,0,,0.000,,,,"206,139,589",0.0034,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-4-20-1,20 Apr,2020,,,97,14,0,,14.433,,,,"206,139,589",0.0471,0.0068,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ebonyi,,87,,,,,,,,"206,139,589",0.0422,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Taraba,,10,,,,,,,,"206,139,589",0.0049,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-4-26-1,26 Apr,2020,Ebonyi,,68,1,,,1.471,Death: 1 F,,,"206,139,589",0.0330,0.0005,,,,,,,,Caring for sick ,,,,,https://promedmail.org/promed-posts/
+NGA20-5-4-1,4 May,2020,Kebbi,Augie,1,0,,,0.000,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-5-18-1,18 May,2020,Kaduna,,1,0,,,0.000,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-6-21-1,21 Jun,2020,Bayelsa,,,5,,,,,,,"206,139,589",0.0000,0.0024,,,"Poor water quality, fish",,,,,,,,,,https://promedmail.org/promed-posts/
+NGA20-6-22-1,22 Jun,2020,,,9,0,,,0.000,,,,"206,139,589",0.0044,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,7,,,,,,,,"206,139,589",0.0034,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,2,,,,,,,,"206,139,589",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-6-29-1,29 Jun,2020,Bauchi,Zaki,10,0,0,,0.000,,,,"206,139,589",0.0049,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-7-6-1,6 Jul,2020,,,2,0,0,,0.000,,,,"206,139,589",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,1,,,,,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kaduna,,1,,,,,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-7-13-1,13 Jul,2020,,,22,0,0, ,0.000,,,,"206,139,589",0.0107,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ebonyi,,19,,,,,,,,"206,139,589",0.0092,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Lagos,,3,,,,,,,,"206,139,589",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-7-20-1,20 Jul,2020,,,38,3,0,,7.895,,,,"206,139,589",0.0184,0.0015,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,2,,,,,,,,"206,139,589",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kebbi,,36,,,,,,,,"206,139,589",0.0175,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-7-27-1,27 Jul,2020,,,12,1,0,,8.333,,,,"206,139,589",0.0058,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,2,,,,,,,,"206,139,589",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kebbi,,8,,,,,,,,"206,139,589",0.0039,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Lagos,,2,,,,,,,,"206,139,589",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-8-3-1,3 Aug,2020,,,21,0,0,,0.000,,,,"206,139,589",0.0102,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,1,,,,,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kebbi,,20,,,,,,,,"206,139,589",0.0097,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-8-10-1,10 Aug,2020,,,10,0,0,,0.000,,,,"206,139,589",0.0049,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,1,,,,,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kebbi,,9,,,,,,,,"206,139,589",0.0044,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-8-17-1,17 Aug,2020,,,5,0,0,,0.000,,,,"206,139,589",0.0024,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,1,,,,,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kebbi,,4,,,,,,,,"206,139,589",0.0019,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-8-24-1,24 Aug,2020,,,9,0,0,,0.000,,,,"206,139,589",0.0044,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,1,,,,,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kebbi,,8,,,,,,,,"206,139,589",0.0039,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-8-31-1,31 Aug,2020,,,20,2,0,,10.000,,,,"206,139,589",0.0097,0.0010,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,1,,,,,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Borno,,7,,,,,,,,"206,139,589",0.0034,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kebbi,,12,,,,,,,,"206,139,589",0.0058,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-9-7-1,7 Sep,2020,Kano,Madobi,3,1,0,,33.333,,,,"206,139,589",0.0015,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-9-14-1,14 Sep,2020,Kebi,,21,1,0,,4.762,,,,"206,139,589",0.0102,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Bagudo,9,,,,,,,,"206,139,589",0.0044,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,,Sakaba,12,,,,,,,,"206,139,589",0.0058,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-9-21-1,21 Sep,2020,Katsina,Bakori,1,0,,,0.000,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-10-12-1,12 Oct,2020,,,103,11,0,,10.680,,,,"206,139,589",0.0500,0.0053,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bauchi,,13,,,,,,,,"206,139,589",0.0063,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Enugu,,1,,,,,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kebbi,,86,,,,,,,,"206,139,589",0.0417,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Sokoto,,3,,,,,,,,"206,139,589",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-10-19-1,19 Oct,2020,,,48,0,,,0.000,,,,"206,139,589",0.0233,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Bayelsa,,1,,,,,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kebbi,,1,,,,,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kwara,,1,,,,,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ondo,,3,,,,,,,,"206,139,589",0.0015,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Sokoto,,42,,,,,,,,"206,139,589",0.0204,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-11-9-1,9 Nov,2020,Oyo,Lagelu,,6,,5,,,,,"206,139,589",,0.0029,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA20-11-16-1,16 Nov,2020,,,19,0,,,0.000,,,,"206,139,589",0.0092,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kwara,,18,0,,,0.000,,,,"206,139,589",0.0087,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Sokoto,,1,0,,,0.000,,,,"206,139,589",0.0005,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-11-30-1,30 Nov,2020,Bayelsa,Southern Ijaw,21,2,0,,9.524,,,,"206,139,589",0.0102,0.0010,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-12-7-1,7 Dec,2020,Bayelsa,Southern Ijaw,4,0,0,,0.000,,,,"206,139,589",0.0019,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-12-14-1,14 Dec,2020,Ekiti,Ado Ekiti,2,0,0,,0.000,,,,"206,139,589",0.0010,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA20-12-28-1,28 Dec,2020,,,7,1,0,,14.286,,,,"206,139,589",0.0034,0.0005,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Ekiti,,,,,,,,,,"206,139,589",,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Kano,,,,,,,,,,"206,139,589",,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA21-1-11-1,11 Jan,2021,Benue,Guma,30,3,,,10.000,,Children,,"206,139,589",0.0146,0.0015,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+NGA21-14-1-1,14 Jan,2021,Benue,,171,35,5,,20.468,Males to females is even,6-14yrs,,"206,139,589",0.0830,0.0170,,,Untreated water,,,,,,,,,,"https://promedmail.org/promed-posts/
+https://apps.who.int/iris/bitstream/handle/10665/338891/OEW04-1824012021.pdf"
+,,,,Agatu,75,14,,,18.667,,,,"206,139,589",0.0364,0.0068,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Guma,58,6,,,10.345,,,,"206,139,589",0.0281,0.0029,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Makurdi,20,7,,,35.000,,,,"206,139,589",0.0097,0.0034,,,,,,,,,,,,,https://apps.who.int/iris/bitstream/handle/10665/338891/OEW04-1824012021.pdf
+NGA21-1-18-1,18 Jan,2021,,,11,,,,,,,,"206,139,589",0.0053,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Adamawa,,7,,,,,,,,"206,139,589",0.0034,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+,,,Nasarawa,,4,,,,,,,,"206,139,589",0.0019,,,,,,,,,,,,,,https://ncdc.gov.ng/reports/238/2019-december-week-52
+NGA21-20-1-1,20 Jan,2021,Delta,,200,20,,,10.000,59%M:41%F,>5yrs 51%,,"206,139,589",0.0970,0.0097,,,Untreated water,,,,,,,,"Enhanced education of healthcare workers and community. Encourage people to report",,https://promedmail.org/promed-posts/
+,,,,Bomadi,,,,,,,,,"206,139,589",,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
+,,,,Burutu,,,,,,,,,"206,139,589",,,,,,,,,,,,,,,https://promedmail.org/promed-posts/
