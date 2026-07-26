@@ -90,33 +90,46 @@ def events_empty():
     return n == 0
 
 
+def has_disease(disease):
+    """True if the real/historical seed for a disease is already loaded (ignores live registrations)."""
+    c = conn()
+    n = c.execute("SELECT COUNT(*) FROM surveillance_events WHERE disease=? AND source!='registration'",
+                  (disease,)).fetchone()[0]
+    c.close()
+    return n > 0
+
+
 def bootstrap(df):
-    """Seed surveillance_events once, from the real SORMAS Lassa line-list (monthly per state),
-    plus a small illustrative multi-disease sample so the disease filter is meaningful."""
-    if not events_empty():
-        return
-    d = df.copy()
-    d["deceased"] = (d["outcome_case"].astype(str) == "Deceased").astype(int)
-    agg = (d.groupby(["State_new", "yr", "mo"])
-           .agg(new_cases=("positive", "sum"), deaths=("deceased", "sum")).reset_index())
+    """Seed surveillance_events from real data, PER DISEASE and idempotently — so adding a new
+    disease to the code also populates an already-existing (e.g. deployed) database, not only a
+    brand-new one. Lassa (SORMAS case-level) + Cholera (per-state) + Mpox (national), all real."""
     rows = []
-    for r in agg.itertuples():
-        mo = int(r.mo)
-        temp, rain = climate(mo, str(r.State_new))
-        rows.append((f"{int(r.yr):04d}-{mo:02d}-01", str(r.State_new), None, "Lassa fever",
-                     int(r.new_cases), int(r.deaths), temp, rain, "historical", _now()))
+    if not has_disease("Lassa fever"):
+        d = df.copy()
+        d["deceased"] = (d["outcome_case"].astype(str) == "Deceased").astype(int)
+        agg = (d.groupby(["State_new", "yr", "mo"])
+               .agg(new_cases=("positive", "sum"), deaths=("deceased", "sum")).reset_index())
+        for r in agg.itertuples():
+            mo = int(r.mo)
+            temp, rain = climate(mo, str(r.State_new))
+            rows.append((f"{int(r.yr):04d}-{mo:02d}-01", str(r.State_new), None, "Lassa fever",
+                         int(r.new_cases), int(r.deaths), temp, rain, "historical", _now()))
     # Additional REAL diseases (cholera per-state, mpox national) — no fabricated data.
     try:
         import real_data
-        for r in real_data.extra_events().itertuples(index=False):
-            rows.append((r.report_date, r.state, r.lga, r.disease, int(r.new_cases),
-                         int(r.deaths), r.temperature, r.rainfall, r.source, _now()))
+        for disease, g in real_data.extra_events().groupby("disease"):
+            if has_disease(disease):
+                continue
+            for r in g.itertuples(index=False):
+                rows.append((r.report_date, r.state, r.lga, r.disease, int(r.new_cases),
+                             int(r.deaths), r.temperature, r.rainfall, r.source, _now()))
     except Exception:
         pass
-    c = conn()
-    c.executemany("INSERT INTO surveillance_events(report_date,state,lga,disease,new_cases,"
-                  "deaths,temperature,rainfall,source,created_at) VALUES(?,?,?,?,?,?,?,?,?,?)", rows)
-    c.commit(); c.close()
+    if rows:
+        c = conn()
+        c.executemany("INSERT INTO surveillance_events(report_date,state,lga,disease,new_cases,"
+                      "deaths,temperature,rainfall,source,created_at) VALUES(?,?,?,?,?,?,?,?,?,?)", rows)
+        c.commit(); c.close()
 
 
 def events_df():

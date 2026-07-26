@@ -18,7 +18,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import joblib
-from sklearn.linear_model import SGDClassifier
+from sklearn.naive_bayes import BernoulliNB
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
@@ -34,13 +34,11 @@ def main():
     classes = np.unique(y)
 
     Xtr, Xte, ytr, yte = train_test_split(X, y, test_size=0.2, stratify=y, random_state=42)
-    clf = SGDClassifier(loss="modified_huber", alpha=1e-4, random_state=42)
-    rng = np.random.RandomState(0)
-    for epoch in range(20):                      # online (partial_fit) training over epochs
-        idx = rng.permutation(len(Xtr))
-        for i in range(0, len(idx), 64):
-            b = idx[i:i + 64]
-            clf.partial_fit(Xtr[b], ytr[b], classes=classes)
+    # BernoulliNB — robust when a clinician enters a PARTIAL symptom set (each present symptom
+    # updates the posterior), the standard model family for symptom checkers. It also supports
+    # partial_fit() for online updates, keeping the adaptive theme.
+    clf = BernoulliNB()
+    clf.partial_fit(Xtr, ytr, classes=classes)
 
     acc = accuracy_score(yte, clf.predict(Xte))
     print(f"multi-disease symptom classifier — test accuracy: {acc:.3f} "

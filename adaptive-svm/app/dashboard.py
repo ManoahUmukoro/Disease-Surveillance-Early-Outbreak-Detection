@@ -231,30 +231,31 @@ def page_header(title, subtitle=""):
 def page_overview():
     page_header("Overview", "A live snapshot of the surveillance system.")
     ev = store.events_df()
+    n_dis = int(ev.disease.nunique()) if not ev.empty else 0
+    total_cases = int(ev.new_cases.sum()) if not ev.empty else 0
+    n_conditions = len(sym_model["classes"]) if sym_model else 0
     k = st.columns(4)
-    k[0].metric("Training records", f"{len(df):,}")
-    k[1].metric("Confirmed Lassa", f"{int(df.positive.sum()):,}")
-    k[2].metric("States covered", int(df.State_new.nunique()))
+    k[0].metric("Diseases monitored", n_dis)
+    k[1].metric("Conditions triaged", n_conditions)
+    k[2].metric("Total surveillance cases", f"{total_cases:,}")
     k[3].metric("Data period", data_period())
     k2 = st.columns(4)
-    k2[0].metric("Surveillance events", f"{len(ev):,}")
+    k2[0].metric("States / regions", int(df.State_new.nunique()))
     k2[1].metric("Cases registered here", f"{store.case_count():,}")
     k2[2].metric("Alerts logged", f"{len(store.recent_notifications(1000)):,}")
     k2[3].metric("Outbreak accuracy", "89%")
 
     left, right = st.columns([3, 2])
     with left:
-        st.markdown("**Confirmed Lassa cases over time**")
-        lassa = ev[ev.disease == "Lassa fever"]
-        if not lassa.empty:
-            ts = lassa.groupby(lassa.report_date.dt.to_period("M")).new_cases.sum()
-            ts.index = ts.index.to_timestamp()
-            st.bar_chart(ts, height=240)
-        st.caption("Real NCDC / SORMAS records — “Training records” is what the model learned from; "
-                   "“Cases registered here” are new cases entered live, which extend the data period.")
+        st.markdown("**Cases by disease (surveillance records)**")
+        if not ev.empty:
+            by_dis = ev.groupby("disease").new_cases.sum().sort_values(ascending=False)
+            st.bar_chart(by_dis, height=260)
+        st.caption("Real surveillance data across every monitored disease. Cases registered here are "
+                   "added live, extending these totals and the data period.")
     with right:
-        st.success("**How well it performs:** the model flags outbreaks with about **89%** accuracy "
-                   "and keeps learning from every new case instead of going stale.")
+        st.success("**How well it performs:** flags outbreaks with about **89%** accuracy and keeps "
+                   "learning from every new case instead of going stale.")
         st.caption("Real, multi-disease data — Lassa (case-level), Cholera (per-state) and Mpox "
                    "(national) for outbreak monitoring, plus a symptom model covering **41 conditions** "
                    "for case triage.")
@@ -407,6 +408,11 @@ def page_register():
         top = reg.get("top") or []
         if not top:
             st.info("Select at least one symptom, then click **Predict**.")
+        elif top[0][1] < 0.50:
+            alt = " · ".join(f"**{d}** ({p:.0%})" for d, p in top[:3])
+            st.warning(f"🔎 Not a confident match yet — the symptoms entered don't clearly point to one "
+                       f"condition. Closest possibilities: {alt}. Add more of the patient's symptoms for a "
+                       f"reliable assessment; you can still save the case for the record.")
         else:
             dis, prob = top[0]
             level = prob_band(prob)
@@ -571,7 +577,7 @@ PAGES = {
 }
 with st.sidebar:
     st.markdown("## 🦠 Disease Surveillance")
-    st.caption("Adaptive SVM · Nigeria (NCDC / SORMAS)")
+    st.caption("Real-data outbreak monitoring & multi-disease case triage")
     st.markdown("")
     choice = st.radio("Menu", list(PAGES), label_visibility="collapsed", key="nav")
     st.divider()
