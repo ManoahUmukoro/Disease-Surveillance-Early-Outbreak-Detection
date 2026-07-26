@@ -46,6 +46,7 @@ st.markdown("""
       border-radius: 12px; padding: 16px 18px 12px;
   }
   [data-testid="stMetric"] [data-testid="stMetricLabel"] p {font-size: 0.78rem; opacity: 0.75;}
+  [data-testid="stMetric"] [data-testid="stMetricValue"] {font-size: 1.9rem;}
   /* sidebar as a nav menu */
   section[data-testid="stSidebar"] {min-width: 268px;}
   section[data-testid="stSidebar"] div[role="radiogroup"] {gap: 3px;}
