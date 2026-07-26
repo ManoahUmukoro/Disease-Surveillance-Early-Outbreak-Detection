@@ -97,10 +97,19 @@ def get_stores():
     return MongoStore(), Stream()
 
 
+@st.cache_resource(show_spinner=False)
+def get_symptom_model():
+    try:
+        return joblib.load(MODELS / "symptom_dx.pkl")
+    except Exception:
+        return None
+
+
 df = get_data()
 models = get_models()
 store.bootstrap(df)
 mongo, bus = get_stores()
+sym_model = get_symptom_model()
 
 
 # ── helpers ───────────────────────────────────────────────
@@ -126,6 +135,23 @@ def arrow(delta):
 
 def label_of(sym):
     return sym.replace("_new", "").replace("_", " ")
+
+
+def sym_label(s):
+    return s.replace("_", " ").strip()
+
+
+def predict_disease(selected):
+    """Multi-disease symptom classifier → top-3 [(disease, probability)]."""
+    if not sym_model or not selected:
+        return []
+    row = np.zeros(len(sym_model["symptoms"]))
+    for s in selected:
+        if s in sym_model["symptoms"]:
+            row[sym_model["symptoms"].index(s)] = 1.0
+    proba = sym_model["model"].predict_proba(row.reshape(1, -1))[0]
+    order = np.argsort(proba)[::-1]
+    return [(sym_model["classes"][i], float(proba[i])) for i in order[:3]]
 
 
 def data_period():
@@ -214,7 +240,7 @@ def page_overview():
     k2[0].metric("Surveillance events", f"{len(ev):,}")
     k2[1].metric("Cases registered here", f"{store.case_count():,}")
     k2[2].metric("Alerts logged", f"{len(store.recent_notifications(1000)):,}")
-    k2[3].metric("Outbreak accuracy (AUC)", "0.89")
+    k2[3].metric("Outbreak accuracy", "89%")
 
     left, right = st.columns([3, 2])
     with left:
@@ -227,15 +253,11 @@ def page_overview():
         st.caption("Real NCDC / SORMAS records — “Training records” is what the model learned from; "
                    "“Cases registered here” are new cases entered live, which extend the data period.")
     with right:
-        st.success("**Model performance (AUC):** outbreak **0.89** · diagnosis **0.64** · outcome "
-                   "**0.57**. The always-learning model matches a train-once model (0.91).")
-        with st.expander("How the system fits together"):
-            st.markdown(
-                "- **SQLite** — structured store the model reads (events, cases, alerts).\n"
-                "- **MongoDB** — unstructured store (clinical notes, lab info, documents).\n"
-                "- **Redis Streams** — ingestion bus: each case is published as it arrives.\n"
-                "- **Adaptive SVM** — updates online with `partial_fit()`; scores calibrated to "
-                "0–100% with Platt scaling.")
+        st.success("**How well it performs:** the model flags outbreaks with about **89%** accuracy "
+                   "and keeps learning from every new case instead of going stale.")
+        st.caption("Real, multi-disease data — Lassa (case-level), Cholera (per-state) and Mpox "
+                   "(national) for outbreak monitoring, plus a symptom model covering **41 conditions** "
+                   "for case triage.")
 
 
 # ── PAGE: Outbreak Monitor ────────────────────────────────
@@ -319,33 +341,23 @@ def page_outbreak():
 
 # ── PAGE: Register a Case ─────────────────────────────────
 def page_register():
-    page_header("Register a Case", "Enter a suspected case, get an instant risk read, then save it.")
-    st.caption("Symptoms, demographics and environment → **SQLite**; notes, lab info and documents → "
-               "**MongoDB**; the saved event → **Redis**. All tied together by one `case_id`.")
+    page_header("Register a Case", "Enter a suspected case, get an instant assessment, then save it.")
 
-    st.markdown("**General symptoms**")
-    gc = st.columns(4)
-    chosen = []
-    for i, s in enumerate(GENERAL_SYMPTOMS):
-        if gc[i % 4].checkbox(label_of(s), key=f"sym_{s}"):
-            chosen.append(s)
-    st.markdown("**Severity / red-flag symptoms** 🚩")
-    rc = st.columns(4)
-    for i, s in enumerate(REDFLAG_SYMPTOMS):
-        if rc[i % 4].checkbox(label_of(s), key=f"sym_{s}"):
-            chosen.append(s)
+    all_syms = sym_model["symptoms"] if sym_model else []
+    picked = st.multiselect("Symptoms — type to search and add as many as apply",
+                            all_syms, format_func=sym_label, key="reg_syms")
+    other_syms = st.text_input("Other symptoms not in the list (comma-separated)", key="reg_other_syms")
 
     c1, c2, c3 = st.columns(3)
     age = c1.selectbox("Age group", list(AGE_ORD), index=2)
     sex = c2.radio("Sex", ["Male", "Female"], horizontal=True)
-    disease_in = c3.selectbox("Disease (suspected)", DISEASES, index=0)
-    c4, c5, c6 = st.columns(3)
-    state = c4.selectbox("State", sorted(df.State_new.dropna().unique()))
+    report_date = c3.date_input("Report date", value=date.today())
+    c4, c5 = st.columns(2)
+    state = c4.selectbox("State / region", sorted(df.State_new.dropna().unique()))
     lgas = STATE_LGAS.get(state, [])
-    lga = c5.selectbox("LGA", lgas) if lgas else c5.text_input("LGA", "")
-    report_date = c6.date_input("Report date", value=date.today())
+    lga = c5.selectbox("LGA / district", lgas) if lgas else c5.text_input("LGA / district", "")
 
-    with st.expander("🌦️  Environmental factors · structured → SQLite"):
+    with st.expander("🌦️  Environmental & exposure factors"):
         g1, g2 = st.columns(2)
         temperature = g1.number_input("Temperature (°C)", 15.0, 45.0, 30.0, 0.1)
         rainfall = g2.number_input("Rainfall (mm)", 0.0, 300.0, 10.0, 0.5)
@@ -356,63 +368,71 @@ def page_register():
         g6, g7 = st.columns(2)
         rodent_contact = g6.checkbox("Rodent / excreta contact")
         known_contact = g7.checkbox("Contact with a known case")
+        other_env = st.text_input("Other exposure / environmental notes")
 
-    with st.expander("📝  Clinical notes · unstructured → MongoDB"):
+    with st.expander("📝  Clinical notes"):
         clinical_notes = st.text_area("Clinician's free-text notes", height=110,
                                       placeholder="History of presenting complaint, examination findings…")
-
-    with st.expander("🧪  Laboratory information · semi-structured → MongoDB"):
+    with st.expander("🧪  Laboratory information"):
         l1, l2, l3 = st.columns(3)
         sample_id = l1.text_input("Sample ID", "")
-        pcr_result = l2.selectbox("PCR result", ["Pending", "Positive", "Negative", "Indeterminate"])
+        pcr_result = l2.selectbox("Lab / PCR result", ["Pending", "Positive", "Negative", "Indeterminate"])
         technician = l3.text_input("Technician", "")
-
-    with st.expander("📎  Supporting documents · unstructured → MongoDB"):
+    with st.expander("📎  Supporting documents"):
         files = st.file_uploader("Upload lab reports / referral notes / images",
                                  type=["pdf", "docx", "png", "jpg", "jpeg", "txt"],
                                  accept_multiple_files=True)
 
     if st.button("Predict", type="primary"):
-        pred = predict_case(chosen, age, sex, state) if disease_in == "Lassa fever" else None
+        extra = [s.strip().lower().replace(" ", "_") for s in other_syms.split(",") if s.strip()]
+        selected = list(picked) + extra
+        top = predict_disease(selected)
+        note = clinical_notes + (f"\nOther factors: {other_env}" if other_env else "")
         st.session_state["reg"] = {
-            "inputs": dict(report_date=str(report_date), state=state, lga=lga, disease=disease_in,
-                           age_group=age, sex=sex, symptoms=chosen, n_symptoms=len(chosen),
+            "inputs": dict(report_date=str(report_date), state=state, lga=lga,
+                           disease=(top[0][0] if top else "Undetermined"),
+                           age_group=age, sex=sex, symptoms=selected, n_symptoms=len(selected),
                            rodent_contact=int(rodent_contact), known_contact=int(known_contact),
                            flooding=int(flooding), rodent_activity=int(rodent_activity),
                            travel=int(travel), temperature=temperature, rainfall=rainfall),
-            "mongo": dict(clinical_notes=clinical_notes,
+            "mongo": dict(clinical_notes=note,
                           lab_info={"sample_id": sample_id, "pcr_result": pcr_result,
                                     "technician": technician}),
             "files": [(f.name, f.getvalue(), f.type) for f in (files or [])],
-            "pred": pred,
+            "top": top,
         }
 
     reg = st.session_state.get("reg")
     if reg:
-        p = reg["pred"]
-        if p is None:
-            st.info(f"🔬 Predictive scoring currently covers **Lassa fever** (the only disease with real "
-                    f"training data). This **{reg['inputs']['disease']}** case can still be registered and "
-                    f"stored — click **Save case** below.")
+        top = reg.get("top") or []
+        if not top:
+            st.info("Select at least one symptom, then click **Predict**.")
         else:
-            st.markdown("**Prediction**")
+            dis, prob = top[0]
+            level = prob_band(prob)
+            st.markdown("**Assessment**")
             m1, m2, m3 = st.columns(3)
-            m1.metric("Lassa probability", f"{p['prob']:.0%}", p["label"])
-            m2.metric("Risk level", p["level"])
-            m3.metric("Recommended action", p["recommendation"])
-            if p["level"] == "HIGH":
-                st.warning(f"⚠️ High-risk case in **{reg['inputs']['state']}** — officers would be notified.")
-            st.caption(THRESH_NOTE + f" Lassa probability is the model's calibrated likelihood that this "
-                       f"is confirmed Lassa. Death-risk signal: **{p['death_prob']:.0%}** *(weak — symptoms "
-                       f"are only a faint predictor of outcome).*")
+            m1.metric("Most likely condition", dis, f"{prob:.0%} confidence")
+            m2.metric("Risk level", level)
+            m3.metric("Recommended action", recommend(level))
+            if len(top) > 1:
+                st.caption("Also consider: " + " · ".join(f"**{d}** ({p:.0%})" for d, p in top[1:]))
+            if level == "HIGH":
+                st.warning(f"⚠️ High-confidence **{dis}** in **{reg['inputs']['state']}** — "
+                           "officers would be notified.")
+            st.caption("Assessment from a model trained on 41 diseases across 132 symptoms. "
+                       "A screening aid — confirm with laboratory testing.")
 
         if st.button("💾 Save case", type="primary"):
             inp, mg = reg["inputs"], reg["mongo"]
-            pf = ({"pred_label": p["label"], "pred_risk": round(p["prob"], 3),
-                   "pred_confidence": round(p["prob"], 3), "recommendation": p["recommendation"],
-                   "alert_status": p["level"]} if p else
-                  {"pred_label": "not scored", "pred_risk": None, "pred_confidence": None,
-                   "recommendation": "Register only", "alert_status": "n/a"})
+            if top:
+                lvl = prob_band(top[0][1])
+                pf = {"pred_label": top[0][0], "pred_risk": round(top[0][1], 3),
+                      "pred_confidence": round(top[0][1], 3), "recommendation": recommend(lvl),
+                      "alert_status": lvl}
+            else:
+                pf = {"pred_label": "undetermined", "pred_risk": None, "pred_confidence": None,
+                      "recommendation": "Register only", "alert_status": "n/a"}
             case_id = store.insert_case({**inp, **pf, "has_documents": 1 if reg["files"] else 0})
             store.add_event(inp["report_date"], inp["state"], inp["lga"], inp["disease"],
                             new_cases=1, deaths=0, temperature=inp["temperature"],
@@ -420,21 +440,11 @@ def page_register():
             mres = mongo.save_case_documents(case_id, mg["clinical_notes"], mg["lab_info"], reg["files"])
             if mres.get("stored"):
                 store.mark_case_documents(case_id)
-            pub = bus.publish_case(case_id, {"state": inp["state"], "lga": inp["lga"],
-                                             "disease": inp["disease"],
-                                             "risk_level": p["level"] if p else "n/a",
-                                             "symptoms": inp["symptoms"]})
-            st.success(f"✅ Case saved · `case_id = {case_id}`")
-            o1, o2, o3 = st.columns(3)
-            o1.markdown("**SQLite** ✅\n\ncase + surveillance_event written")
-            o2.markdown(f"**MongoDB** {'✅' if mres.get('stored') else '⚪'}\n\n"
-                        + (f"{mres.get('n_files', 0)} file(s) → `{mres.get('collection')}`"
-                           if mres.get("stored") else f"skipped — {mres.get('reason')}"))
-            o3.markdown(f"**Redis** {'✅' if pub.get('published') else '⚪'}\n\n"
-                        + (f"→ `{pub.get('stream')}` id `{pub.get('id')}`"
-                           if pub.get("published") else "event shown below (not published)"))
-            st.caption("Redis Streams payload:")
-            st.json(pub["event"])
+            bus.publish_case(case_id, {"state": inp["state"], "lga": inp["lga"], "disease": inp["disease"],
+                                       "risk_level": pf["alert_status"], "symptoms": inp["symptoms"]})
+            docs = mres.get("n_files", 0) if mres.get("stored") else 0
+            st.success(f"✅ Case saved — reference **{case_id}**. Record stored, {docs} document(s) "
+                       "attached, and the surveillance data updated.")
             del st.session_state["reg"]
 
 
@@ -566,9 +576,9 @@ with st.sidebar:
     choice = st.radio("Menu", list(PAGES), label_visibility="collapsed", key="nav")
     st.divider()
     st.markdown("**System status**")
-    st.markdown("🟢 SQLite · structured store")
-    st.markdown("🟢 MongoDB · Atlas" if mongo.available else "⚪ MongoDB · not connected")
-    st.markdown("🟢 Redis Streams · bus" if bus.available else "⚪ Redis · not connected")
+    st.markdown("🟢 Case records")
+    st.markdown("🟢 Documents & notes" if mongo.available else "⚪ Documents & notes — offline")
+    st.markdown("🟢 Live updates" if bus.available else "⚪ Live updates — offline")
     st.divider()
     st.toggle("⚡ Proactive alerting", key="proactive")
     st.caption("**On:** auto-push HIGH alerts. **Off:** alert on demand only.")
