@@ -40,21 +40,19 @@ def _send_email(recipient, subject, body) -> bool:
 
 
 def send_alert(disease, location, severity, message, recipients=None):
-    """Log + deliver one alert per recipient. Returns a delivery record."""
+    """Log ONE alert per event (all recipients in a single row) and deliver to each."""
     recipients = recipients or RECIPIENTS
     ts = datetime.now().isoformat(timespec="seconds")
     subject = f"[{severity}] {disease} outbreak signal — {location}"
     smtp_on = bool(os.environ.get("SMTP_HOST"))
-    rows = []
-    for r in recipients:
-        delivered = _send_email(r, subject, message)
-        method = "Email" if delivered else "Dashboard"
-        status = "Delivered" if delivered else ("Failed" if smtp_on else "Delivered")
-        nid = store.log_notification(ts, disease, location, severity, message,
-                                     r["name"], method, status)
-        rows.append({"id": nid, "recipient": r["name"], "method": method, "status": status})
-    return {"ts": ts, "recipients": [r["name"] for r in recipients], "rows": rows,
-            "delivered": any(x["status"] == "Delivered" for x in rows)}
+    delivered_any = any(_send_email(r, subject, message) for r in recipients)
+    method = "Email" if delivered_any else "Dashboard"
+    status = "Delivered" if (delivered_any or not smtp_on) else "Failed"
+    recips = ", ".join(r["name"] for r in recipients)
+    nid = store.log_notification(ts, disease, location, severity, message, recips, method, status)
+    return {"ts": ts, "id": nid, "recipients": [r["name"] for r in recipients],
+            "recipient_str": recips, "method": method, "status": status,
+            "delivered": status == "Delivered"}
 
 
 def check_and_notify(signals):

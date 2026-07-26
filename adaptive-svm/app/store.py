@@ -105,10 +105,6 @@ def bootstrap(df):
         temp, rain = climate(mo, str(r.State_new))
         rows.append((f"{int(r.yr):04d}-{mo:02d}-01", str(r.State_new), None, "Lassa fever",
                      int(r.new_cases), int(r.deaths), temp, rain, "historical", _now()))
-    # small illustrative Cholera sample (matches the advisor's example table)
-    for day, nc, dth, t, rf in [("2026-01-01", 4, 0, 30, 12), ("2026-01-02", 8, 1, 31, 15),
-                                ("2026-01-03", 18, 2, 31, 20)]:
-        rows.append((day, "Anambra", "Onitsha North", "Cholera", nc, dth, t, rf, "sample", _now()))
     c = conn()
     c.executemany("INSERT INTO surveillance_events(report_date,state,lga,disease,new_cases,"
                   "deaths,temperature,rainfall,source,created_at) VALUES(?,?,?,?,?,?,?,?,?,?)", rows)

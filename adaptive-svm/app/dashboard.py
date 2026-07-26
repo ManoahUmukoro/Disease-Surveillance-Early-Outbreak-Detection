@@ -3,19 +3,15 @@ dashboard.py — Streamlit front end for the Adaptive SVM disease-surveillance s
 
 Run:  streamlit run adaptive-svm/app/dashboard.py
 
-Demonstrates the Chapter 4 architecture end-to-end:
-  • Overview                    — data + model summary and live store status
-  • Outbreak monitor            — per-state risk (Risk Level + Confidence + trend + action)
-  • Case Registration & Triage  — accordion form → Predict → Save (SQLite + MongoDB + Redis)
-  • Trends                      — cases / deaths / risk / alerts over time, filterable
-  • Notifications               — the alert log with delivery status and acknowledgement
-  • Model Status                — the three online SVMs and adaptive-vs-batch performance
+Six tabs: Overview · Outbreak monitor · Case Registration & Triage · Trends ·
+Notifications · Model Status.
 
 Structured data (surveillance_events, cases, notifications) → SQLite (store.py).
 Unstructured data (clinical notes, lab info, documents) → MongoDB (mongo_store.py).
 New-case events → Redis Streams (stream.py). Mongo/Redis degrade gracefully when not configured.
 """
 import sys
+import json
 import math
 from datetime import date, datetime
 from pathlib import Path
@@ -37,11 +33,23 @@ from notifications import check_and_notify, RECIPIENTS
 MODELS = HERE / "models"
 st.set_page_config(page_title="Adaptive SVM — Disease Surveillance", layout="wide")
 
-KEY_SYMPTOMS = ["fever_new", "headache_new", "muscle_pain", "sore_throat", "abdominal_pain",
-                "vomiting_new", "bleeding_gums", "nose_bleeding", "difficulty_breathing",
-                "confused_disoriented", "chest_pain", "diarrhea_new"]
+# Symptoms are grouped so the form reflects the "assess severity" job (red-flags stand apart).
+GENERAL_SYMPTOMS = ["fever_new", "headache_new", "muscle_pain", "sore_throat",
+                    "abdominal_pain", "vomiting_new", "diarrhea_new", "chest_pain"]
+REDFLAG_SYMPTOMS = ["bleeding_gums", "nose_bleeding", "difficulty_breathing", "confused_disoriented"]
 DISEASES = ["Lassa fever", "Cholera", "Meningitis", "Mpox", "Other"]
 AGE_ORD = {"0-14": 0, "15-24": 1, "25-64": 2, "65+": 3}
+
+# One consistent risk rule everywhere, applied to the CALIBRATED probability, so the label
+# on screen always matches the number next to it.
+HIGH_T, MED_T = 0.50, 0.20
+THRESH_NOTE = (f"Risk level comes from the calibrated probability, one consistent rule everywhere: "
+               f"**HIGH ≥ {HIGH_T:.0%}**, **MEDIUM {MED_T:.0%}–{HIGH_T:.0%}**, **LOW < {MED_T:.0%}**.")
+
+try:
+    STATE_LGAS = json.loads((HERE / "data" / "state_lgas.json").read_text())
+except Exception:
+    STATE_LGAS = {}
 
 
 @st.cache_data(show_spinner=False)
@@ -72,8 +80,7 @@ mongo, bus = get_stores()
 
 # ── helpers ───────────────────────────────────────────────
 def to_prob(bundle, margin):
-    """Calibrated probability (0-1) from an SVM margin, via the bundle's Platt-scaling params.
-    Turns the unbounded hinge-loss margin into an interpretable 0-100% likelihood."""
+    """Calibrated probability (0-1) from an SVM margin, via the bundle's Platt-scaling params."""
     cal = bundle.get("calib")
     if cal:
         A, B = cal
@@ -82,7 +89,7 @@ def to_prob(bundle, margin):
 
 
 def prob_band(p):
-    return "HIGH" if p >= 0.5 else ("MEDIUM" if p >= 0.25 else "LOW")
+    return "HIGH" if p >= HIGH_T else ("MEDIUM" if p >= MED_T else "LOW")
 
 
 def recommend(level):
@@ -91,6 +98,19 @@ def recommend(level):
 
 def arrow(delta):
     return "↑" if delta > 0 else ("↓" if delta < 0 else "→")
+
+
+def label_of(sym):
+    return sym.replace("_new", "").replace("_", " ")
+
+
+def data_period():
+    """The true date span of everything the system has ingested — updates as cases stream in."""
+    ev = store.events_df()
+    if ev.empty:
+        return "—"
+    lo, hi = int(ev.report_date.min().year), int(ev.report_date.max().year)
+    return f"{lo}" if lo == hi else f"{lo}–{hi}"
 
 
 BADGE = {"HIGH": "🔴 HIGH", "MEDIUM": "🟡 MEDIUM", "LOW": "🟢 LOW"}
@@ -138,24 +158,24 @@ def predict_case(chosen, age, sex, state):
     obg = models["outcome"]
     orow = row.reindex(obg["features"]).fillna(0.0)
     os_ = float(obg["model"].decision_function(obg["scaler"].transform(orow.values.reshape(1, -1)))[0])
-    p = to_prob(dbg, ds)                        # calibrated Lassa probability (0-1)
-    pdeath = to_prob(obg, os_)                  # calibrated death-risk probability
+    p = to_prob(dbg, ds)
+    pdeath = to_prob(obg, os_)
     level = prob_band(p)
     return {"prob": p, "level": level, "recommendation": recommend(level),
-            "label": "LIKELY" if p >= 0.5 else "unlikely", "death_prob": pdeath}
+            "label": "LIKELY" if p >= HIGH_T else "unlikely", "death_prob": pdeath}
 
 
 # ── header + live store status ────────────────────────────
-st.title("🦠 Adaptive SVM — Intelligent Disease Surveillance")
-st.caption("Real NCDC / SORMAS Lassa fever data (2018–2021 · 774 LGAs) · an online SVM that "
-           "learns incrementally as cases stream in")
+st.title("🦠 Intelligent Disease Surveillance — Adaptive SVM")
+st.caption("Real Nigerian Lassa fever surveillance data (NCDC / SORMAS) · a model that keeps "
+           "learning from every new case instead of being trained once and going stale.")
 
 s1, s2, s3 = st.columns(3)
 s1.markdown("🟢 **SQLite** · structured store *(cases · events · alerts)*")
-s2.markdown((f"🟢 **MongoDB** · unstructured store *(Atlas)*" if mongo.available
+s2.markdown(("🟢 **MongoDB** · unstructured store *(Atlas)*" if mongo.available
              else f"⚪ **MongoDB** · not connected — *{mongo.reason}*"))
-s3.markdown((f"🟢 **Redis Streams** · ingestion bus" if bus.available
-             else f"⚪ **Redis Streams** · event shown, not published"))
+s3.markdown(("🟢 **Redis Streams** · ingestion bus" if bus.available
+             else "⚪ **Redis Streams** · event shown, not published"))
 
 tabs = st.tabs(["Overview", "🚨 Outbreak monitor", "🩺 Case Registration & Triage",
                 "📈 Trends", "🔔 Notifications", "🧠 Model Status"])
@@ -163,31 +183,34 @@ tabs = st.tabs(["Overview", "🚨 Outbreak monitor", "🩺 Case Registration & T
 # ── Overview ──────────────────────────────────────────────
 with tabs[0]:
     a, b, c, d = st.columns(4)
-    a.metric("Historical cases", f"{len(df):,}")
+    a.metric("Training records", f"{len(df):,}")
     b.metric("Confirmed Lassa", f"{int(df.positive.sum()):,}")
-    c.metric("States", int(df.State_new.nunique()))
-    d.metric("Period", f"{int(df.yr.min())}–{int(df.yr.max())}")
+    c.metric("States covered", int(df.State_new.nunique()))
+    d.metric("Data period", data_period())
 
     e, f, g, h = st.columns(4)
     ev = store.events_df()
     e.metric("Surveillance events (SQLite)", f"{len(ev):,}")
-    f.metric("Registered cases", f"{store.case_count():,}")
+    f.metric("Cases registered here", f"{store.case_count():,}")
     g.metric("Alerts logged", f"{len(store.recent_notifications(1000)):,}")
     h.metric("Adaptive outbreak AUC", "0.89")
+    st.caption("“Training records” is the historical dataset the model learned from (2018–2021). "
+               "“Cases registered here” are new cases entered live through this system; the data "
+               "period above extends automatically as they arrive.")
 
-    st.success("**Adaptive (online) SVM — prequential AUC on real data:** outbreak **0.89** · "
-               "diagnosis **0.64** · outcome **0.57**. The online model matches a batch SVM (0.91) "
-               "while updating case-by-case — the core 'Adaptive SVM' contribution.")
-    with st.expander("How the architecture fits together"):
+    st.success("**How well it performs (prequential AUC on real data):** outbreak **0.89** · "
+               "diagnosis **0.64** · outcome **0.57**. The always-learning model matches a "
+               "train-once model (0.91) while updating case-by-case — the core contribution.")
+    with st.expander("How the system fits together (for the technical reader)"):
         st.markdown(
-            "- **SQLite** — the *structured / time-series* store the SVM reads: `surveillance_events` "
-            "(date, state, LGA, disease, new_cases, deaths, temperature, rainfall), plus structured "
-            "case records and the alert log.\n"
-            "- **MongoDB** — the *unstructured* store: clinical notes, laboratory information, and "
-            "uploaded documents (PDF / DOCX / images), linked to each case by `case_id`.\n"
-            "- **Redis Streams** — the *ingestion bus*: every registered case is published so the "
-            "adaptive learner can consume it as data arrives.\n"
-            "- **Adaptive SVM** — `SGDClassifier(loss='hinge', average=True)` updated with `partial_fit()`.")
+            "- **SQLite** — the structured / time-series store the model reads: `surveillance_events` "
+            "(date, state, LGA, disease, new_cases, deaths, temperature, rainfall), case records, alerts.\n"
+            "- **MongoDB** — the unstructured store: clinical notes, laboratory information, and uploaded "
+            "documents (PDF / DOCX / images), linked to each case by `case_id`.\n"
+            "- **Redis Streams** — the ingestion bus: every registered case is published so the adaptive "
+            "learner can consume it as data arrives.\n"
+            "- **Adaptive SVM** — `SGDClassifier(loss='hinge', average=True)` updated with `partial_fit()`; "
+            "scores are turned into 0–100% probabilities with Platt scaling.")
 
 
 # ── Outbreak monitor ──────────────────────────────────────
@@ -200,63 +223,84 @@ with tabs[1]:
     latest, last_dt = outbreak_latest(disease)
     top[1].caption(f"🕒 Last updated: {last_dt.date() if last_dt is not None else '—'} "
                    f"· source: surveillance_events (SQLite)")
-    st.subheader(f"Predicted outbreak risk by state — {disease}")
+    st.subheader(f"Which states are most likely heading into an outbreak — {disease}")
 
     if latest.empty:
-        st.info("Not enough time-series history for this disease yet to compute outbreak risk.")
+        st.info("Not enough time-series history for this disease yet to estimate outbreak risk.")
     else:
         b = models["outbreak"]
         score = b["model"].decision_function(b["scaler"].transform(latest[b["features"]]))
-        latest = latest.assign(risk=score)
-        latest["prob"] = [to_prob(b, s) for s in score]
-        # Risk level ranks states by the model signal (robust to the margin's skewed scale and to
-        # ties among states with no recent cases); Outbreak probability is the calibrated 0-100%.
-        pct = latest.risk.rank(pct=True)
-        latest["level"] = np.where(pct >= 0.75, "HIGH", np.where(pct >= 0.40, "MEDIUM", "LOW"))
+        latest = latest.assign(prob=[to_prob(b, s) for s in score])
+        latest["level"] = [prob_band(p) for p in latest["prob"]]         # label matches the number
         latest["Status"] = latest["level"].map(BADGE)
         latest["Outbreak probability"] = [f"{p:.0%}" for p in latest["prob"]]
         latest["Trend"] = [arrow(t) for t in latest.trend]
         latest["Recommended action"] = [recommend(l) for l in latest["level"]]
-        view = (latest[["state", "confirmed", "Status", "Outbreak probability", "Trend", "Recommended action"]]
-                .sort_values("confirmed", ascending=False).reset_index(drop=True))
-        view.columns = ["State", "Recent cases", "Risk level", "Outbreak probability", "Trend", "Recommended action"]
+        view = (latest.sort_values("prob", ascending=False)
+                [["state", "confirmed", "Outbreak probability", "Status", "Trend", "Recommended action"]]
+                .reset_index(drop=True))
+        view.columns = ["State", "Recent cases", "Outbreak probability", "Risk level", "Trend", "Recommended action"]
         st.dataframe(view, width="stretch", hide_index=True)
-        st.caption("Risk level ranks states by the model's outbreak signal; outbreak probability is "
-                   "the calibrated likelihood (0–100%). Recommended action follows the risk level.")
+        st.caption(THRESH_NOTE + " A state can read higher than its raw case count when seasonal and "
+                   "environmental predictors are elevated — that is the model looking ahead, by design.")
 
-        high = latest[latest["level"] == "HIGH"]
-        if st.button(f"🔔 Notify NCDC — {len(high)} HIGH-risk state(s)"):
-            signals = [{"disease": disease, "location": r.state, "severity": "HIGH",
-                        "message": f"HIGH outbreak risk in {r.state}: recent cases={int(r.confirmed)}. "
-                                   f"Recommend NCDC field verification."}
-                       for r in high.itertuples()]
-            fired = check_and_notify(signals)
-            st.success(f"Logged {sum(len(f['rows']) for f in fired)} alert(s) to "
-                       f"{len(RECIPIENTS)} recipients across {len(fired)} state(s).")
-            for f in fired:
-                st.write(f"→ **{f['severity']}** · {f['location']} · "
-                         f"{', '.join(x['recipient']+' ('+x['method']+', '+x['status']+')' for x in f['rows'])}")
+        high = latest[latest["level"] == "HIGH"].sort_values("prob", ascending=False)
+        proactive = st.session_state.get("proactive", False)
+        if proactive:
+            done = st.session_state.setdefault("auto_alerted", set())
+            todo = [r for r in high.itertuples() if (disease, r.state) not in done]
+            if todo:
+                fired = check_and_notify([
+                    {"disease": disease, "location": r.state, "severity": "HIGH",
+                     "message": f"HIGH outbreak risk in {r.state}: recent cases={int(r.confirmed)}, "
+                                f"{r.prob:.0%} probability. Recommend NCDC field verification."}
+                    for r in todo])
+                for r in todo:
+                    done.add((disease, r.state))
+                st.warning(f"🟢 **Proactive mode ON** — automatically alerted {len(fired)} HIGH-risk "
+                           f"state(s): {', '.join(r.state for r in todo)}.")
+            else:
+                st.info(f"🟢 **Proactive mode ON** — {len(high)} HIGH-risk state(s); all already alerted "
+                        "this session. (Switch modes on the Notifications tab.)")
+        else:
+            if st.button(f"🔔 Notify NCDC — {len(high)} HIGH-risk state(s)", disabled=high.empty):
+                fired = check_and_notify([
+                    {"disease": disease, "location": r.state, "severity": "HIGH",
+                     "message": f"HIGH outbreak risk in {r.state}: recent cases={int(r.confirmed)}, "
+                                f"{r.prob:.0%} probability. Recommend NCDC field verification."}
+                    for r in high.itertuples()])
+                st.success(f"Logged {len(fired)} alert(s) — one per state — to {len(RECIPIENTS)} recipients.")
+                for fr in fired:
+                    st.write(f"→ **{fr['severity']}** · {fr['location']} · {fr['recipient_str']} "
+                             f"({fr['method']}, {fr['status']})")
 
 
 # ── Case Registration & Triage ────────────────────────────
 with tabs[2]:
     st.subheader("Register & triage a suspected case")
-    st.caption("Structured fields → **SQLite**; notes, lab info and documents → **MongoDB**; "
-               "the saved event → **Redis**. All linked by one `case_id`.")
+    st.caption("Symptoms, demographics and environment → **SQLite**; notes, lab info and documents → "
+               "**MongoDB**; the saved event → **Redis**. All tied together by one `case_id`.")
 
-    st.markdown("**Basic case information** · structured → SQLite")
-    cols = st.columns(3)
+    st.markdown("**General symptoms**")
+    gc = st.columns(4)
     chosen = []
-    for i, s in enumerate(dict.fromkeys(KEY_SYMPTOMS)):
-        if cols[i % 3].checkbox(s.replace("_new", "").replace("_", " "), key=f"sym_{s}"):
+    for i, s in enumerate(GENERAL_SYMPTOMS):
+        if gc[i % 4].checkbox(label_of(s), key=f"sym_{s}"):
             chosen.append(s)
+    st.markdown("**Severity / red-flag symptoms** 🚩")
+    rc = st.columns(4)
+    for i, s in enumerate(REDFLAG_SYMPTOMS):
+        if rc[i % 4].checkbox(label_of(s), key=f"sym_{s}"):
+            chosen.append(s)
+
     c1, c2, c3 = st.columns(3)
     age = c1.selectbox("Age group", list(AGE_ORD), index=2)
     sex = c2.radio("Sex", ["Male", "Female"], horizontal=True)
     disease_in = c3.selectbox("Disease (suspected)", DISEASES, index=0)
     c4, c5, c6 = st.columns(3)
     state = c4.selectbox("State", sorted(df.State_new.dropna().unique()))
-    lga = c5.text_input("LGA", "")
+    lgas = STATE_LGAS.get(state, [])
+    lga = c5.selectbox("LGA", lgas) if lgas else c5.text_input("LGA", "")
     report_date = c6.date_input("Report date", value=date.today())
 
     with st.expander("🌦️  Environmental factors · structured → SQLite"):
@@ -287,8 +331,6 @@ with tabs[2]:
                                  accept_multiple_files=True)
 
     if st.button("Predict", type="primary"):
-        # The trained model is Lassa-specific (real SORMAS data); other diseases are registered
-        # and stored but not scored, rather than shown a misleading Lassa verdict.
         pred = predict_case(chosen, age, sex, state) if disease_in == "Lassa fever" else None
         st.session_state["reg"] = {
             "inputs": dict(report_date=str(report_date), state=state, lga=lga, disease=disease_in,
@@ -307,9 +349,9 @@ with tabs[2]:
     if reg:
         p = reg["pred"]
         if p is None:
-            st.info(f"🔬 Predictive scoring currently covers **Lassa fever** (the only disease with "
-                    f"real training data). This **{reg['inputs']['disease']}** case can still be "
-                    f"registered and stored — click **Save case** below.")
+            st.info(f"🔬 Predictive scoring currently covers **Lassa fever** (the only disease with real "
+                    f"training data). This **{reg['inputs']['disease']}** case can still be registered and "
+                    f"stored — click **Save case** below.")
         else:
             st.markdown("**Prediction** · structured → SQLite")
             m1, m2, m3 = st.columns(3)
@@ -318,9 +360,9 @@ with tabs[2]:
             m3.metric("Recommended action", p["recommendation"])
             if p["level"] == "HIGH":
                 st.warning(f"⚠️ High-risk case in **{reg['inputs']['state']}** — officers would be notified.")
-            st.caption(f"Lassa probability is the model's **calibrated** likelihood (0–100%) that this is "
-                       f"confirmed Lassa — the SVM margin mapped through Platt scaling, not a raw score. "
-                       f"Death-risk signal: **{p['death_prob']:.0%}**.")
+            st.caption(THRESH_NOTE + f" Lassa probability is the model's calibrated likelihood that this "
+                       f"is confirmed Lassa. Death-risk signal: **{p['death_prob']:.0%}** *(weak — symptoms "
+                       f"are only a faint predictor of outcome).*")
 
         if st.button("💾 Save case", type="primary"):
             inp, mg = reg["inputs"], reg["mongo"]
@@ -343,9 +385,9 @@ with tabs[2]:
 
             st.success(f"✅ Case saved · `case_id = {case_id}`")
             o1, o2, o3 = st.columns(3)
-            o1.markdown(f"**SQLite** ✅\n\ncase + surveillance_event written")
+            o1.markdown("**SQLite** ✅\n\ncase + surveillance_event written")
             o2.markdown(f"**MongoDB** {'✅' if mres.get('stored') else '⚪'}\n\n"
-                        + (f"{mres.get('n_files',0)} file(s) → `{mres.get('collection')}`"
+                        + (f"{mres.get('n_files', 0)} file(s) → `{mres.get('collection')}`"
                            if mres.get("stored") else f"skipped — {mres.get('reason')}"))
             o3.markdown(f"**Redis** {'✅' if pub.get('published') else '⚪'}\n\n"
                         + (f"→ `{pub.get('stream')}` id `{pub.get('id')}`"
@@ -361,17 +403,16 @@ with tabs[3]:
     f1, f2, f3 = st.columns(3)
     disease_t = f1.selectbox("Disease", ["All"] + sorted(ev.disease.unique()), key="tr_disease")
     state_t = f2.selectbox("State", ["All"] + sorted(ev.state.unique()), key="tr_state")
-    metric = f3.selectbox("Show", ["Confirmed cases", "Deaths", "Risk score", "Alerts"])
+    metric = f3.selectbox("Show", ["Confirmed cases", "Deaths", "Outbreak probability", "Alerts"])
 
     d = ev.copy()
     if disease_t != "All":
         d = d[d.disease == disease_t]
     if state_t != "All":
         d = d[d.state == state_t]
-    y1, y2 = st.columns(2)
     years = sorted(d.report_date.dt.year.unique().tolist()) if not d.empty else []
     if years:
-        yr_sel = y1.select_slider("Year range", options=years,
+        yr_sel = st.select_slider("Year range", options=years,
                                   value=(years[0], years[-1]) if len(years) > 1 else (years[0], years[0]))
         d = d[(d.report_date.dt.year >= yr_sel[0]) & (d.report_date.dt.year <= yr_sel[1])]
 
@@ -379,23 +420,25 @@ with tabs[3]:
         col = "new_cases" if metric == "Confirmed cases" else "deaths"
         ts = d.groupby(d.report_date.dt.to_period("M")).agg(v=(col, "sum")).reset_index()
         ts["date"] = ts.report_date.dt.to_timestamp()
-        st.line_chart(ts.set_index("date")["v"], height=320)
-        st.caption(f"{metric} per month — {disease_t} · {state_t} (surveillance_events).")
+        # bar chart, not a line: bars appear only where records exist, so there is never a
+        # misleading interpolated line drawn across months that have no data.
+        st.bar_chart(ts.set_index("date")["v"], height=320)
+        st.caption(f"{metric} per month — {disease_t} · {state_t}. Real surveillance records only "
+                   "(bars appear only for months that actually have data).")
     elif metric == "Alerts":
         nf = store.recent_notifications(1000)
         if nf.empty:
             st.info("No alerts logged yet.")
         else:
             nf["date"] = pd.to_datetime(nf.ts, errors="coerce").dt.to_period("D").dt.to_timestamp()
-            ac = nf.groupby("date").size()
-            st.bar_chart(ac, height=320)
-            st.caption("Alerts logged per day (notifications).")
-    else:  # Risk score
+            st.bar_chart(nf.groupby("date").size(), height=320)
+            st.caption("Alerts logged per day.")
+    else:  # Outbreak probability
         if state_t == "All" or disease_t == "All":
-            st.info("Pick a single **disease** and **state** to plot the model's risk score over time.")
+            st.info("Pick a single **disease** and **state** to plot the model's outbreak probability over time.")
         else:
-            sub = d.groupby([d.report_date.dt.year.rename("yr"), d.report_date.dt.month.rename("mo")]) \
-                   .agg(confirmed=("new_cases", "sum")).reset_index().sort_values(["yr", "mo"])
+            sub = (d.groupby([d.report_date.dt.year.rename("yr"), d.report_date.dt.month.rename("mo")])
+                   .agg(confirmed=("new_cases", "sum")).reset_index().sort_values(["yr", "mo"]))
             sub["lag1"] = sub.confirmed.shift(1); sub["lag2"] = sub.confirmed.shift(2)
             sub["roll3"] = sub.confirmed.shift(1).rolling(3, min_periods=1).mean()
             sub["trend"] = sub.lag1 - sub.lag2
@@ -403,28 +446,41 @@ with tabs[3]:
             sub["sin"] = np.sin(2 * np.pi * sub.mo / 12); sub["cos"] = np.cos(2 * np.pi * sub.mo / 12)
             sub = sub.dropna(subset=["lag1", "lag2", "roll3"])
             if sub.empty:
-                st.info("Not enough history for a risk curve here.")
+                st.info("Not enough history for a probability curve here.")
             else:
                 b = models["outbreak"]
-                sub["risk"] = b["model"].decision_function(b["scaler"].transform(sub[b["features"]]))
+                margins = b["model"].decision_function(b["scaler"].transform(sub[b["features"]]))
+                sub["prob"] = [to_prob(b, m) for m in margins]
                 sub["date"] = pd.to_datetime(dict(year=sub.yr.astype(int), month=sub.mo.astype(int), day=1))
-                st.line_chart(sub.set_index("date")["risk"], height=320)
-                st.caption(f"Adaptive SVM outbreak risk score per month — {disease_t} · {state_t}.")
+                st.line_chart(sub.set_index("date")["prob"], height=320)
+                st.caption(f"Calibrated outbreak probability (0–100%) per month — {disease_t} · {state_t}.")
 
 
 # ── Notifications ─────────────────────────────────────────
 with tabs[4]:
-    st.subheader("Alert recipients (people in charge)")
-    st.write(" · ".join(f"**{r['name']}** ({r['role']})" for r in RECIPIENTS))
+    st.subheader("Alerting mode")
+    st.toggle("Proactive mode — automatically alert officials when a state crosses HIGH risk",
+              key="proactive")
+    st.caption("**ON (Proactive):** the system pushes alerts automatically the moment predicted risk "
+               "crosses the HIGH threshold — matching “automatically alerts officials.” "
+               "**OFF (Reactive):** alerts are sent only on demand, when an official runs a check on the "
+               "Outbreak monitor.")
+    st.divider()
+
+    st.markdown("**Recipients (people in charge):** "
+                + " · ".join(f"**{r['name']}** ({r['role']})" for r in RECIPIENTS))
     nf = store.recent_notifications()
     if nf.empty:
-        st.info("No notifications yet — run a surveillance sweep on the Outbreak monitor tab.")
+        st.info("No notifications yet — flip Proactive mode on, or run a check on the Outbreak monitor tab.")
     else:
         show = nf.copy()
         show["acknowledged"] = show.acknowledged.map({1: "✔ acknowledged", 0: "—"})
         show.columns = ["id", "Time", "Disease", "Location", "Severity", "Message",
-                        "Recipient", "Method", "Status", "Acknowledged"]
+                        "Recipients", "Method", "Status", "Acknowledged"]
         st.dataframe(show, width="stretch", hide_index=True)
+        st.caption("One row per alert event (all recipients in the Recipients column). Method is "
+                   "**Dashboard** (in-app) by default; it shows **Email** when SMTP is configured "
+                   "(`SMTP_*` environment variables).")
         pending = nf[nf.acknowledged == 0]
         if not pending.empty:
             a1, a2 = st.columns([2, 3])
@@ -448,12 +504,17 @@ with tabs[5]:
                    if pkl.exists() else "self-trained at startup")
         rows.append({"Task": name, "Online AUC": f"{online:.2f}",
                      "Batch AUC": f"{batch:.2f}" if batch is not None else "—",
+                     "Calibrated": "✔" if b.get("calib") else "—",
                      "Features": len(b["features"]), "Last updated": updated})
     st.dataframe(pd.DataFrame(rows), width="stretch", hide_index=True)
+    st.warning("⚠️ **Outcome (death) — AUC 0.57 is weak, and we say so.** Symptoms alone are only a "
+               "faint signal of who will survive; this row is an honest limitation, not a defect. "
+               "Diagnosis (0.64) is modest for the same reason — early Lassa looks like malaria/flu.")
     st.markdown(
-        "- **Learner:** `SGDClassifier(loss='hinge', average=True)` — a linear SVM trained by "
-        "averaged SGD and updated online with `partial_fit()` as cases stream in.\n"
-        "- **Evaluation:** prequential (predict each incoming batch, then train on it).\n"
+        "- **Learner:** `SGDClassifier(loss='hinge', average=True)` — a linear SVM trained by averaged "
+        "SGD and updated online with `partial_fit()` as cases stream in.\n"
+        "- **Probabilities:** raw SVM margins are mapped to calibrated 0–100% probabilities with "
+        "**Platt scaling**, so displayed numbers are interpretable and consistent with the risk labels.\n"
         "- **Headline:** the adaptive model (outbreak **0.89**) matches a train-once batch SVM "
         "(**0.91**) — continuous learning at almost no accuracy cost.")
-    st.caption("Data: Zenodo record 7309567 (SORMAS / NCDC), 20,062 Lassa cases, 2018–2021.")
+    st.caption("Data: Zenodo record 7309567 (SORMAS / NCDC), 20,062 real Lassa cases, 2018–2021.")
