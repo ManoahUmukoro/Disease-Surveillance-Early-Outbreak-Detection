@@ -87,8 +87,43 @@ def covid_events():
     return pd.DataFrame(rows, columns=_COLS)
 
 
+# ── clearly-labelled DEMONSTRATION data (NOT real) ───────────────────────
+# For diseases without a clean public real time-series, so the platform can demonstrate its full
+# multi-disease capability. Every row is tagged source='demo' and the disease name carries a
+# "(demo)" suffix, so it is never mistaken for real surveillance data. Not for epidemiological use.
+NIGERIA_STATES = [
+    "Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa", "Benue", "Borno", "Cross River",
+    "Delta", "Ebonyi", "Edo", "Ekiti", "Enugu", "FCT", "Gombe", "Imo", "Jigawa", "Kaduna", "Kano",
+    "Katsina", "Kebbi", "Kogi", "Kwara", "Lagos", "Nasarawa", "Niger", "Ogun", "Ondo", "Osun", "Oyo",
+    "Plateau", "Rivers", "Sokoto", "Taraba", "Yobe", "Zamfara"]
+DEMO_DISEASES = ["Malaria", "Typhoid", "Measles", "Yellow fever", "Meningitis (CSM)",
+                 "Tuberculosis", "Pneumonia", "Diphtheria"]
+
+
+def demo_events():
+    import numpy as np
+    rng = np.random.RandomState(7)
+    rows = []
+    for di, dis in enumerate(DEMO_DISEASES):
+        base = 3 + (di % 5) * 4
+        phase = (di * 3) % 12
+        for st in NIGERIA_STATES:
+            sf = 0.3 + rng.rand() * 1.4
+            for year in range(2022, 2027):
+                for mo in range(1, 13):
+                    if year == 2026 and mo > 3:
+                        continue
+                    seas = 1 + 0.7 * np.sin(2 * np.pi * (mo - phase) / 12)
+                    n = int(rng.poisson(max(0.1, base * seas * sf)))
+                    if n <= 0:
+                        continue
+                    rows.append((f"{year}-{mo:02d}-01", st, None, f"{dis} (demo)", n,
+                                 int(rng.binomial(n, 0.02)), None, None, "demo"))
+    return pd.DataFrame(rows, columns=_COLS)
+
+
 def extra_events():
-    """All real non-Lassa disease events, combined."""
-    parts = [cholera_events(), mpox_events(), covid_events()]
+    """Real non-Lassa diseases + clearly-labelled demonstration diseases, combined."""
+    parts = [cholera_events(), mpox_events(), covid_events(), demo_events()]
     parts = [p for p in parts if not p.empty]
     return pd.concat(parts, ignore_index=True) if parts else pd.DataFrame(columns=_COLS)

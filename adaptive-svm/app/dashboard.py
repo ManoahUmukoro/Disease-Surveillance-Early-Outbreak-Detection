@@ -133,6 +133,15 @@ def arrow(delta):
     return "↑" if delta > 0 else ("↓" if delta < 0 else "→")
 
 
+def is_demo(disease):
+    """A disease shown with clearly-labelled demonstration data (name carries a '(demo)' suffix)."""
+    return "(demo)" in str(disease)
+
+
+DEMO_NOTE = ("🧪 **Demonstration data** — this disease is shown with clearly-labelled synthetic data to "
+             "illustrate multi-disease coverage. It is **not** real surveillance data.")
+
+
 def label_of(sym):
     return sym.replace("_new", "").replace("_", " ")
 
@@ -231,11 +240,14 @@ def page_header(title, subtitle=""):
 def page_overview():
     page_header("Overview", "A live snapshot of the surveillance system.")
     ev = store.events_df()
-    n_dis = int(ev.disease.nunique()) if not ev.empty else 0
+    diseases = [d for d in ev.disease.unique() if d not in ("Other", "Undetermined")] if not ev.empty else []
+    n_real = sum(1 for d in diseases if not is_demo(d))
+    n_demo = sum(1 for d in diseases if is_demo(d))
     total_cases = int(ev.new_cases.sum()) if not ev.empty else 0
     n_conditions = len(sym_model["classes"]) if sym_model else 0
     k = st.columns(4)
-    k[0].metric("Diseases monitored", n_dis)
+    k[0].metric("Diseases monitored", len(diseases),
+                help=f"{n_real} on real data + {n_demo} demonstration diseases")
     k[1].metric("Conditions triaged", n_conditions)
     k[2].metric("Total surveillance cases", f"{total_cases:,}")
     k[3].metric("Data period", data_period())
@@ -251,14 +263,15 @@ def page_overview():
         if not ev.empty:
             by_dis = ev.groupby("disease").new_cases.sum().sort_values(ascending=False)
             st.bar_chart(by_dis, height=260)
-        st.caption("Real surveillance data across every monitored disease. Cases registered here are "
-                   "added live, extending these totals and the data period.")
+        st.caption(f"**{n_real}** diseases on **real** surveillance data (Lassa, Cholera, Mpox, "
+                   f"COVID-19); **{n_demo}** more shown with clearly-labelled *(demo)* demonstration data. "
+                   "Cases registered here are added live, extending these totals and the data period.")
     with right:
         st.success("**How well it performs:** flags outbreaks with about **89%** accuracy and keeps "
                    "learning from every new case instead of going stale.")
-        st.caption("Real, multi-disease data — Lassa (case-level), Cholera (per-state) and Mpox "
-                   "(national) for outbreak monitoring, plus a symptom model covering **41 conditions** "
-                   "for case triage.")
+        st.caption(f"Outbreak monitoring on **real** data — Lassa (case-level), Cholera (per-state), Mpox "
+                   f"& COVID-19 (national) — plus **{n_demo}** demonstration diseases tagged *(demo)*, and "
+                   "a symptom model covering **41 conditions** for case triage.")
 
 
 # ── PAGE: Outbreak Monitor ────────────────────────────────
@@ -268,6 +281,8 @@ def page_outbreak():
     c = st.columns([2, 3])
     disease = c[0].selectbox("Disease", _dz,
                              index=_dz.index("Lassa fever") if "Lassa fever" in _dz else 0, key="ob_disease")
+    if is_demo(disease):
+        st.warning(DEMO_NOTE)
     latest, _, last_dt = outbreak_table(disease)
     if disease == "Lassa fever" and not latest.empty:
         tbl = latest[["state", "confirmed", "prob", "level", "trend"]].copy()
@@ -289,9 +304,14 @@ def page_outbreak():
         g["trend"] = 0
         tbl, last_dt = g[["state", "confirmed", "prob", "level", "trend"]], ev.report_date.max()
         metric_name = "Recent burden"
-        method_note = ("The adaptive SVM needs a dense monthly per-state history, which only **Lassa** "
-                       f"has. For **{disease}** this ranks states by their real recent case burden "
-                       "(last 5 years) on the same HIGH/MEDIUM/LOW thresholds.")
+        if is_demo(disease):
+            method_note = (f"**{disease}** uses clearly-labelled **demonstration data** (not real records). "
+                           "States are ranked by case burden on the same HIGH/MEDIUM/LOW thresholds, to "
+                           "show how the monitor extends to additional diseases.")
+        else:
+            method_note = ("The adaptive SVM needs a dense monthly per-state history, which only **Lassa** "
+                           f"has. For **{disease}** this ranks states by their real recent case burden "
+                           "(last 5 years) on the same HIGH/MEDIUM/LOW thresholds.")
 
     c[1].caption(f"🕒 Last updated: {last_dt.date() if last_dt is not None else '—'} · source: SQLite")
     if tbl.empty:
@@ -463,6 +483,8 @@ def page_trends():
                                                          if d not in ("Other", "Undetermined")), key="tr_disease")
     state_t = f2.selectbox("State", ["All"] + sorted(ev.state.unique()), key="tr_state")
     metric = f3.selectbox("Show", ["Confirmed cases", "Deaths", "Outbreak probability", "Alerts"])
+    if is_demo(disease_t):
+        st.warning(DEMO_NOTE)
 
     d = ev.copy()
     if disease_t != "All":
@@ -480,8 +502,9 @@ def page_trends():
         ts = d.groupby(d.report_date.dt.to_period("M")).agg(v=(col, "sum")).reset_index()
         ts["date"] = ts.report_date.dt.to_timestamp()
         st.bar_chart(ts.set_index("date")["v"], height=340)
-        st.caption(f"{metric} per month — {disease_t} · {state_t}. Real records only (bars appear only "
-                   "for months that have data — no interpolation across empty months).")
+        src = "Demonstration data" if is_demo(disease_t) else "Real records"
+        st.caption(f"{metric} per month — {disease_t} · {state_t}. {src}; bars appear only for months that "
+                   "have data — no interpolation across empty months.")
     elif metric == "Alerts":
         nf = store.recent_notifications(1000)
         if nf.empty:
@@ -544,10 +567,12 @@ def page_model():
     page_header("Models & Coverage", "Every model behind the platform and what each covers.")
     ev = store.events_df()
     surv = sorted([d for d in ev.disease.unique() if d not in ("Other", "Undetermined")]) if not ev.empty else []
+    real = [d for d in surv if not is_demo(d)]
+    demo = [d for d in surv if is_demo(d)]
     n_tri = len(sym_model["classes"]) if sym_model else 0
     k = st.columns(3)
     k[0].metric("Conditions triaged", n_tri)
-    k[1].metric("Diseases monitored", len(surv))
+    k[1].metric("Diseases monitored", len(surv), help=f"{len(real)} real + {len(demo)} demonstration")
     k[2].metric("Outbreak accuracy", "89%")
 
     st.markdown("**Models**")
@@ -561,15 +586,21 @@ def page_model():
     ]
     st.dataframe(pd.DataFrame(rows), width="stretch", hide_index=True)
 
-    st.markdown("**Diseases with live outbreak surveillance data**")
-    st.write(" · ".join(f"**{d}**" for d in surv) or "—")
+    st.markdown("**Diseases with outbreak surveillance data**")
+    st.write("🟢 **Real data:** " + (" · ".join(f"**{d}**" for d in real) or "—"))
+    if demo:
+        st.write("🧪 **Demonstration data** (clearly labelled *(demo)*): " + " · ".join(demo))
 
     st.info(f"Two layers that work together: the **triage** model reads a patient's symptoms and covers "
-            f"**{n_tri} conditions**; the **outbreak** layer charts real case counts over time for the "
-            "diseases that have real surveillance data. Every registered case adds its disease to the "
-            "surveillance data, so the outbreak layer grows automatically as the system is used.")
-    st.caption("Triage is a screening aid — confirm with laboratory testing. Sources: SORMAS/NCDC (Lassa), "
-               "GinaCharnley et al. (Cholera), WHO/OWID (Mpox, COVID-19), and a 41-condition symptom corpus.")
+            f"**{n_tri} conditions**; the **outbreak** layer tracks case counts over time per state. "
+            f"**{len(real)}** diseases use **real** surveillance data (Lassa, Cholera, Mpox, COVID-19); "
+            f"**{len(demo)}** more use clearly-labelled **demonstration** data so the platform can show its "
+            "full multi-disease capability. Every registered case adds to the surveillance data, so the "
+            "real layer grows automatically as the system is used.")
+    st.caption("Triage is a screening aid — confirm with laboratory testing. Real sources: SORMAS/NCDC "
+               "(Lassa), GinaCharnley et al. (Cholera), WHO/OWID (Mpox, COVID-19); a 41-condition symptom "
+               "corpus for triage. Diseases tagged *(demo)* use synthetic demonstration data, not real "
+               "records.")
 
 
 # ── sidebar (menu + status + alerting control) ────────────
@@ -583,7 +614,7 @@ PAGES = {
 }
 with st.sidebar:
     st.markdown("## 🦠 Disease Surveillance")
-    st.caption("Real-data outbreak monitoring & multi-disease case triage")
+    st.caption("Multi-disease outbreak monitoring & case triage")
     st.markdown("")
     choice = st.radio("Menu", list(PAGES), label_visibility="collapsed", key="nav")
     st.divider()
