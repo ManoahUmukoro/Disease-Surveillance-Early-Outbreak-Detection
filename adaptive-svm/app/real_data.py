@@ -73,8 +73,22 @@ def mpox_events():
     return pd.DataFrame(rows, columns=_COLS)
 
 
+def covid_events():
+    """Real COVID-19 national monthly series for Nigeria (WHO / OWID, 2020-2023)."""
+    f = DATA / "covid_nigeria.csv"
+    if not f.exists():
+        return pd.DataFrame(columns=_COLS)
+    m = pd.read_csv(f)
+    m["date"] = pd.to_datetime(m["date"], errors="coerce")
+    ts = m.dropna(subset=["date"]).set_index("date")["new_cases"].fillna(0).resample("MS").sum()
+    ts = ts[ts > 0]
+    rows = [(d.strftime("%Y-%m-01"), "Nigeria (national)", None, "COVID-19", int(v), 0, None, None,
+             "real:covid") for d, v in ts.items()]
+    return pd.DataFrame(rows, columns=_COLS)
+
+
 def extra_events():
     """All real non-Lassa disease events, combined."""
-    parts = [cholera_events(), mpox_events()]
+    parts = [cholera_events(), mpox_events(), covid_events()]
     parts = [p for p in parts if not p.empty]
     return pd.concat(parts, ignore_index=True) if parts else pd.DataFrame(columns=_COLS)

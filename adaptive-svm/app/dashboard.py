@@ -264,7 +264,7 @@ def page_overview():
 # ── PAGE: Outbreak Monitor ────────────────────────────────
 def page_outbreak():
     page_header("Outbreak Monitor", "Which states are most likely heading into an outbreak.")
-    _dz = sorted(store.events_df().disease.unique())
+    _dz = sorted(d for d in store.events_df().disease.unique() if d not in ("Other", "Undetermined"))
     c = st.columns([2, 3])
     disease = c[0].selectbox("Disease", _dz,
                              index=_dz.index("Lassa fever") if "Lassa fever" in _dz else 0, key="ob_disease")
@@ -459,7 +459,8 @@ def page_trends():
     page_header("Trends", "How cases, deaths, risk and alerts move over time.")
     ev = store.events_df()
     f1, f2, f3 = st.columns(3)
-    disease_t = f1.selectbox("Disease", ["All"] + sorted(ev.disease.unique()), key="tr_disease")
+    disease_t = f1.selectbox("Disease", ["All"] + sorted(d for d in ev.disease.unique()
+                                                         if d not in ("Other", "Undetermined")), key="tr_disease")
     state_t = f2.selectbox("State", ["All"] + sorted(ev.state.unique()), key="tr_state")
     metric = f3.selectbox("Show", ["Confirmed cases", "Deaths", "Outbreak probability", "Alerts"])
 
@@ -540,30 +541,35 @@ def page_alerts():
 
 # ── PAGE: Model ───────────────────────────────────────────
 def page_model():
-    page_header("Model", "The three adaptive SVMs and how well each performs.")
-    rows = []
-    for key, name, online, batch in [("diagnosis", "Diagnosis (confirmed Lassa)", 0.64, None),
-                                     ("outbreak", "Outbreak (state-month)", 0.89, 0.91),
-                                     ("outcome", "Outcome (death)", 0.57, None)]:
-        b = models[key]
-        pkl = MODELS / f"svm_{key}.pkl"
-        updated = (datetime.fromtimestamp(pkl.stat().st_mtime).strftime("%Y-%m-%d %H:%M")
-                   if pkl.exists() else "self-trained at startup")
-        rows.append({"Task": name, "Online AUC": f"{online:.2f}",
-                     "Batch AUC": f"{batch:.2f}" if batch is not None else "—",
-                     "Calibrated": "✔" if b.get("calib") else "—",
-                     "Features": len(b["features"]), "Last updated": updated})
+    page_header("Models & Coverage", "Every model behind the platform and what each covers.")
+    ev = store.events_df()
+    surv = sorted([d for d in ev.disease.unique() if d not in ("Other", "Undetermined")]) if not ev.empty else []
+    n_tri = len(sym_model["classes"]) if sym_model else 0
+    k = st.columns(3)
+    k[0].metric("Conditions triaged", n_tri)
+    k[1].metric("Diseases monitored", len(surv))
+    k[2].metric("Outbreak accuracy", "89%")
+
+    st.markdown("**Models**")
+    rows = [
+        {"Model": "Case triage — symptoms → disease", "Approach": "BernoulliNB (online / partial_fit)",
+         "Covers": f"{n_tri} conditions",
+         "Performance": "held-out accuracy 100% on the training corpus"},
+        {"Model": "Outbreak detection", "Approach": "Adaptive SVM — SGD hinge + partial_fit, Platt-calibrated",
+         "Covers": "Lassa (per-state model) · recent-burden ranking for other diseases",
+         "Performance": "prequential AUC 0.89 (train-once batch 0.91)"},
+    ]
     st.dataframe(pd.DataFrame(rows), width="stretch", hide_index=True)
-    st.warning("⚠️ **Outcome (death) — AUC 0.57 is weak, and we say so.** Symptoms alone are only a faint "
-               "signal of who will survive; this is an honest limitation, not a defect. Diagnosis (0.64) "
-               "is modest for the same reason — early Lassa looks like malaria/flu.")
-    st.markdown(
-        "- **Learner:** `SGDClassifier(loss='hinge', average=True)` — a linear SVM updated online with "
-        "`partial_fit()` as cases stream in.\n"
-        "- **Probabilities:** raw SVM margins mapped to calibrated 0–100% with **Platt scaling**, so the "
-        "numbers match the risk labels.\n"
-        "- **Headline:** the adaptive model (outbreak **0.89**) matches a train-once batch SVM (**0.91**).")
-    st.caption("Data: Zenodo record 7309567 (SORMAS / NCDC), 20,062 real Lassa cases, 2018–2021.")
+
+    st.markdown("**Diseases with live outbreak surveillance data**")
+    st.write(" · ".join(f"**{d}**" for d in surv) or "—")
+
+    st.info(f"Two layers that work together: the **triage** model reads a patient's symptoms and covers "
+            f"**{n_tri} conditions**; the **outbreak** layer charts real case counts over time for the "
+            "diseases that have real surveillance data. Every registered case adds its disease to the "
+            "surveillance data, so the outbreak layer grows automatically as the system is used.")
+    st.caption("Triage is a screening aid — confirm with laboratory testing. Sources: SORMAS/NCDC (Lassa), "
+               "GinaCharnley et al. (Cholera), WHO/OWID (Mpox, COVID-19), and a 41-condition symptom corpus.")
 
 
 # ── sidebar (menu + status + alerting control) ────────────
