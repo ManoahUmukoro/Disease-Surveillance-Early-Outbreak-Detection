@@ -313,7 +313,7 @@ def page_outbreak():
                            f"has. For **{disease}** this ranks states by their real recent case burden "
                            "(last 5 years) on the same HIGH/MEDIUM/LOW thresholds.")
 
-    c[1].caption(f"🕒 Last updated: {last_dt.date() if last_dt is not None else '—'} · source: SQLite")
+    c[1].caption(f"🕒 Last updated: {last_dt.date() if last_dt is not None else '—'}")
     if tbl.empty:
         st.info("Not enough history for this disease yet.")
         return
