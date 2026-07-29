@@ -473,6 +473,23 @@ def page_register():
                        "attached, and the surveillance data updated.")
             del st.session_state["reg"]
 
+    st.divider()
+    st.markdown("**🗂️ Recently registered cases**")
+    rc = store.recent_cases(25)
+    if rc.empty:
+        st.caption("No cases saved yet — register one above and it will appear here.")
+    else:
+        show = rc.copy()
+        show["created_at"] = pd.to_datetime(show["created_at"], errors="coerce").dt.strftime("%Y-%m-%d %H:%M")
+        show["has_documents"] = show["has_documents"].map({1: "📎", 0: "—"})
+        show["pred_risk"] = show["pred_risk"].apply(lambda v: f"{v:.0%}" if pd.notna(v) else "—")
+        show = show[["case_id", "created_at", "pred_label", "pred_risk", "alert_status",
+                     "state", "lga", "has_documents"]]
+        show.columns = ["Reference", "Saved", "Assessment", "Confidence", "Risk", "State", "LGA", "Docs"]
+        st.dataframe(show, width="stretch", hide_index=True)
+        st.caption(f"Showing the {len(rc)} most recent. Every saved case is also added to the Outbreak "
+                   "Monitor and Trends.")
+
 
 # ── PAGE: Trends ──────────────────────────────────────────
 def page_trends():
