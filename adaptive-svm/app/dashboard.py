@@ -29,6 +29,7 @@ import store
 from mongo_store import MongoStore
 from stream import Stream
 from notifications import check_and_notify, RECIPIENTS
+import auth
 
 MODELS = HERE / "models"
 st.set_page_config(page_title="Disease Surveillance", page_icon="🦠",
@@ -260,15 +261,11 @@ def page_overview():
         if not ev.empty:
             by_dis = ev.groupby("disease").new_cases.sum().sort_values(ascending=False)
             st.bar_chart(by_dis, height=260)
-        st.caption(f"**{n_real}** diseases on **real** surveillance data (Lassa, Cholera, Mpox, "
-                   f"COVID-19); **{n_demo}** more shown with clearly-labelled *(demo)* demonstration data. "
-                   "Cases registered here are added live, extending these totals and the data period.")
+        st.caption("Real data (Lassa, Cholera, Mpox, COVID-19) plus clearly-labelled *(demo)* diseases. "
+                   "New registered cases extend these totals live.")
     with right:
-        st.success("**How well it performs:** flags outbreaks with about **89%** accuracy and keeps "
-                   "learning from every new case instead of going stale.")
-        st.caption(f"Outbreak monitoring on **real** data — Lassa (case-level), Cholera (per-state), Mpox "
-                   f"& COVID-19 (national) — plus **{n_demo}** demonstration diseases tagged *(demo)*, and "
-                   "a symptom model covering **41 conditions** for case triage.")
+        st.success("**~89% outbreak-detection accuracy** — and it keeps learning from every new case.")
+        st.caption(f"**{n_real}** diseases on real data · **{n_demo}** tagged *(demo)* · **41** conditions triaged.")
 
 
 # ── PAGE: Outbreak Monitor ────────────────────────────────
@@ -336,25 +333,14 @@ def page_outbreak():
                             f"{r.prob:.0%} probability. Recommend NCDC field verification."}
                 for r in rows]
 
-    if st.session_state.get("proactive", False):
-        done = st.session_state.setdefault("auto_alerted", set())
-        todo = [r for r in high.itertuples() if (disease, r.state) not in done]
-        if todo:
-            fired = check_and_notify(sig_for(todo))
-            for r in todo:
-                done.add((disease, r.state))
-            st.warning(f"🟢 **Proactive mode ON** — automatically alerted {len(fired)} HIGH-risk "
-                       f"state(s): {', '.join(r.state for r in todo)}.")
-        else:
-            st.info(f"🟢 **Proactive mode ON** — {len(high)} HIGH-risk state(s); all already alerted "
-                    "this session. (Switch modes in the sidebar.)")
-    else:
-        if st.button(f"🔔 Notify NCDC — {len(high)} HIGH-risk state(s)", disabled=high.empty):
-            fired = check_and_notify(sig_for(list(high.itertuples())))
-            st.success(f"Logged {len(fired)} alert(s) — one per state — to {len(RECIPIENTS)} recipients.")
-            for fr in fired:
-                st.write(f"→ **{fr['severity']}** · {fr['location']} · {fr['recipient_str']} "
-                         f"({fr['method']}, {fr['status']})")
+    st.caption("Autonomous alerting is handled by the **System Brain** on a schedule. Use this button "
+               "to notify NCDC manually right now.")
+    if st.button(f"🔔 Notify NCDC — {len(high)} HIGH-risk state(s)", disabled=high.empty):
+        fired = check_and_notify(sig_for(list(high.itertuples())))
+        st.success(f"Logged {len(fired)} alert(s) — one per state — to {len(RECIPIENTS)} recipients.")
+        for fr in fired:
+            st.write(f"→ **{fr['severity']}** · {fr['location']} · {fr['recipient_str']} "
+                     f"({fr['method']}, {fr['status']})")
 
 
 # ── PAGE: Register a Case ─────────────────────────────────
@@ -374,6 +360,21 @@ def page_register():
     state = c4.selectbox("State / region", sorted(df.State_new.dropna().unique()))
     lgas = STATE_LGAS.get(state, [])
     lga = c5.selectbox("LGA / district", lgas) if lgas else c5.text_input("LGA / district", "")
+
+    ctx = brain_context(state)
+    if ctx["signals"]:
+        parts = []
+        for kind, sg in ctx["signals"]:
+            if kind == "alert":
+                parts.append(f"an **active alert** for **{sg['disease']}** ({(sg.get('confirmed') or 0):,} cases)")
+            elif kind == "surge":
+                parts.append(f"a **{sg['disease']} surge** ({sg['latest']:,} cases, {sg['ratio']}x baseline)")
+            elif kind == "risk":
+                parts.append(f"**{sg['disease']}** outbreak risk at **{sg['prob']:.0%}** ({sg['level']})")
+        st.warning(f"🧠 **Brain assist — {state}:** the engine currently sees " + "; ".join(parts)
+                   + ". Factor this into your assessment and confirmation.")
+    else:
+        st.caption(f"🧠 Brain assist: no active outbreak signals for {state} right now.")
 
     with st.expander("🌦️  Environmental & exposure factors"):
         g1, g2 = st.columns(2)
@@ -638,6 +639,38 @@ def brain_runs(limit=30):
     return runs
 
 
+def brain_context(state):
+    """The autonomous engine's current read on one state — surfaced to the human while they enter a
+    report, so the brain actively assists (not just runs in the background)."""
+    runs = brain_runs(1)
+    if not runs:
+        return {"ts": None, "signals": []}
+    r = runs[0]; sig = []
+    for al in r.get("act", {}).get("alerts", []):
+        if al.get("state") == state:
+            sig.append(("alert", al))
+    seen = {s[1].get("disease") for s in sig}
+    for s in r.get("think", {}).get("surges", []):
+        if s.get("state") == state and s.get("disease") not in seen:
+            sig.append(("surge", s))
+    for p in r.get("think", {}).get("predicted", {}).get("states", []):
+        if p.get("state") == state and p.get("level") in ("HIGH", "MEDIUM"):
+            sig.append(("risk", p))
+    return {"ts": r.get("ts"), "signals": sig}
+
+
+def brain_sidebar_status():
+    """A small, always-visible brain presence so its 'consciousness' is felt across every page."""
+    runs = brain_runs(1)
+    if not runs:
+        st.markdown("🧠 **System Brain** · ⚪ standby")
+        return
+    r = runs[0]; n = r.get("act", {}).get("n_fired", 0)
+    st.markdown("🧠 **System Brain** · 🟢 active")
+    st.caption(f"Last cycle {str(r.get('ts', '')).replace('T', ' ')[:16]}"
+               + (f" · 🚨 {n} alert(s)" if n else " · all clear"))
+
+
 def _brain_explainer():
     with st.expander("ℹ️  How the autonomous brain works"):
         st.markdown(
@@ -677,9 +710,11 @@ def page_brain():
     st.markdown("#### 🚨 Autonomous actions this cycle")
     alerts = a.get("alerts", [])
     if alerts:
-        adf = pd.DataFrame([{"Disease": x["disease"], "State": x["state"],
-                             "Probability": f"{x['prob']:.0%}", "Sent to": x.get("recipients", ""),
-                             "Method": x.get("method", "")} for x in alerts])
+        adf = pd.DataFrame([{"Type": "🚨 Surge" if x.get("kind") == "surge" else "🔮 Predicted",
+                             "Disease": x["disease"], "State": x["state"],
+                             "Cases": f"{(x.get('confirmed') or 0):,}",
+                             "Confidence": (f"{x['prob']:.0%}" if x.get("prob") is not None else "—"),
+                             "Sent to": x.get("recipients", "")} for x in alerts])
         st.dataframe(adf, width="stretch", hide_index=True)
     else:
         st.caption("No new alerts this cycle — nothing crossed the HIGH threshold, or the state was "
@@ -718,8 +753,35 @@ def page_brain():
     _brain_explainer()
 
 
-# ── sidebar (menu + status + alerting control) ────────────
-PAGES = {
+# ── authentication gate ───────────────────────────────────
+def login_screen():
+    _, mid, _ = st.columns([1, 1.4, 1])
+    with mid:
+        st.markdown("<div style='text-align:center'><div style='font-size:3rem'>🦠</div>"
+                    "<h2 style='margin:.2rem 0 0'>Disease Surveillance</h2>"
+                    "<p style='opacity:.65;margin:.2rem 0 1rem'>Sign in to continue</p></div>",
+                    unsafe_allow_html=True)
+        with st.form("login"):
+            u = st.text_input("Username")
+            p = st.text_input("Password", type="password")
+            ok = st.form_submit_button("Sign in", use_container_width=True, type="primary")
+        if ok:
+            person = auth.verify(u, p)
+            if person:
+                st.session_state["user"] = person
+                st.rerun()
+            else:
+                st.error("Invalid username or password.")
+        st.caption("Demo access — **worker** / health123  ·  **supervisor** / admin123")
+    st.stop()
+
+
+user = st.session_state.get("user")
+if not user:
+    login_screen()
+
+# ── role-gated navigation ─────────────────────────────────
+PAGES_ALL = {
     "🏠  Overview": page_overview,
     "🚨  Outbreak Monitor": page_outbreak,
     "🩺  Register a Case": page_register,
@@ -728,18 +790,21 @@ PAGES = {
     "🧠  System Brain": page_brain,
     "🔬  Model": page_model,
 }
+WORKER_PAGES = ["🏠  Overview", "🩺  Register a Case", "🚨  Outbreak Monitor", "📈  Trends", "🔔  Alerts"]
+allowed = list(PAGES_ALL) if user["role"] == "supervisor" else WORKER_PAGES
+PAGES = {k: PAGES_ALL[k] for k in allowed}
+
 with st.sidebar:
     st.markdown("## 🦠 Disease Surveillance")
     st.caption("Multi-disease outbreak monitoring & case triage")
-    st.markdown("")
     choice = st.radio("Menu", list(PAGES), label_visibility="collapsed", key="nav")
     st.divider()
-    st.markdown("**System status**")
-    st.markdown("🟢 Case records")
-    st.markdown("🟢 Documents & notes" if mongo.available else "⚪ Documents & notes — offline")
-    st.markdown("🟢 Live updates" if bus.available else "⚪ Live updates — offline")
+    brain_sidebar_status()
     st.divider()
-    st.toggle("⚡ Proactive alerting", key="proactive")
-    st.caption("**On:** auto-push HIGH alerts. **Off:** alert on demand only.")
+    st.markdown(f"👤 **{user['name']}** · {auth.ROLE_LABELS.get(user['role'], user['role'])}")
+    if st.button("Sign out", use_container_width=True):
+        for _k in ("user", "nav", "reg"):
+            st.session_state.pop(_k, None)
+        st.rerun()
 
 PAGES[choice]()

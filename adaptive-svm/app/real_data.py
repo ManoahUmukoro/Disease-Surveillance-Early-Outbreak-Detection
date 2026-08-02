@@ -119,6 +119,10 @@ def demo_events():
                         continue
                     rows.append((f"{year}-{mo:02d}-01", st, None, f"{dis} (demo)", n,
                                  int(rng.binomial(n, 0.02)), None, None, "demo"))
+    # A staged, clearly-labelled DEMO outbreak so the platform always shows a fresh, high-case CURRENT
+    # event that the autonomous engine can detect and alert on — a Measles surge in Kano, early 2026.
+    for ym, cases, deaths in [("2026-01", 1200, 18), ("2026-02", 2450, 41), ("2026-03", 4100, 73)]:
+        rows.append((f"{ym}-01", "Kano", None, "Measles (demo)", cases, deaths, None, None, "demo"))
     return pd.DataFrame(rows, columns=_COLS)
 
 

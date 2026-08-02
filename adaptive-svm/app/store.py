@@ -45,7 +45,11 @@ CREATE TABLE IF NOT EXISTS notifications(
     severity TEXT, message TEXT, recipient TEXT, method TEXT,
     status TEXT, acknowledged INTEGER DEFAULT 0
 );
+CREATE TABLE IF NOT EXISTS meta(key TEXT PRIMARY KEY, value TEXT);
 """
+
+# Bump whenever the bundled seed dataset changes, to force a one-time re-seed on a persisted DB.
+SEED_VERSION = "2"
 
 
 def conn():
@@ -102,7 +106,15 @@ def has_disease(disease):
 def bootstrap(df):
     """Seed surveillance_events from real data, PER DISEASE and idempotently — so adding a new
     disease to the code also populates an already-existing (e.g. deployed) database, not only a
-    brand-new one. Lassa (SORMAS case-level) + Cholera (per-state) + Mpox (national), all real."""
+    brand-new one. A seed-version marker forces a one-time re-seed when the bundled dataset changes,
+    so a persisted/deployed database picks up new or updated data instead of staying stale. Live
+    registrations (source='registration') are always preserved."""
+    c = conn()
+    cur = c.execute("SELECT value FROM meta WHERE key='seed_version'").fetchone()
+    if (cur[0] if cur else None) != SEED_VERSION:
+        c.execute("DELETE FROM surveillance_events WHERE source!='registration'")
+        c.commit()
+    c.close()
     rows = []
     if not has_disease("Lassa fever"):
         d = df.copy()
@@ -130,6 +142,9 @@ def bootstrap(df):
         c.executemany("INSERT INTO surveillance_events(report_date,state,lga,disease,new_cases,"
                       "deaths,temperature,rainfall,source,created_at) VALUES(?,?,?,?,?,?,?,?,?,?)", rows)
         c.commit(); c.close()
+    c = conn()
+    c.execute("INSERT OR REPLACE INTO meta(key,value) VALUES('seed_version',?)", (SEED_VERSION,))
+    c.commit(); c.close()
 
 
 def events_df():

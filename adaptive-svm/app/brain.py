@@ -98,15 +98,38 @@ def think(bundles, ev):
     return out
 
 
+# ── surge detection (aberration) ─────────────────────────────────────────
+def detect_surges(ev, min_cases=200, factor=2.0, recent_months=3):
+    """Flag any disease-state whose latest month is well above its own recent baseline — simple
+    aberration detection in the spirit of the CDC EARS early-warning algorithms. This works across
+    EVERY disease (not just the SVM-modelled Lassa), so the brain is aware of the whole picture. Only
+    recent months are considered, so a historical tail is never mistaken for a current surge."""
+    gmax = ev.report_date.max()
+    cutoff = gmax.to_period("M") - recent_months
+    out = []
+    for disease in [d for d in sorted(ev.disease.unique()) if d not in ("Other", "Undetermined")]:
+        d = ev[ev.disease == disease]
+        ts = (d.assign(ym=d.report_date.dt.to_period("M")).groupby(["state", "ym"])
+              .new_cases.sum().reset_index())
+        for st, g in ts.groupby("state"):
+            g = g.sort_values("ym")
+            if len(g) < 4 or g.ym.iloc[-1] < cutoff:
+                continue
+            latest = int(g.new_cases.iloc[-1]); base = g.new_cases.iloc[:-1].tail(6)
+            mu = float(base.mean()) if len(base) else 0.0
+            if latest >= min_cases and latest >= factor * max(mu, 1) and latest > base.max():
+                out.append({"disease": disease, "state": st, "latest": latest,
+                            "baseline": round(mu, 1), "ratio": round(latest / max(mu, 1), 1)})
+    return sorted(out, key=lambda x: x["latest"], reverse=True)
+
+
 # ── ACT ──────────────────────────────────────────────────────────────────
-def act(assessments, mongo):
-    """Alert on HIGH, model-PREDICTED outbreaks (adaptive SVM), newest first, respecting a cooldown
-    so the same state is not re-alerted every cycle. Burden-ranked diseases are monitored, not auto-
-    alerted (their rank is descriptive, not a prediction)."""
+def act(candidates, mongo):
+    """Autonomously alert the highest-priority outbreak signals — detected SURGES (any disease) plus
+    adaptive-SVM HIGH predictions — biggest first, respecting a cooldown so the same state is not
+    re-alerted every cycle."""
     now = datetime.now()
     since = (now - timedelta(hours=COOLDOWN_HOURS)).isoformat(timespec="seconds")
-    candidates = sorted([a for a in assessments if a["method"] == "adaptive SVM" and a["level"] == "HIGH"],
-                        key=lambda a: a["prob"], reverse=True)
     fired, suppressed = [], 0
     for a in candidates:
         if len(fired) >= MAX_ALERTS_PER_RUN:
@@ -114,16 +137,21 @@ def act(assessments, mongo):
         if mongo.alerted_recently(a["disease"], a["state"], since):
             suppressed += 1
             continue
-        msg = (f"Autonomous engine: HIGH outbreak risk for {a['disease']} in {a['state']} "
-               f"({a['prob']:.0%} calibrated probability; recent confirmed cases={a['confirmed']}). "
-               "Recommend NCDC field verification.")
+        if a.get("kind") == "surge":
+            msg = (f"Autonomous engine: SURGE detected for {a['disease']} in {a['state']} — "
+                   f"{a['confirmed']:,} cases this month (~{a['ratio']}x the recent baseline). "
+                   "Recommend immediate NCDC field verification.")
+        else:
+            msg = (f"Autonomous engine: HIGH outbreak risk for {a['disease']} in {a['state']} "
+                   f"({a['prob']:.0%} calibrated probability; recent cases={a['confirmed']}). "
+                   "Recommend NCDC field verification.")
         res = notifications.send_alert(a["disease"], a["state"], "HIGH", msg)
         mongo.record_alert_key(a["disease"], a["state"], now.isoformat(timespec="seconds"))
         fired.append({"disease": a["disease"], "state": a["state"], "severity": "HIGH",
-                      "prob": a["prob"], "message": msg, "recipients": res["recipient_str"],
-                      "method": res["method"]})
-    return {"n_high": len(candidates), "n_fired": len(fired), "suppressed_cooldown": suppressed,
-            "alerts": fired}
+                      "prob": a.get("prob"), "confirmed": a.get("confirmed"), "kind": a.get("kind", "svm"),
+                      "message": msg, "recipients": res["recipient_str"], "method": res["method"]})
+    return {"n_candidates": len(candidates), "n_fired": len(fired),
+            "suppressed_cooldown": suppressed, "alerts": fired}
 
 
 # ── LEARN ────────────────────────────────────────────────────────────────
@@ -147,7 +175,15 @@ def run_once():
     svm = [a for a in assessments if a["method"] == "adaptive SVM"]          # genuine predictions (Lassa)
     burden = [a for a in assessments if a["method"] == "recent-burden"]      # descriptive monitoring
     counts = {lvl: int(sum(1 for a in svm if a["level"] == lvl)) for lvl in ("HIGH", "MEDIUM", "LOW")}
-    action = act(assessments, mongo)
+
+    surges = detect_surges(ev)                                              # aberration across ALL diseases
+    surge_sig = [{"disease": s["disease"], "state": s["state"], "confirmed": s["latest"],
+                  "prob": min(0.95, 0.55 + 0.05 * s["ratio"]), "ratio": s["ratio"], "kind": "surge"}
+                 for s in surges]
+    svm_high = [{"disease": a["disease"], "state": a["state"], "confirmed": a["confirmed"],
+                 "prob": a["prob"], "kind": "svm"} for a in svm if a["level"] == "HIGH"]
+    candidates = sorted(surge_sig + svm_high, key=lambda x: x["confirmed"], reverse=True)
+    action = act(candidates, mongo)
     learning = learn(metrics, sinfo)
 
     monitored = {}                                                          # highest-burden state per disease
@@ -156,13 +192,17 @@ def run_once():
                                             "confirmed": a["confirmed"]})
     predicted_states = sorted(svm, key=lambda a: a["prob"], reverse=True)
 
-    narrative = (f"Adaptive SVM scanned Lassa fever across {len(svm)} states "
-                 f"({counts['HIGH']} HIGH, {counts['MEDIUM']} MEDIUM); monitoring {len(monitored)} "
-                 f"other diseases by recent burden. Fired {action['n_fired']} alert(s). "
-                 f"Model AUC {learning['roc_auc']}.")
+    if surges:
+        s0 = surges[0]
+        headline = (f"🚨 Detected a surge — {s0['disease']} in {s0['state']}: {s0['latest']:,} cases "
+                    f"this month (~{s0['ratio']}x baseline).")
+    else:
+        headline = f"Adaptive SVM: {counts['HIGH']} HIGH / {counts['MEDIUM']} MEDIUM for Lassa fever."
+    narrative = (f"{headline} Scanned {sinfo['diseases']} diseases across {sinfo['states']} states · "
+                 f"fired {action['n_fired']} alert(s) · model AUC {learning['roc_auc']}.")
     run = {"ts": ts, "status": "ok", "narrative": narrative, "sense": sinfo,
            "think": {"predicted": {"disease": "Lassa fever", "counts": counts, "states": predicted_states},
-                     "monitored": list(monitored.values())},
+                     "monitored": list(monitored.values()), "surges": surges},
            "act": action, "learn": learning}
 
     mongo.save_brain_run(run)                              # -> Atlas (dashboard reads this)
