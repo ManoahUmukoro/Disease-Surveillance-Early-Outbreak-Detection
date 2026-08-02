@@ -237,6 +237,13 @@ def page_header(title, subtitle=""):
 # ── PAGE: Overview ────────────────────────────────────────
 def page_overview():
     page_header("Overview", "A live snapshot of the surveillance system.")
+    _role = st.session_state.get("user", {}).get("role")
+    if _role == "worker":
+        st.info("👩‍⚕️ **Health Worker view** — register suspected cases with live brain assistance and "
+                "monitor your area. Alert dispatch and the autonomous engine are managed by supervisors.")
+    else:
+        st.info("🧑‍💼 **Supervisor view** — full oversight: the autonomous System Brain, outbreak "
+                "alerting, and model performance.")
     ev = store.events_df()
     diseases = [d for d in ev.disease.unique() if d not in ("Other", "Undetermined")] if not ev.empty else []
     n_real = sum(1 for d in diseases if not is_demo(d))
@@ -333,14 +340,18 @@ def page_outbreak():
                             f"{r.prob:.0%} probability. Recommend NCDC field verification."}
                 for r in rows]
 
-    st.caption("Autonomous alerting is handled by the **System Brain** on a schedule. Use this button "
-               "to notify NCDC manually right now.")
-    if st.button(f"🔔 Notify NCDC — {len(high)} HIGH-risk state(s)", disabled=high.empty):
-        fired = check_and_notify(sig_for(list(high.itertuples())))
-        st.success(f"Logged {len(fired)} alert(s) — one per state — to {len(RECIPIENTS)} recipients.")
-        for fr in fired:
-            st.write(f"→ **{fr['severity']}** · {fr['location']} · {fr['recipient_str']} "
-                     f"({fr['method']}, {fr['status']})")
+    if st.session_state.get("user", {}).get("role") == "supervisor":
+        st.caption("Autonomous alerting is handled by the **System Brain** on a schedule. Use this "
+                   "button to notify NCDC manually right now.")
+        if st.button(f"🔔 Notify NCDC — {len(high)} HIGH-risk state(s)", disabled=high.empty):
+            fired = check_and_notify(sig_for(list(high.itertuples())))
+            st.success(f"Logged {len(fired)} alert(s) — one per state — to {len(RECIPIENTS)} recipients.")
+            for fr in fired:
+                st.write(f"→ **{fr['severity']}** · {fr['location']} · {fr['recipient_str']} "
+                         f"({fr['method']}, {fr['status']})")
+    else:
+        st.caption("Autonomous alerting is handled by the **System Brain**. Dispatching NCDC alerts is a "
+                   "supervisor action.")
 
 
 # ── PAGE: Register a Case ─────────────────────────────────
@@ -769,6 +780,8 @@ def login_screen():
             person = auth.verify(u, p)
             if person:
                 st.session_state["user"] = person
+                st.session_state["nav"] = ("🩺  Register a Case" if person["role"] == "worker"
+                                           else "🧠  System Brain")
                 st.rerun()
             else:
                 st.error("Invalid username or password.")
@@ -790,7 +803,7 @@ PAGES_ALL = {
     "🧠  System Brain": page_brain,
     "🔬  Model": page_model,
 }
-WORKER_PAGES = ["🏠  Overview", "🩺  Register a Case", "🚨  Outbreak Monitor", "📈  Trends", "🔔  Alerts"]
+WORKER_PAGES = ["🏠  Overview", "🩺  Register a Case", "🚨  Outbreak Monitor", "📈  Trends"]
 allowed = list(PAGES_ALL) if user["role"] == "supervisor" else WORKER_PAGES
 PAGES = {k: PAGES_ALL[k] for k in allowed}
 
