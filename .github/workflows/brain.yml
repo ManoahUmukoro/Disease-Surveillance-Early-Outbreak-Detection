@@ -1,0 +1,43 @@
+name: Autonomous Surveillance Brain
+
+# The system "brain": runs one Sense -> Think -> Act -> Learn cycle on a schedule, with no human
+# in the loop. It writes its decisions to MongoDB Atlas, which the dashboard's "System Brain" page
+# reads. This repo is public, so scheduled Actions minutes are free.
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"      # every 30 minutes
+  workflow_dispatch: {}          # ...and on-demand from the Actions tab
+
+permissions:
+  contents: read
+
+concurrency:
+  group: surveillance-brain
+  cancel-in-progress: false
+
+jobs:
+  cycle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: adaptive-svm/app/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r adaptive-svm/app/requirements.txt
+
+      - name: Run one autonomous cycle (Sense -> Think -> Act -> Learn)
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}   # so the brain's decisions reach the dashboard
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}        # optional: real e-mail delivery of alerts
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+        run: python adaptive-svm/app/brain.py

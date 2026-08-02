@@ -16,6 +16,7 @@ Online scoring is PREQUENTIAL (predict each batch, then train on it) — the hon
 to evaluate an online learner.
 """
 from pathlib import Path
+import math
 import warnings
 
 import numpy as np
@@ -50,6 +51,20 @@ SYMPTOMS = ["fever_new", "headache_new", "abdominal_pain", "vomiting_new", "diar
 EXPOSURE = ["rodents_excreta", "burial_of_case", "contact_with_source_case_new",
             "direct_contact_probable_case"]
 HOTSPOTS = ["Edo", "Ondo", "Ebonyi", "Bauchi", "Taraba", "Plateau"]
+
+
+def calibrated_prob(bundle, margin, lo=0.01, hi=0.95):
+    """SVM decision margin -> calibrated probability via the bundle's Platt scaling, then CLAMP to
+    [lo, hi]. The clamp stops a very confident (large-margin) point from displaying a hard 100% / 0%
+    — a known saturation property of Platt scaling, not a genuine certainty. Single source of truth
+    shared by the dashboard, the evaluation script and the autonomous engine."""
+    cal = bundle.get("calib") if isinstance(bundle, dict) else None
+    if cal:
+        A, B = cal
+        p = 1.0 / (1.0 + math.exp(-(A * float(margin) + B)))
+    else:
+        p = 1.0 / (1.0 + math.exp(-float(margin) / 50.0))
+    return float(min(hi, max(lo, p)))
 
 
 def yesbin(s):

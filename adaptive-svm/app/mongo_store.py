@@ -84,3 +84,28 @@ class MongoStore:
         return {"available": True, "db": DB_NAME,
                 "records": self._db["case_records"].estimated_document_count(),
                 "files": self._db["fs.files"].estimated_document_count()}
+
+    # ── autonomous engine ("brain") run-log ──────────────────────────────
+    def save_brain_run(self, run: dict):
+        """Persist one autonomous-engine cycle so the dashboard can show what the brain did."""
+        if not self.available:
+            return False
+        self._db["brain_runs"].insert_one(dict(run))     # copy so caller's dict keeps no _id
+        return True
+
+    def recent_brain_runs(self, limit=20):
+        if not self.available:
+            return []
+        return list(self._db["brain_runs"].find({}, {"_id": 0}).sort("ts", -1).limit(int(limit)))
+
+    def record_alert_key(self, disease, state, ts):
+        if not self.available:
+            return
+        self._db["brain_alerts"].insert_one({"disease": disease, "state": state, "ts": ts})
+
+    def alerted_recently(self, disease, state, since_iso):
+        """Cooldown check — has this (disease, state) already been alerted since `since_iso`?"""
+        if not self.available:
+            return False
+        return self._db["brain_alerts"].find_one(
+            {"disease": disease, "state": state, "ts": {"$gte": since_iso}}) is not None

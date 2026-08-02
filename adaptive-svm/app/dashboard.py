@@ -24,7 +24,7 @@ import streamlit as st
 HERE = Path(__file__).resolve().parents[1]
 sys.path.append(str(HERE / "scripts"))
 sys.path.append(str(Path(__file__).resolve().parent))
-from prepare_and_train import load, HOTSPOTS
+from prepare_and_train import load, HOTSPOTS, calibrated_prob
 import store
 from mongo_store import MongoStore
 from stream import Stream
@@ -114,11 +114,8 @@ sym_model = get_symptom_model()
 
 # ── helpers ───────────────────────────────────────────────
 def to_prob(bundle, margin):
-    cal = bundle.get("calib")
-    if cal:
-        A, B = cal
-        return float(1 / (1 + math.exp(-(A * float(margin) + B))))
-    return float(1 / (1 + math.exp(-float(margin) / 50)))
+    # calibrated (Platt) probability, capped so it never shows a hard 100% / 0%
+    return calibrated_prob(bundle, margin)
 
 
 def prob_band(p):
@@ -620,6 +617,107 @@ def page_model():
                "records.")
 
 
+# ── PAGE: System Brain (autonomous engine) ────────────────
+def brain_runs(limit=30):
+    """Latest autonomous-engine cycles — from Atlas (shared, what the scheduled brain writes) or the
+    local JSON fallback."""
+    import json as _json
+    runs = []
+    try:
+        if mongo.available:
+            runs = mongo.recent_brain_runs(limit)
+    except Exception:
+        runs = []
+    if not runs:
+        f = HERE / "data" / "brain_log.json"
+        if f.exists():
+            try:
+                runs = _json.loads(f.read_text())[:limit]
+            except Exception:
+                runs = []
+    return runs
+
+
+def _brain_explainer():
+    with st.expander("ℹ️  How the autonomous brain works"):
+        st.markdown(
+            "The engine runs a self-managing **MAPE-K** loop (Monitor–Analyze–Plan–Execute over a "
+            "shared Knowledge base) on a schedule, with no human in the loop:\n\n"
+            "- **👁️ Sense** — reads the latest surveillance data across every state and disease.\n"
+            "- **🧠 Think** — scores each state with the adaptive SVM (calibrated outbreak probability).\n"
+            "- **🚨 Act** — raises alerts for HIGH-risk, model-predicted outbreaks, with a cooldown so it "
+            "never repeats itself.\n"
+            "- **🎓 Learn** — runs the online (partial_fit) update so the model keeps improving.\n\n"
+            "It monitors, detects, alerts and learns on its own; a human still verifies an outbreak in "
+            "the field before a response is dispatched (*human-on-the-loop*).")
+
+
+def page_brain():
+    page_header("System Brain", "The autonomous engine that runs the system on its own.")
+    runs = brain_runs(30)
+    if not runs:
+        st.info("🧠 The autonomous engine has not logged a cycle yet. It runs on a schedule with no "
+                "human input; its decisions will appear here after the first run.")
+        _brain_explainer()
+        return
+    r = runs[0]
+    s, t, a, l = r.get("sense", {}), r.get("think", {}), r.get("act", {}), r.get("learn", {})
+    pred = t.get("predicted", {}); counts = pred.get("counts", {})
+
+    st.markdown(f"🟢 **Autonomous — running on schedule.**   Last cycle: "
+                f"**{str(r.get('ts', '')).replace('T', ' ')}**")
+    st.success("🧠 " + r.get("narrative", ""))
+
+    k = st.columns(4)
+    k[0].metric("👁️ Events sensed", f"{s.get('events', 0):,}")
+    k[1].metric("🔬 Diseases scanned", s.get("diseases", "—"))
+    k[2].metric("🚨 Alerts fired", a.get("n_fired", 0))
+    k[3].metric("📈 Model AUC", l.get("roc_auc", "—"))
+
+    st.markdown("#### 🚨 Autonomous actions this cycle")
+    alerts = a.get("alerts", [])
+    if alerts:
+        adf = pd.DataFrame([{"Disease": x["disease"], "State": x["state"],
+                             "Probability": f"{x['prob']:.0%}", "Sent to": x.get("recipients", ""),
+                             "Method": x.get("method", "")} for x in alerts])
+        st.dataframe(adf, width="stretch", hide_index=True)
+    else:
+        st.caption("No new alerts this cycle — nothing crossed the HIGH threshold, or the state was "
+                   "already alerted within the cooldown window.")
+
+    c1, c2 = st.columns(2)
+    with c1:
+        st.markdown("#### 🔮 Predicted outbreak risk")
+        st.caption(f"Adaptive SVM · Lassa fever · {counts.get('HIGH', 0)} HIGH · "
+                   f"{counts.get('MEDIUM', 0)} MEDIUM")
+        states = pred.get("states", [])
+        if states:
+            st.dataframe(pd.DataFrame([{"State": x["state"], "Cases": x["confirmed"],
+                                        "Probability": f"{x['prob']:.0%}",
+                                        "Risk": BADGE.get(x["level"], x["level"])}
+                                       for x in states[:12]]), width="stretch", hide_index=True)
+    with c2:
+        st.markdown("#### 📡 Monitored diseases")
+        st.caption("Recent-burden watch · highest-burden state")
+        mon = t.get("monitored", [])
+        if mon:
+            st.dataframe(pd.DataFrame([{"Disease": x["disease"], "Top state": x["top_state"],
+                                        "Recent cases": f"{x['confirmed']:,}"} for x in mon]),
+                         width="stretch", hide_index=True)
+
+    st.markdown("#### 🎓 Learning")
+    st.info(f"**{l.get('model', '—')}** · ROC-AUC **{l.get('roc_auc', '—')}** · F1 **{l.get('f1', '—')}** "
+            f"· learned from **{l.get('observations_learned', 0):,}** observations. {l.get('note', '')}")
+
+    if len(runs) > 1:
+        st.markdown("#### 🕑 Recent autonomous cycles")
+        st.dataframe(pd.DataFrame([{"When": str(x.get("ts", "")).replace("T", " "),
+                                    "What the brain did": x.get("narrative", "")} for x in runs[:12]]),
+                     width="stretch", hide_index=True)
+
+    _brain_explainer()
+
+
 # ── sidebar (menu + status + alerting control) ────────────
 PAGES = {
     "🏠  Overview": page_overview,
@@ -627,7 +725,8 @@ PAGES = {
     "🩺  Register a Case": page_register,
     "📈  Trends": page_trends,
     "🔔  Alerts": page_alerts,
-    "🧠  Model": page_model,
+    "🧠  System Brain": page_brain,
+    "🔬  Model": page_model,
 }
 with st.sidebar:
     st.markdown("## 🦠 Disease Surveillance")

@@ -30,3 +30,6 @@ frontend/.vite/
 # ── Adaptive SVM runtime artifacts (not source) ──────────
 adaptive-svm/data/surveillance.db
 ~$*
+
+# autonomous engine local run-log (dashboard reads Atlas in production)
+adaptive-svm/data/brain_log.json
